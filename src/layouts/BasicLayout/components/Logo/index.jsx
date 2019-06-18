@@ -7,7 +7,7 @@ export default class Logo extends PureComponent {
     return (
       <div className="logo">
         <Link to="/" className="logo-text">
-          Richstone AI Visualization Platform
+          Richstone AI Visual Analysis Platform
         </Link>
       </div>
     );
