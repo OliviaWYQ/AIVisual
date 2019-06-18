@@ -36,10 +36,10 @@ const asideMenuConfig = [
     path: '/chart',
     icon: 'chart1',
     children: [
-      {
-        name: 'basic',
-        path: '/chart/basic',
-      },
+      // {
+      //   name: 'basic',
+      //   path: '/chart/basic',
+      // },
       {
         name: 'general',
         path: '/chart/general',
@@ -56,58 +56,58 @@ const asideMenuConfig = [
         path: '/table/basic',
         // authority: 'admin',
       },
-      {
-        name: 'general',
-        path: '/table/general',
-        // authority: 'user',
-      },
+      // {
+      //   name: 'general',
+      //   path: '/table/general',
+      //   // authority: 'user',
+      // },
     ],
   },
-  {
-    name: '列表页',
-    path: '/list',
-    icon: 'copy',
-    children: [
-      {
-        name: 'basic',
-        path: '/list/basic',
-      },
-      {
-        name: 'general',
-        path: '/list/general',
-      },
-    ],
-  },
-  {
-    name: 'profile',
-    path: '/profile',
-    icon: 'cascades',
-    children: [
-      {
-        name: 'basic',
-        path: '/profile/basic',
-      },
-      {
-        name: 'terms',
-        path: '/profile/general',
-      },
-    ],
-  },
-  {
-    name: 'result',
-    path: '/result',
-    icon: 'edit2',
-    children: [
-      {
-        name: 'success',
-        path: '/result/success',
-      },
-      {
-        name: 'fail',
-        path: '/result/fail',
-      },
-    ],
-  },
+  // {
+  //   name: '列表页',
+  //   path: '/list',
+  //   icon: 'copy',
+  //   children: [
+  //     {
+  //       name: 'basic',
+  //       path: '/list/basic',
+  //     },
+  //     // {
+  //     //   name: 'general',
+  //     //   path: '/list/general',
+  //     // },
+  //   ],
+  // },
+  // {
+  //   name: 'profile',
+  //   path: '/profile',
+  //   icon: 'cascades',
+  //   children: [
+  //     {
+  //       name: 'basic',
+  //       path: '/profile/basic',
+  //     },
+  //     // {
+  //     //   name: 'terms',
+  //     //   path: '/profile/general',
+  //     // },
+  //   ],
+  // },
+  // {
+  //   name: 'result',
+  //   path: '/result',
+  //   icon: 'edit2',
+  //   children: [
+  //     {
+  //       name: 'success',
+  //       path: '/result/success',
+  //     },
+  //     {
+  //       name: 'fail',
+  //       path: '/result/fail',
+  //     },
+  //   ],
+  // },
   {
     name: 'account',
     path: '/account',
@@ -119,29 +119,29 @@ const asideMenuConfig = [
       },
     ],
   },
-  {
-    name: 'exception',
-    path: '/exception',
-    icon: 'gaojingxinxi',
-    children: [
-      {
-        name: '204',
-        path: '/exception/204',
-      },
-      {
-        name: '403',
-        path: '/exception/403',
-      },
-      {
-        name: '404',
-        path: '/exception/404',
-      },
-      {
-        name: '500',
-        path: '/exception/500',
-      },
-    ],
-  },
+  // {
+  //   name: 'exception',
+  //   path: '/exception',
+  //   icon: 'gaojingxinxi',
+  //   children: [
+  //     {
+  //       name: '204',
+  //       path: '/exception/204',
+  //     },
+  //     {
+  //       name: '403',
+  //       path: '/exception/403',
+  //     },
+  //     {
+  //       name: '404',
+  //       path: '/exception/404',
+  //     },
+  //     {
+  //       name: '500',
+  //       path: '/exception/500',
+  //     },
+  //   ],
+  // },
 ];
 
 export { headerMenuConfig, asideMenuConfig };

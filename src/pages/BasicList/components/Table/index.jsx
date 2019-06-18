@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Table, Pagination, Button, Dialog } from '@alifd/next';
 import { FormattedMessage } from 'react-intl';
 import IceContainer from '@icedesign/container';
-import FilterTag from '../FilterTag';
+// import FilterTag from '../FilterTag';
 import FilterForm from '../FilterForm';
 import styles from './index.module.scss';
 
@@ -115,19 +115,19 @@ export default class GoodsTable extends Component {
 
     return (
       <div style={styles.container}>
-        <IceContainer>
+        {/* <IceContainer>
           <FilterTag onChange={this.handleFilterChange} />
           <FilterForm onChange={this.handleFilterChange} />
-        </IceContainer>
+        </IceContainer> */}
         <IceContainer>
           <Table loading={isLoading} dataSource={data} hasBorder={false}>
-            <Table.Column title="会员名称" dataIndex="name" />
-            <Table.Column title="会员等级" dataIndex="level" />
-            <Table.Column title="会员余额(元)" dataIndex="balance" />
-            <Table.Column title="累计消费(元)" dataIndex="accumulative" />
-            <Table.Column title="注册时间" dataIndex="regdate" />
-            <Table.Column title="生日时间" dataIndex="birthday" />
-            <Table.Column title="归属门店" dataIndex="store" />
+            <Table.Column title="算法名称" dataIndex="name" />
+            {/* <Table.Column title="会员等级" dataIndex="level" /> */}
+            {/* <Table.Column title="会员余额(元)" dataIndex="balance" /> */}
+            {/* <Table.Column title="累计消费(元)" dataIndex="accumulative" /> */}
+            <Table.Column title="修改时间" dataIndex="regdate" />
+            {/* <Table.Column title="生日时间" dataIndex="birthday" /> */}
+            {/* <Table.Column title="归属门店" dataIndex="store" /> */}
             <Table.Column
               title="操作"
               width={200}

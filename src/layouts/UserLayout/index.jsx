@@ -20,7 +20,7 @@ export default class UserLayout extends Component {
           <a href="#" className="meta">
             <span className="title">Richstone</span>
           </a>
-          <p className="desc">让前端开发简单而友好</p>
+          {/* <p className="desc">让前端开发简单而友好</p> */}
         </div>
         <Suspense fallback={<PageLoading />}>
           <Switch>

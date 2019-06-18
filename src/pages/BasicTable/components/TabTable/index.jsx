@@ -23,12 +23,12 @@ export default class TabTable extends Component {
     };
     this.columns = [
       {
-        title: '标题',
+        title: '名称',
         dataIndex: 'title',
         key: 'title',
       },
       {
-        title: '作者',
+        title: '用户',
         dataIndex: 'author',
         key: 'author',
       },
@@ -38,7 +38,7 @@ export default class TabTable extends Component {
         key: 'status',
       },
       {
-        title: '发布时间',
+        title: '提交时间',
         dataIndex: 'date',
         key: 'date',
       },

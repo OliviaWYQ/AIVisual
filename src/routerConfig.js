@@ -13,9 +13,9 @@ const BasicCharts = React.lazy(() => import('./pages/BasicCharts'));
 // const Terms = React.lazy(() => import('./pages/Terms'));
 const Result = React.lazy(() => import('./pages/Result'));
 const BasicList = React.lazy(() => import('./pages/BasicList'));
-const ProjectList = React.lazy(() => import('./pages/ProjectList'));
+// const ProjectList = React.lazy(() => import('./pages/ProjectList'));
 const BasicTable = React.lazy(() => import('./pages/BasicTable'));
-const GeneralTable = React.lazy(() => import('./pages/GeneralTable'));
+// const GeneralTable = React.lazy(() => import('./pages/'));
 const Profile = React.lazy(() => import('./pages/Profile'));
 const Setting = React.lazy(() => import('./pages/Setting'));
 const Fail = React.lazy(() => import('./pages/Fail'));
@@ -41,10 +41,10 @@ const routerConfig = [
     path: '/list/basic',
     component: BasicList,
   },
-  {
-    path: '/list/general',
-    component: ProjectList,
-  },
+  // {
+  //   path: '/list/general',
+  //   component: ProjectList,
+  // },
   {
     path: '/result/success',
     component: Result,
@@ -65,10 +65,10 @@ const routerConfig = [
   //   path: '/profile/general',
   //   component: Terms,
   // },
-  {
-    path: '/table/general',
-    component: GeneralTable,
-  },
+  // {
+  //   path: '/table/general',
+  //   component: ,
+  // },
   {
     path: '/account/setting',
     component: Setting,

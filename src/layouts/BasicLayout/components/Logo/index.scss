@@ -1,5 +1,5 @@
 .logo {
-  max-width: 340px;
+  max-width: 500px;
   height: 42px;
   line-height: 42px;
   .logo-text {
@@ -17,7 +17,7 @@
 
 @media screen and (max-width: 1199px) {
   .logo {
-    width: 80px;
+    width: 140px;
     .logo-text {
       font-size: 22px;
     }

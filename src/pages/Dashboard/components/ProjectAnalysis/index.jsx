@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Grid } from '@alifd/next';
 import LineChart from './LineChart';
 import PieChart from './PieChart';
-import ProjectList from './ProjectList';
+// import  from './ProjectList';
 
 const { Row, Col } = Grid;
 
@@ -12,7 +12,7 @@ export default class Overview extends Component {
     return (
       <Row wrap gutter={20}>
         <Col l="16">
-          <ProjectList />
+          {/* <ProjectList /> */}
         </Col>
         <Col l="8">
           <PieChart />
