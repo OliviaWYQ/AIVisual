@@ -10,7 +10,7 @@ const UserRegister = React.lazy(() => import('./pages/UserRegister'));
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
 const Charts = React.lazy(() => import('./pages/Charts'));
 const BasicCharts = React.lazy(() => import('./pages/BasicCharts'));
-const Terms = React.lazy(() => import('./pages/Terms'));
+// const Terms = React.lazy(() => import('./pages/Terms'));
 const Result = React.lazy(() => import('./pages/Result'));
 const BasicList = React.lazy(() => import('./pages/BasicList'));
 const ProjectList = React.lazy(() => import('./pages/ProjectList'));
@@ -61,10 +61,10 @@ const routerConfig = [
     path: '/profile/basic',
     component: Profile,
   },
-  {
-    path: '/profile/general',
-    component: Terms,
-  },
+  // {
+  //   path: '/profile/general',
+  //   component: Terms,
+  // },
   {
     path: '/table/general',
     component: GeneralTable,
