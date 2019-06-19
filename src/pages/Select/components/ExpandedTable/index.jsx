@@ -1,7 +1,61 @@
 import React, { Component } from 'react';
-import { Table, Button, Pagination } from '@alifd/next';
+import { Table, Button, Pagination, Dialog } from '@alifd/next';
 import IceContainer from '@icedesign/container';
 import { FormattedMessage } from 'react-intl';
+
+const input = {
+  img: [
+    {
+      name: '图片1',
+      type: '.jpg',
+      size: '1M',
+      user: '管理员',
+      time: '2019-03-06',
+      desc:
+        '测试图片',
+    },
+    {
+      name: '图片2',
+      type: '.jpg',
+      size: '1M',
+      user: '管理员',
+      time: '2019-03-06',
+      desc:
+        '测试图片',
+    },
+  ],
+  mov: [
+    {
+      name: '视频1',
+      type: '.avi',
+      size: '20M',
+      user: '管理员',
+      time: '2019-01-05',
+      desc:
+        '测试视频',
+    },
+    {
+      name: '视频2',
+      type: '.mp4',
+      size: '12M',
+      user: '管理员',
+      time: '2019-01-12',
+      desc:
+        '测试视频',
+    },
+  ],
+  num: [
+    {
+      name: '声音1',
+      type: '.csv',
+      size: '2M',
+      user: '管理员',
+      time: '2018-12-07',
+      desc:
+        '测试声音',
+    },
+  ],
+}
 
 const generatorData = (input) => {
   return Array.from(input).map((item, index) => {
@@ -28,6 +82,7 @@ export default class ExpandedTable extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      dataSource: input.img.concat(input.mov, input.num),
       current: 1,
     };
   }
@@ -41,6 +96,31 @@ export default class ExpandedTable extends Component {
   handleRowSelection = (selectedRowKeys, records) => {
     console.log('selectedRowKeys:', selectedRowKeys);
     console.log('records:', records);
+  };
+
+  handleDelete = () => {
+    Dialog.confirm({
+      title: '提示',
+      content: '确认删除吗',
+      onOk: () => {
+        this.handleRemove();
+      },
+    });
+  };
+
+  handleRemove = (value, index) => {
+    const { dataSource } = this.state;
+    dataSource.splice(index, 1);
+    this.setState({
+      dataSource,
+    });
+  };
+
+  handleDetail = () => {
+    Dialog.confirm({
+      title: '提示',
+      content: '暂不支持查看详情',
+    });
   };
 
   renderOper = () => {
@@ -61,58 +141,7 @@ export default class ExpandedTable extends Component {
   };
 
   render() {
-    
-    const input = {
-      img: [
-        {
-          name: '图片1',
-          type: '.jpg',
-          size: '1M',
-          user: '管理员',
-          time: '2019-03-06',
-          desc:
-            '测试图片',
-        },
-        {
-          name: '图片2',
-          type: '.jpg',
-          size: '1M',
-          user: '管理员',
-          time: '2019-03-06',
-          desc:
-            '测试图片',
-        },
-        {
-          name: '视频1',
-          type: '.avi',
-          size: '20M',
-          user: '管理员',
-          time: '2019-01-05',
-          desc:
-            '测试视频',
-        },
-        {
-          name: '视频2',
-          type: '.mp4',
-          size: '12M',
-          user: '管理员',
-          time: '2019-01-12',
-          desc:
-            '测试视频',
-        },
-        {
-          name: '声音1',
-          type: '.csv',
-          size: '2M',
-          user: '管理员',
-          time: '2018-12-07',
-          desc:
-            '测试声音',
-        },
-      ],
-    }
-
-    const data = generatorData(input.img);
+    const data = generatorData(this.state.dataSource);
     const rowSelection = {
       onChange: this.handleRowSelection,
       mode: 'multiple',
