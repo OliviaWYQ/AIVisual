@@ -45,6 +45,14 @@ export default class ColumnForm extends Component {
                   >
                     <Input name="dbname" />
                   </FormItem>
+                  <FormItem
+                    label="路径："
+                    {...formItemLayout}
+                    required
+                    requiredMessage="路径必须填写"
+                  >
+                    <Input name="dbname" />
+                  </FormItem>
                 </Col> 
                 <Col>
                   <FormItem

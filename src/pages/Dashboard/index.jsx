@@ -11,11 +11,11 @@ export default class Dashboard extends Component {
     return (
       <div className="dashboard-page">
         <Overivew />
-        <TabChart />
-        <LatestActivity />
-        <ProjectAnalysis />
+        {/* <TabChart /> */}
         <EditableTable />
-        <PieDoughnutChart />
+        <LatestActivity />
+        {/* <ProjectAnalysis /> */}
+        {/* <PieDoughnutChart /> */}
       </div>
     );
   }

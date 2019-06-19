@@ -3,21 +3,21 @@ export default {
   'app.menu.dashboard': '控制台',
   'app.menu.dashboard.monitor': '监控页',
 
-  'app.menu.chart': '分析结果',
-  'app.menu.chart.basic': '基础图表',
-  'app.menu.chart.general': '通用图表',
+  'app.menu.chart': '分析报告',
+  // 'app.menu.chart.basic': '基础图表',
+  'app.menu.chart.general': '运行结果',
 
   'app.menu.table': '算法模型',
   'app.menu.table.basic': '模型库',
-  'app.menu.table.general': '通用表格',
+  // 'app.menu.table.general': '通用表格',
 
-  'app.menu.list': '列表页',
-  'app.menu.list.basic': '基础列表',
-  'app.menu.list.general': '通用列表',
+  // 'app.menu.list': '列表页',
+  // 'app.menu.list.basic': '基础列表',
+  // 'app.menu.list.general': '通用列表',
 
-  'app.menu.profile': '内容页',
-  'app.menu.profile.basic': '基础详情页',
-  'app.menu.profile.general': '条款协议页',
+  // 'app.menu.profile': '内容页',
+  // 'app.menu.profile.basic': '基础详情页',
+  // 'app.menu.profile.general': '条款协议页',
 
   'app.menu.result': '结果页',
   'app.menu.result.success': '成功',

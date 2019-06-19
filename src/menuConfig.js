@@ -80,11 +80,6 @@ const asideMenuConfig = [
         name: 'general',
         path: '/chart/general',
       },
-      {
-        name: 'Nav_download',
-        path: '/download',
-        // icon: 'home',
-      },
     ],
   },
   // {

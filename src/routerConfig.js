@@ -3,7 +3,7 @@
 // 变量名 routerConfig 为 iceworks 检测关键字，请不要修改名称
 import React from 'react';
 import { getRouterData } from './utils/utils';
-import Download from './pages/Download';
+
 import Introduction from './pages/Introduction';
 import Select from './pages/Select';
 import { asideMenuConfig } from './menuConfig';
@@ -99,10 +99,6 @@ const routerConfig = [
   {
     path: '/user/register',
     component: UserRegister,
-  },
-  {
-    path: '/download',
-    component: Download,
   },
   {
     path: '/Introduction/detail',
