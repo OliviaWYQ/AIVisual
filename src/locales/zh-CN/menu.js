@@ -3,11 +3,11 @@ export default {
   'app.menu.dashboard': '控制台',
   'app.menu.dashboard.monitor': '监控页',
 
-  'app.menu.chart': '图表页',
+  'app.menu.chart': '分析结果',
   'app.menu.chart.basic': '基础图表',
   'app.menu.chart.general': '通用图表',
 
-  'app.menu.table': '选择模型',
+  'app.menu.table': '算法模型',
   'app.menu.table.basic': '基础模型',
   'app.menu.table.general': '通用表格',
 
@@ -31,6 +31,12 @@ export default {
   'app.menu.exception.404': '404',
   'app.menu.exception.403': '403',
   'app.menu.exception.500': '500',
+
+  'app.menu.download': '数据下载',
+
+  'app.menu.Introduction': '平台介绍',
+  'app.menu.Introduction.detail': '功能简介',
+  
 
   // Top Header
   'app.header.feedback': '反馈',

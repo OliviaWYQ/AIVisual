@@ -21,6 +21,19 @@ const headerMenuConfig = [
 
 const asideMenuConfig = [
   {
+    name: 'Introduction',
+    path: '/Introduction',
+    icon: 'home',
+    children: [
+      {
+        name: 'detail',
+        path: '/Introduction/detail',
+        // icon: 'home',
+      },
+    ],
+  },
+  
+  {
     name: 'Dashboard',
     path: '/dashboard',
     icon: 'home2',
@@ -28,6 +41,18 @@ const asideMenuConfig = [
       {
         name: 'monitor',
         path: '/dashboard/monitor',
+      },
+    ],
+  },
+  {
+    name: '表格页',
+    path: '/table',
+    icon: 'table',
+    children: [
+      {
+        name: 'basic',
+        path: '/table/basic',
+        // authority: 'admin',
       },
     ],
   },
@@ -44,23 +69,11 @@ const asideMenuConfig = [
         name: 'general',
         path: '/chart/general',
       },
-    ],
-  },
-  {
-    name: '表格页',
-    path: '/table',
-    icon: 'table',
-    children: [
       {
-        name: 'basic',
-        path: '/table/basic',
-        // authority: 'admin',
+        name: 'Nav_download',
+        path: '/download',
+        // icon: 'home',
       },
-      // {
-      //   name: 'general',
-      //   path: '/table/general',
-      //   // authority: 'user',
-      // },
     ],
   },
   // {
@@ -119,29 +132,7 @@ const asideMenuConfig = [
       },
     ],
   },
-  // {
-  //   name: 'exception',
-  //   path: '/exception',
-  //   icon: 'gaojingxinxi',
-  //   children: [
-  //     {
-  //       name: '204',
-  //       path: '/exception/204',
-  //     },
-  //     {
-  //       name: '403',
-  //       path: '/exception/403',
-  //     },
-  //     {
-  //       name: '404',
-  //       path: '/exception/404',
-  //     },
-  //     {
-  //       name: '500',
-  //       path: '/exception/500',
-  //     },
-  //   ],
-  // },
+
 ];
 
 export { headerMenuConfig, asideMenuConfig };

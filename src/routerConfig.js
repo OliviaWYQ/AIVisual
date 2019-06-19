@@ -3,6 +3,8 @@
 // 变量名 routerConfig 为 iceworks 检测关键字，请不要修改名称
 import React from 'react';
 import { getRouterData } from './utils/utils';
+import Download from './pages/Download';
+import Introduction from './pages/Introduction';
 import { asideMenuConfig } from './menuConfig';
 
 const UserLogin = React.lazy(() => import('./pages/UserLogin'));
@@ -26,12 +28,20 @@ const ServerError = React.lazy(() => import('./pages/Exception/ServerError'));
 
 const routerConfig = [
   {
-    path: '/dashboard/monitor',
-    component: Dashboard,
-  },
-  {
     path: '/chart/general',
     component: Charts,
+  },
+  // {
+  //   path: '/profile/general',
+  //   component: Terms,
+  // },
+  // {
+  //   path: '/table/general',
+  //   component: ,
+  // },
+  {
+    path: '/account/setting',
+    component: Setting,
   },
   {
     path: '/chart/basic',
@@ -61,17 +71,9 @@ const routerConfig = [
     path: '/profile/basic',
     component: Profile,
   },
-  // {
-  //   path: '/profile/general',
-  //   component: Terms,
-  // },
-  // {
-  //   path: '/table/general',
-  //   component: ,
-  // },
   {
-    path: '/account/setting',
-    component: Setting,
+    path: '/dashboard/monitor',
+    component: Dashboard,
   },
   {
     path: '/exception/500',
@@ -96,6 +98,14 @@ const routerConfig = [
   {
     path: '/user/register',
     component: UserRegister,
+  },
+  {
+    path: '/download',
+    component: Download,
+  },
+  {
+    path: '/Introduction/detail',
+    component: Introduction,
   },
 ];
 
