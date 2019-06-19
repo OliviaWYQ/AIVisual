@@ -110,8 +110,17 @@ export default class GoodsTable extends Component {
     );
   };
 
+  handleRowSelection = (selectedRowKeys, records) => {
+    console.log('selectedRowKeys:', selectedRowKeys);
+    console.log('records:', records);
+  };
+
   render() {
     const { isLoading, data, current } = this.state;
+    // const rowSelection = {
+    //   onChange: this.handleRowSelection,
+    //   mode: 'single',
+    // };
 
     return (
       <div style={styles.container}>
@@ -120,7 +129,13 @@ export default class GoodsTable extends Component {
           <FilterForm onChange={this.handleFilterChange} />
         </IceContainer> */}
         <IceContainer>
-          <Table loading={isLoading} dataSource={data} hasBorder={false}>
+          <Table 
+            loading={isLoading} 
+            dataSource={data} 
+            hasBorder={false} 
+            // rowSelection={rowSelection}
+            >
+
             <Table.Column title="算法名称" dataIndex="name" />
             {/* <Table.Column title="会员等级" dataIndex="level" /> */}
             {/* <Table.Column title="会员余额(元)" dataIndex="balance" /> */}

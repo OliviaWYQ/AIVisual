@@ -55,7 +55,6 @@ const asideMenuConfig = [
       },
     ],
   },
-  
   {
     name: '表格页',
     path: '/table',
@@ -144,7 +143,6 @@ const asideMenuConfig = [
       },
     ],
   },
-  
 ];
 
 export { headerMenuConfig, asideMenuConfig };
