@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ExpandedTable from './components/ExpandedTable';
 import ColumnForm from './components/ColumnForm';
+// import UploadFile from './components/UploadFile';
 
 export default class Select extends Component {
   constructor(props) {
@@ -14,6 +15,7 @@ export default class Select extends Component {
         <ColumnForm />
         {/* 额外渲染和选择混合表格 */}
         <ExpandedTable />
+        {/* <UploadFile /> */}
       </div>
     );
   }
