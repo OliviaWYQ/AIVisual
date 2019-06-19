@@ -28,19 +28,19 @@ export default class TabTable extends Component {
         key: 'title',
       },
       {
-        title: '用户',
+        title: '发布者',
         dataIndex: 'author',
         key: 'author',
       },
       {
-        title: '状态',
-        dataIndex: 'status',
-        key: 'status',
-      },
-      {
-        title: '提交时间',
+        title: '发布时间',
         dataIndex: 'date',
         key: 'date',
+      },
+      {
+        title: '准确率',
+        dataIndex: 'status',
+        key: 'status',
       },
       {
         title: '操作',
@@ -92,7 +92,7 @@ export default class TabTable extends Component {
     } = this.props;
     const tabs = [
       { tab: formatMessage({ id: 'app.base.table.tab1' }), key: 'all' },
-      { tab: formatMessage({ id: 'app.base.table.tab2' }), key: 'review' },
+      // { tab: formatMessage({ id: 'app.base.table.tab2' }), key: 'review' },
       { tab: formatMessage({ id: 'app.base.table.tab3' }), key: 'released' },
       { tab: formatMessage({ id: 'app.base.table.tab4' }), key: 'rejected' },
     ];

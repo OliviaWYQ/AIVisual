@@ -1,7 +1,7 @@
 export default {
   // 基础表格
   'app.base.table.tab1': '全部',
-  'app.base.table.tab2': '审核中',
+  // 'app.base.table.tab2': '审核中',
   'app.base.table.tab3': '运行中',
   'app.base.table.tab4': '已完成',
   'app.base.table.btn.edit': '编辑',

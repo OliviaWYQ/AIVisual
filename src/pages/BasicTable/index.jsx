@@ -14,7 +14,7 @@ export default class BasicTable extends Component {
     return (
       <div className="basic-table-page">
         <TabTable />
-        <TableChartCard />
+        {/* <TableChartCard /> */}
       </div>
     );
   }

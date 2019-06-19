@@ -5,6 +5,7 @@ import React from 'react';
 import { getRouterData } from './utils/utils';
 import Download from './pages/Download';
 import Introduction from './pages/Introduction';
+import Select from './pages/Select';
 import { asideMenuConfig } from './menuConfig';
 
 const UserLogin = React.lazy(() => import('./pages/UserLogin'));
@@ -28,20 +29,12 @@ const ServerError = React.lazy(() => import('./pages/Exception/ServerError'));
 
 const routerConfig = [
   {
+    path: '/exception/500',
+    component: ServerError,
+  },
+  {
     path: '/chart/general',
     component: Charts,
-  },
-  // {
-  //   path: '/profile/general',
-  //   component: Terms,
-  // },
-  // {
-  //   path: '/table/general',
-  //   component: ,
-  // },
-  {
-    path: '/account/setting',
-    component: Setting,
   },
   {
     path: '/chart/basic',
@@ -75,9 +68,17 @@ const routerConfig = [
     path: '/dashboard/monitor',
     component: Dashboard,
   },
+  // {
+  //   path: '/profile/general',
+  //   component: Terms,
+  // },
+  // {
+  //   path: '/table/general',
+  //   component: ,
+  // },
   {
-    path: '/exception/500',
-    component: ServerError,
+    path: '/account/setting',
+    component: Setting,
   },
   {
     path: '/exception/403',
@@ -106,6 +107,10 @@ const routerConfig = [
   {
     path: '/Introduction/detail',
     component: Introduction,
+  },
+  {
+    path: '/select/db',
+    component: Select,
   },
 ];
 

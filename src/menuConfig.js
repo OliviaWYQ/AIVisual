@@ -32,7 +32,6 @@ const asideMenuConfig = [
       },
     ],
   },
-  
   {
     name: 'Dashboard',
     path: '/dashboard',
@@ -44,6 +43,19 @@ const asideMenuConfig = [
       },
     ],
   },
+  {
+    name: 'Nav_select',
+    path: '/select',
+    icon: 'copy',
+    children: [
+      {
+        name: 'Nav_select',
+        path: '/select/db',
+        // icon: 'home',
+      },
+    ],
+  },
+  
   {
     name: '表格页',
     path: '/table',
@@ -132,7 +144,7 @@ const asideMenuConfig = [
       },
     ],
   },
-
+  
 ];
 
 export { headerMenuConfig, asideMenuConfig };

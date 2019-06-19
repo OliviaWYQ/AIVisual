@@ -3,12 +3,12 @@ export default {
   'app.menu.dashboard': 'Dashboard',
   'app.menu.dashboard.monitor': 'Monitor',
 
-  'app.menu.chart': 'Chart',
+  'app.menu.chart': 'Analysis',
   'app.menu.chart.basic': 'Basic Chart',
   'app.menu.chart.general': 'General Chart',
 
-  'app.menu.table': 'Table',
-  'app.menu.table.basic': 'Basic Table',
+  'app.menu.table': 'Models',
+  'app.menu.table.basic': 'Model Lib',
   'app.menu.table.general': 'General Table',
 
   'app.menu.list': 'List',
@@ -32,10 +32,18 @@ export default {
   'app.menu.exception.403': 'Not Permission',
   'app.menu.exception.500': 'Server Error',
 
+  'app.menu.download': 'Download',
+
+  'app.menu.Introduction': 'About',
+  'app.menu.Introduction.detail': 'Introduction',
+
+  'app.menu.select': 'Data',
+  'app.menu.select.db': 'Database',
+
   // Top Header
   'app.header.feedback': 'Feedback',
   'app.header.help': 'Help',
-  'app.header.user.name': 'Tao',
+  'app.header.user.name': 'Username',
   'app.header.user.department': 'Tech',
   'app.header.user.setting': 'Setting',
   'app.header.user.logout': 'Logout',

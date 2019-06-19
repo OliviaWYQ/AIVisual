@@ -8,7 +8,7 @@ export default {
   'app.menu.chart.general': '通用图表',
 
   'app.menu.table': '算法模型',
-  'app.menu.table.basic': '基础模型',
+  'app.menu.table.basic': '模型库',
   'app.menu.table.general': '通用表格',
 
   'app.menu.list': '列表页',
@@ -37,11 +37,13 @@ export default {
   'app.menu.Introduction': '平台介绍',
   'app.menu.Introduction.detail': '功能简介',
   
+  'app.menu.select': '数据输入',
+  'app.menu.select.db': '数据库',
 
   // Top Header
   'app.header.feedback': '反馈',
   'app.header.help': '帮助',
-  'app.header.user.name': '淘小宝',
+  'app.header.user.name': '用户名',
   'app.header.user.department': '技术部',
   'app.header.user.setting': '设置',
   'app.header.user.logout': '退出',
