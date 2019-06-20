@@ -3,9 +3,9 @@ export default {
   'app.menu.dashboard': 'Dashboard',
   'app.menu.dashboard.monitor': 'Monitor',
 
-  'app.menu.chart': 'Analysis',
-  'app.menu.chart.basic': 'Basic Chart',
-  'app.menu.chart.general': 'General Chart',
+  // 'app.menu.chart': 'Analysis',
+  // 'app.menu.chart.basic': 'Basic Chart',
+  'app.menu.chart.general': 'Analysis',
 
   'app.menu.table': 'Models',
   'app.menu.table.basic': 'Model Lib',
@@ -22,9 +22,9 @@ export default {
   'app.menu.account': 'Account',
   'app.menu.account.setting': 'Account Setting',
 
-  'app.menu.result': 'Result',
-  'app.menu.result.success': 'Success',
-  'app.menu.result.fail': 'Fail',
+  // 'app.menu.result': 'Result',
+  // 'app.menu.result.success': 'Success',
+  // 'app.menu.result.fail': 'Fail',
 
   'app.menu.exception': 'Exception',
   'app.menu.exception.204': 'Empty',
@@ -37,8 +37,10 @@ export default {
   'app.menu.Introduction': 'About',
   'app.menu.Introduction.detail': 'Introduction',
 
-  'app.menu.select': 'Data',
+  'app.menu.select': 'Projects',
   'app.menu.select.db': 'Database',
+
+  'app.menu.step': 'Flow Chart',
 
   // Top Header
   'app.header.feedback': 'Feedback',

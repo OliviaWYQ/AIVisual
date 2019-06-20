@@ -23,7 +23,7 @@ const asideMenuConfig = [
   {
     name: 'Introduction',
     path: '/Introduction',
-    icon: 'home',
+    icon: 'home2',
     children: [
       {
         name: 'detail',
@@ -32,17 +32,17 @@ const asideMenuConfig = [
       },
     ],
   },
-  {
-    name: 'Dashboard',
-    path: '/dashboard',
-    icon: 'home2',
-    children: [
-      {
-        name: 'monitor',
-        path: '/dashboard/monitor',
-      },
-    ],
-  },
+  // {
+  //   name: 'Dashboard',
+  //   path: '/dashboard',
+  //   icon: 'home2',
+  //   children: [
+  //     {
+  //       name: 'monitor',
+  //       path: '/dashboard/monitor',
+  //     },
+  //   ],
+  // },
   {
     name: 'Nav_select',
     path: '/select',
@@ -52,6 +52,15 @@ const asideMenuConfig = [
         name: 'Nav_select',
         path: '/select/db',
         // icon: 'home',
+      },
+      {
+        name: 'Nav_step',
+        path: '/step',
+        icon: 'home',
+      },
+      {
+        name: 'general',
+        path: '/chart/general',
       },
     ],
   },
@@ -67,21 +76,21 @@ const asideMenuConfig = [
       },
     ],
   },
-  {
-    name: 'chart',
-    path: '/chart',
-    icon: 'chart1',
-    children: [
-      // {
-      //   name: 'basic',
-      //   path: '/chart/basic',
-      // },
-      {
-        name: 'general',
-        path: '/chart/general',
-      },
-    ],
-  },
+  // {
+  //   name: 'chart',
+  //   path: '/chart',
+  //   icon: 'chart1',
+  //   children: [
+  //     // {
+  //     //   name: 'basic',
+  //     //   path: '/chart/basic',
+  //     // },
+  //     {
+  //       name: 'general',
+  //       path: '/chart/general',
+  //     },
+  //   ],
+  // },
   // {
   //   name: '列表页',
   //   path: '/list',
@@ -138,6 +147,7 @@ const asideMenuConfig = [
       },
     ],
   },
+  
 ];
 
 export { headerMenuConfig, asideMenuConfig };

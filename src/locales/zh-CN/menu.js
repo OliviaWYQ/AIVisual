@@ -3,9 +3,9 @@ export default {
   'app.menu.dashboard': '控制台',
   'app.menu.dashboard.monitor': '监控页',
 
-  'app.menu.chart': '分析报告',
+  // 'app.menu.chart': '分析报告',
   // 'app.menu.chart.basic': '基础图表',
-  'app.menu.chart.general': '运行结果',
+  'app.menu.chart.general': '分析报告',
 
   'app.menu.table': '算法模型',
   'app.menu.table.basic': '模型库',
@@ -19,9 +19,9 @@ export default {
   // 'app.menu.profile.basic': '基础详情页',
   // 'app.menu.profile.general': '条款协议页',
 
-  'app.menu.result': '结果页',
-  'app.menu.result.success': '成功',
-  'app.menu.result.fail': '失败',
+  // 'app.menu.result': '结果页',
+  // 'app.menu.result.success': '成功',
+  // 'app.menu.result.fail': '失败',
 
   'app.menu.account': '个人中心',
   'app.menu.account.setting': '基本设置',
@@ -37,8 +37,10 @@ export default {
   'app.menu.Introduction': '平台介绍',
   'app.menu.Introduction.detail': '功能简介',
   
-  'app.menu.select': '数据输入',
+  'app.menu.select': '项目分析',
   'app.menu.select.db': '数据库',
+
+  'app.menu.step': '流程图',
 
   // Top Header
   'app.header.feedback': '反馈',

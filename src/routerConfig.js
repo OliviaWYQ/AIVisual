@@ -6,6 +6,8 @@ import { getRouterData } from './utils/utils';
 
 import Introduction from './pages/Introduction';
 import Select from './pages/Select';
+import Step from './pages/Step';
+// import Export from './pages/Export';
 import { asideMenuConfig } from './menuConfig';
 
 const UserLogin = React.lazy(() => import('./pages/UserLogin'));
@@ -14,14 +16,14 @@ const Dashboard = React.lazy(() => import('./pages/Dashboard'));
 const Charts = React.lazy(() => import('./pages/Charts'));
 const BasicCharts = React.lazy(() => import('./pages/BasicCharts'));
 // const Terms = React.lazy(() => import('./pages/Terms'));
-const Result = React.lazy(() => import('./pages/Result'));
+// const Result = React.lazy(() => import('./pages/Result'));
 const BasicList = React.lazy(() => import('./pages/BasicList'));
 // const ProjectList = React.lazy(() => import('./pages/ProjectList'));
 const BasicTable = React.lazy(() => import('./pages/BasicTable'));
 // const GeneralTable = React.lazy(() => import('./pages/'));
-const Profile = React.lazy(() => import('./pages/Profile'));
+// const Profile = React.lazy(() => import('./pages/Profile'));
 const Setting = React.lazy(() => import('./pages/Setting'));
-const Fail = React.lazy(() => import('./pages/Fail'));
+// const Fail = React.lazy(() => import('./pages/Fail'));
 const Empty = React.lazy(() => import('./pages/Exception/Empty'));
 const Forbidden = React.lazy(() => import('./pages/Exception/Forbidden'));
 const NotFound = React.lazy(() => import('./pages/Exception/NotFound'));
@@ -29,12 +31,20 @@ const ServerError = React.lazy(() => import('./pages/Exception/ServerError'));
 
 const routerConfig = [
   {
-    path: '/exception/500',
-    component: ServerError,
-  },
-  {
     path: '/chart/general',
     component: Charts,
+  },
+  // {
+  //   path: '/profile/general',
+  //   component: Terms,
+  // },
+  // {
+  //   path: '/table/general',
+  //   component: ,
+  // },
+  {
+    path: '/account/setting',
+    component: Setting,
   },
   {
     path: '/chart/basic',
@@ -49,36 +59,20 @@ const routerConfig = [
   //   component: ProjectList,
   // },
   {
-    path: '/result/success',
-    component: Result,
-  },
-  {
-    path: '/result/fail',
-    component: Fail,
-  },
-  {
     path: '/table/basic',
     component: BasicTable,
   },
-  {
-    path: '/profile/basic',
-    component: Profile,
-  },
+  // {
+  //   path: '/profile/basic',
+  //   component: Profile,
+  // },
   {
     path: '/dashboard/monitor',
     component: Dashboard,
   },
-  // {
-  //   path: '/profile/general',
-  //   component: Terms,
-  // },
-  // {
-  //   path: '/table/general',
-  //   component: ,
-  // },
   {
-    path: '/account/setting',
-    component: Setting,
+    path: '/exception/500',
+    component: ServerError,
   },
   {
     path: '/exception/403',
@@ -107,6 +101,10 @@ const routerConfig = [
   {
     path: '/select/db',
     component: Select,
+  },
+  {
+    path: '/step',
+    component: Step,
   },
 ];
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BaseSetting from './components/BaseSetting';
+import ChangePasswordForm from './components/ChangePasswordForm'
 
 export default class Setting extends Component {
   static displayName = 'Setting';
@@ -13,6 +14,7 @@ export default class Setting extends Component {
     return (
       <div>
         <BaseSetting />
+        <ChangePasswordForm />
       </div>
     );
   }

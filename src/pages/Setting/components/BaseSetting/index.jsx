@@ -100,8 +100,20 @@ class SettingsForm extends Component {
                   id: 'app.setting.name.message',
                 })}
               >
-                <Input name="name" placeholder="taoxiaobao" />
+                <Input name="name" placeholder="username" />
               </FormItem>
+
+              <FormItem
+                label={formatMessage({ id: 'app.setting.email' })}
+                {...formItemLayout}
+                required
+                requiredMessage={formatMessage({
+                  id: 'app.setting.email.message',
+                })}
+              >
+                <Input htmlType="email" name="email" />
+              </FormItem>
+
               <FormItem
                 label={formatMessage({ id: 'app.setting.avatar' })}
                 {...formItemLayout}
@@ -121,7 +133,7 @@ class SettingsForm extends Component {
                   onError={onError}
                 />
               </FormItem>
-              <FormItem
+              {/* <FormItem
                 label={formatMessage({ id: 'app.setting.gender' })}
                 {...formItemLayout}
                 required
@@ -137,25 +149,16 @@ class SettingsForm extends Component {
                     <FormattedMessage id="app.setting.female" />
                   </Radio>
                 </RadioGroup>
-              </FormItem>
+              </FormItem> */}
 
-              <FormItem
+              {/* <FormItem
                 label={formatMessage({ id: 'app.setting.notification' })}
                 {...formItemLayout}
               >
                 <Switch name="notice" />
-              </FormItem>
-              <FormItem
-                label={formatMessage({ id: 'app.setting.email' })}
-                {...formItemLayout}
-                required
-                requiredMessage={formatMessage({
-                  id: 'app.setting.email.message',
-                })}
-              >
-                <Input htmlType="email" name="email" />
-              </FormItem>
-              <FormItem
+              </FormItem> */}
+              
+              {/* <FormItem
                 label={formatMessage({ id: 'app.setting.website' })}
                 {...formItemLayout}
                 required
@@ -169,9 +172,9 @@ class SettingsForm extends Component {
                   type="url"
                   placeholder="https://alibaba.github.io/ice"
                 />
-              </FormItem>
+              </FormItem> */}
 
-              <FormItem
+              {/* <FormItem
                 label={formatMessage({ id: 'app.setting.github' })}
                 {...formItemLayout}
                 required
@@ -216,7 +219,7 @@ class SettingsForm extends Component {
                     <FormattedMessage id="app.setting.submit" />
                   </Form.Submit>
                 </Col>
-              </Row>
+              </Row> */}
             </div>
           </Form>
         </IceContainer>
