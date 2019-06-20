@@ -38,9 +38,9 @@ export default {
   'app.menu.Introduction.detail': '功能简介',
   
   'app.menu.select': '项目分析',
-  'app.menu.select.db': '数据库',
+  'app.menu.select.db': '选择数据',
 
-  'app.menu.step': '流程图',
+  'app.menu.step': '项目流程',
 
   // Top Header
   'app.header.feedback': '反馈',

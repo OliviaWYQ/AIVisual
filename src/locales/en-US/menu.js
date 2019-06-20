@@ -15,9 +15,9 @@ export default {
   'app.menu.list.basic': 'Basic List',
   'app.menu.list.general': 'General List',
 
-  'app.menu.profile': 'Profile',
-  'app.menu.profile.basic': 'Basic Profile',
-  'app.menu.profile.general': 'General Profile',
+  // 'app.menu.profile': 'Profile',
+  // 'app.menu.profile.basic': 'Basic Profile',
+  // 'app.menu.profile.general': 'General Profile',
 
   'app.menu.account': 'Account',
   'app.menu.account.setting': 'Account Setting',

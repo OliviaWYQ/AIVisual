@@ -148,7 +148,7 @@ export default class ExpandedTable extends Component {
       mode: 'multiple',
     };
     return (
-      <IceContainer>
+      <IceContainer title='选择资源'>
         <Table
           hasBorder={false}
           dataSource={data}

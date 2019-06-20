@@ -147,7 +147,11 @@ const asideMenuConfig = [
       },
     ],
   },
-  
+  {
+    name: 'Nav_ModelOCR',
+    path: '/ModelOCR',
+    icon: 'home',
+  },
 ];
 
 export { headerMenuConfig, asideMenuConfig };

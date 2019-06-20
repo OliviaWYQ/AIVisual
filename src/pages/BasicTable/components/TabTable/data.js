@@ -30,18 +30,6 @@ const data = {
       status: '90%',
       date: '2019-05-18',
     },
-    {
-      title: '客流预测',
-      author: '管理员',
-      status: '75%',
-      date: '2019-05-18',
-    },
-    {
-      title: '声音预警',
-      author: '管理员',
-      status: '85%',
-      date: '2019-03-16',
-    },
   ],
   // review: [
   //   {
