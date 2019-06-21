@@ -9,6 +9,7 @@ import Select from './pages/Select';
 import Step from './pages/Step';
 // import Export from './pages/Export';
 import ModelOcr from './pages/ModelOcr';
+import ModelFace from './pages/ModelFace';
 import { asideMenuConfig } from './menuConfig';
 
 const UserLogin = React.lazy(() => import('./pages/UserLogin'));
@@ -31,13 +32,21 @@ const NotFound = React.lazy(() => import('./pages/Exception/NotFound'));
 const ServerError = React.lazy(() => import('./pages/Exception/ServerError'));
 
 const routerConfig = [
+  // {
+  //   path: '/profile/general',
+  //   component: Terms,
+  // },
+  // {
+  //   path: '/table/general',
+  //   component: ,
+  // },
+  {
+    path: '/account/setting',
+    component: Setting,
+  },
   {
     path: '/exception/204',
     component: Empty,
-  },
-  {
-    path: '/chart/general',
-    component: Charts,
   },
   {
     path: '/chart/basic',
@@ -71,17 +80,9 @@ const routerConfig = [
     path: '/exception/403',
     component: Forbidden,
   },
-  // {
-  //   path: '/profile/general',
-  //   component: Terms,
-  // },
-  // {
-  //   path: '/table/general',
-  //   component: ,
-  // },
   {
-    path: '/account/setting',
-    component: Setting,
+    path: '/chart/general',
+    component: Charts,
   },
   {
     path: '/exception/404',
@@ -110,6 +111,10 @@ const routerConfig = [
   {
     path: '/ModelOCR',
     component: ModelOcr,
+  },
+  {
+    path: '/ModelFace',
+    component: ModelFace,
   },
 ];
 

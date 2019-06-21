@@ -42,6 +42,10 @@ export default {
 
   'app.menu.step': 'Flow Chart',
 
+  'app.menu.ModelOCR': 'OCR',
+
+  'app.menu.ModelFace': 'Face Recognition',
+
   // Top Header
   'app.header.feedback': 'Feedback',
   'app.header.help': 'Help',

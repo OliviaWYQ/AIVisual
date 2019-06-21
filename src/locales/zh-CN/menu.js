@@ -42,6 +42,10 @@ export default {
 
   'app.menu.step': '项目流程',
 
+  'app.menu.ModelOCR': '光学字符识别 (OCR)',
+
+  'app.menu.ModelFace': '人脸识别',
+
   // Top Header
   'app.header.feedback': '反馈',
   'app.header.help': '帮助',

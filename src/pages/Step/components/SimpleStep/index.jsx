@@ -48,14 +48,14 @@ export default class SimpleStep extends Component {
     const { currentStep } = this.state;
 
     return (
-      <IceContainer title="步骤条">
+      <IceContainer title="流程图">
         <Step current={currentStep}>
-          <StepItem title="步骤1" onClick={this.onClick} />
-          <StepItem title="步骤2" onClick={this.onClick} />
-          <StepItem title="步骤3" onClick={this.onClick} />
-          <StepItem title="步骤4" onClick={this.onClick} />
-          <StepItem title="步骤5" onClick={this.onClick} />
-          <StepItem title="步骤6" onClick={this.onClick} />
+          <StepItem title="数据清理" onClick={this.onClick} />
+          <StepItem title="特征提取" onClick={this.onClick} />
+          <StepItem title="算法1" onClick={this.onClick} />
+          <StepItem title="算法2" onClick={this.onClick} />
+          <StepItem title="算法3" onClick={this.onClick} />
+          <StepItem title="完成" onClick={this.onClick} />
         </Step>
         <div className={styles.buttonGroup}>
           <ButtonGroup>

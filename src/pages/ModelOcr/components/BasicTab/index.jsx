@@ -8,15 +8,17 @@ export default class BasicTab extends Component {
 
   render() {
     const tabs = [
-      { tab: '订阅号概览', key: 'guide' },
-      { tab: '订阅号推送', key: 'push' },
-      { tab: '互动消息', key: 'message' },
-      { tab: '自动回复设置', key: 'autoreply' },
+      { tab: '通用文本 OCR', key: 'tongyong' },
+      { tab: '车牌 OCR', key: 'chepai' },
+      { tab: '身份证 OCR', key: 'shenfenzheng' },
+      { tab: '营业执照 OCR', key: 'yinyezhizhao' },
+      { tab: '发票 OCR', key: 'fapiao' },
+      { tab: '火车票 OCR', key: 'huochepiao' },
     ];
 
     return (
       <div className="basic-tab">
-        <IceContainer className={styles.tabCardStyle}>
+        <IceContainer title='识别项目' className={styles.tabCardStyle}>
           <Tab contentStyle={{ display: 'none' }}>
             {tabs.map((item) => <Tab.Item key={item.key} title={item.tab} />)}
           </Tab>

@@ -21,6 +21,7 @@ const headerMenuConfig = [
 
 const asideMenuConfig = [
   {
+    //平台功能
     name: 'Introduction',
     path: '/Introduction',
     icon: 'home2',
@@ -43,7 +44,33 @@ const asideMenuConfig = [
   //     },
   //   ],
   // },
+  
   {
+    //算法模型
+    name: '表格页',
+    path: '/table',
+    icon: 'table',
+    children: [
+      // {
+      //   name: 'basic',
+      //   path: '/table/basic',
+      //   // authority: 'admin',
+      // },
+      {
+        name: 'Nav_ModelOCR',
+        path: '/ModelOCR',
+        // icon: 'home',
+      },
+      {
+        name: 'Nav_ModelFace',
+        path: '/ModelFace',
+        // icon: 'home',
+      },
+    ],
+  },
+
+  {
+    // 项目分析
     name: 'Nav_select',
     path: '/select',
     icon: 'copy',
@@ -61,18 +88,6 @@ const asideMenuConfig = [
       {
         name: 'general',
         path: '/chart/general',
-      },
-    ],
-  },
-  {
-    name: '表格页',
-    path: '/table',
-    icon: 'table',
-    children: [
-      {
-        name: 'basic',
-        path: '/table/basic',
-        // authority: 'admin',
       },
     ],
   },
@@ -137,6 +152,7 @@ const asideMenuConfig = [
   //   ],
   // },
   {
+    //个人中心
     name: 'account',
     path: '/account',
     icon: 'person',
@@ -146,11 +162,6 @@ const asideMenuConfig = [
         path: '/account/setting',
       },
     ],
-  },
-  {
-    name: 'Nav_ModelOCR',
-    path: '/ModelOCR',
-    icon: 'home',
   },
 ];
 

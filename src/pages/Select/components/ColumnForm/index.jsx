@@ -32,7 +32,7 @@ export default class ColumnForm extends Component {
   render() {
     return (
       <div className="column-form">
-        <IceContainer title="添加资源" className={styles.container}>
+        <IceContainer title="新建资源" className={styles.container}>
           <Form onChange={this.onFormChange}>
             <div>
               <Row wrap>
@@ -46,12 +46,19 @@ export default class ColumnForm extends Component {
                     <Input name="dbname" />
                   </FormItem>
                   <FormItem
-                    label="路径："
+                    label="数据源："
                     {...formItemLayout}
                     required
-                    requiredMessage="路径必须填写"
+                    requiredMessage="请选择数据源"
                   >
-                    <Input name="dbname" />
+                    <Select
+                      name="dbtype"
+                      className={styles.selectWidth}
+                      dataSource={[
+                        { label: '数据库', value: 'database' },
+                        { label: '本地文件', value: 'file' },
+                      ]}
+                    />
                   </FormItem>
                 </Col> 
                 <Col>
@@ -65,14 +72,23 @@ export default class ColumnForm extends Component {
                       name="type"
                       className={styles.selectWidth}
                       dataSource={[
-                        { label: '.jpg', value: '.jpg' },
-                        { label: '.png', value: '.png' },
-                        { label: '.avi', value: '.avi' },
-                        { label: '.mp4', value: '.mp4' },
+                        // { label: '.jpg', value: '.jpg' },
+                        // { label: '.png', value: '.png' },
+                        // { label: '.avi', value: '.avi' },
+                        // { label: '.mp4', value: '.mp4' },
                         { label: '.csv', value: '.csv' },
                         { label: '.sql', value: '.sql' },
                       ]}
                     />
+                  </FormItem>
+
+                  <FormItem
+                    label="路径："
+                    {...formItemLayout}
+                    required
+                    requiredMessage="路径必须填写"
+                  >
+                    <Input name="dbpath" />
                   </FormItem>
                 </Col>
               </Row>
