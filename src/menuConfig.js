@@ -21,7 +21,7 @@ const headerMenuConfig = [
 
 const asideMenuConfig = [
   {
-    //平台功能
+    // 平台功能
     name: 'Introduction',
     path: '/Introduction',
     icon: 'home2',
@@ -33,7 +33,7 @@ const asideMenuConfig = [
       },
     ],
   },
-  // {
+  // { // 控制台
   //   name: 'Dashboard',
   //   path: '/dashboard',
   //   icon: 'home2',
@@ -44,18 +44,12 @@ const asideMenuConfig = [
   //     },
   //   ],
   // },
-  
   {
-    //算法模型
+    // 算法模型
     name: '表格页',
     path: '/table',
     icon: 'table',
     children: [
-      // {
-      //   name: 'basic',
-      //   path: '/table/basic',
-      //   // authority: 'admin',
-      // },
       {
         name: 'Nav_ModelOCR',
         path: '/ModelOCR',
@@ -91,68 +85,8 @@ const asideMenuConfig = [
       },
     ],
   },
-  // {
-  //   name: 'chart',
-  //   path: '/chart',
-  //   icon: 'chart1',
-  //   children: [
-  //     // {
-  //     //   name: 'basic',
-  //     //   path: '/chart/basic',
-  //     // },
-  //     {
-  //       name: 'general',
-  //       path: '/chart/general',
-  //     },
-  //   ],
-  // },
-  // {
-  //   name: '列表页',
-  //   path: '/list',
-  //   icon: 'copy',
-  //   children: [
-  //     {
-  //       name: 'basic',
-  //       path: '/list/basic',
-  //     },
-  //     // {
-  //     //   name: 'general',
-  //     //   path: '/list/general',
-  //     // },
-  //   ],
-  // },
-  // {
-  //   name: 'profile',
-  //   path: '/profile',
-  //   icon: 'cascades',
-  //   children: [
-  //     {
-  //       name: 'basic',
-  //       path: '/profile/basic',
-  //     },
-  //     // {
-  //     //   name: 'terms',
-  //     //   path: '/profile/general',
-  //     // },
-  //   ],
-  // },
-  // {
-  //   name: 'result',
-  //   path: '/result',
-  //   icon: 'edit2',
-  //   children: [
-  //     {
-  //       name: 'success',
-  //       path: '/result/success',
-  //     },
-  //     {
-  //       name: 'fail',
-  //       path: '/result/fail',
-  //     },
-  //   ],
-  // },
   {
-    //个人中心
+    // 个人中心
     name: 'account',
     path: '/account',
     icon: 'person',

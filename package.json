@@ -10,7 +10,7 @@
     "@icedesign/ellipsis": "^1.x",
     "@icedesign/form-binder": "^1.0.3",
     "@icedesign/foundation-symbol": "^1.0.0",
-    "@icedesign/img": "^1.0.0",
+    "@icedesign/img": "^1.0.2",
     "@icedesign/label": "^1.x",
     "@icedesign/layout": "^1.x",
     "@icedesign/panel": "^1.0.2",

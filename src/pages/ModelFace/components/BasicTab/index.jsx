@@ -1,13 +1,31 @@
 import React, { Component } from 'react';
-import { Tab, Grid } from '@alifd/next';
+import { Tab } from '@alifd/next';
 import IceContainer from '@icedesign/container';
 import styles from './index.module.scss';
-import IcePanel from '@icedesign/panel';
 
-const { Row, Col } = Grid;
+// import CustomBlock from './components/CustomBlock';
+import data from './data';
 
 export default class BasicTab extends Component {
   static displayName = 'BasicTab';
+
+  static propTypes = {};
+
+  static defaultProps = {};
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      dataSource: data,
+      tabKey: 'face_recognition',
+    };
+  }
+
+  handleTabChange = (key) => {
+    this.setState({
+      tabKey: key,
+    });
+  };
 
   render() {
     const tabs = [
@@ -19,32 +37,16 @@ export default class BasicTab extends Component {
     return (
       <div className="basic-tab">
         <IceContainer title='识别项目' className={styles.tabCardStyle}>
-          <Tab shape='text' contentStyle={{ display: 'none' }}>
+          <Tab shape='text' onChange={this.handleTabChange} contentStyle={{ display: 'none' }}>
             {tabs.map((item) => <Tab.Item key={item.key} title={item.tab} />)}
           </Tab>
-          <Row wrap>
-            <Col xxs="24" s="12" l="12">
-            <IcePanel style={{marginBottom: '10px', marginRight: '15px'}}>
-              <IcePanel.Header>
-                原始图片
-              </IcePanel.Header>
-              <IcePanel.Body>
-                <img></img>
-              </IcePanel.Body>
-            </IcePanel>
-            </Col>
-            <Col>
-            <IcePanel style={{marginBottom: '10px'}}>
-              <IcePanel.Header>
-                识别结果
-              </IcePanel.Header>
-              <IcePanel.Body>
-                <img></img>
-              </IcePanel.Body>
-            </IcePanel>
-            </Col>
-          </Row>
-          
+{/* 
+          <CustomBlock
+            dataSource={dataSource[this.state.tabKey]}
+            // columns={this.columns}
+            hasBorder={false}
+          />
+           */}
         </IceContainer>
       </div>
     );

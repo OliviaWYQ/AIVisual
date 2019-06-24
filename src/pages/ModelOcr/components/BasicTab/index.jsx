@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Tab } from '@alifd/next';
-import IceContainer from '@icedesign/container';
-import styles from './index.module.scss';
+// import IceContainer from '@icedesign/container';
+// import styles from './index.module.scss';
 
 export default class BasicTab extends Component {
   static displayName = 'BasicTab';
@@ -18,11 +18,11 @@ export default class BasicTab extends Component {
 
     return (
       <div className="basic-tab">
-        <IceContainer title='识别项目' className={styles.tabCardStyle}>
-          <Tab contentStyle={{ display: 'none' }}>
+        {/* <IceContainer title='识别项目' className={styles.tabCardStyle}>*/}
+          <Tab shape='wrapped'>
             {tabs.map((item) => <Tab.Item key={item.key} title={item.tab} />)}
           </Tab>
-        </IceContainer>
+        {/* </IceContainer>*/}
       </div>
     );
   }
