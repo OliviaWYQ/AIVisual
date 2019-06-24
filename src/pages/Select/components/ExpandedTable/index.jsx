@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Table, Button, Pagination, Dialog } from '@alifd/next';
+import { Table, Button, Pagination, Dialog, Step } from '@alifd/next';
 import IceContainer from '@icedesign/container';
 import { FormattedMessage } from 'react-intl';
-
+import { Link, Route } from 'react-router';
 
 const input = {
   // img: [
@@ -178,11 +178,19 @@ export default class ExpandedTable extends Component {
               cell={this.renderOper}
             />
         </Table>
-        <Pagination
+        {/* <Pagination
           style={{ marginTop: '20px', textAlign: 'right' }}
           current={this.state.current}
           onChange={this.handlePaginationChange}
-        />
+        /> */}
+        <Button
+          type="primary"
+          style={{ marginTop: '25px', marginRight: '5px', marginBottom: '5px', float: 'right' }}
+          onClick={this.handleSubmit}
+        > 确认 </Button>
+
+        {/* <Link to="/step" >Here</Link> */}
+        {/* <Route path="/step">Route</Route> */}
       </IceContainer>
     );
   }
