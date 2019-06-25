@@ -62,7 +62,6 @@ const asideMenuConfig = [
       },
     ],
   },
-
   {
     // 项目分析
     name: 'Nav_select',
@@ -77,7 +76,7 @@ const asideMenuConfig = [
       {
         name: 'Nav_step',
         path: '/step',
-        icon: 'home',
+        // icon: 'home',
       },
       {
         name: 'general',
@@ -96,6 +95,11 @@ const asideMenuConfig = [
         path: '/account/setting',
       },
     ],
+  },
+  {
+    name: 'test',
+    path: '/test',
+    icon: 'home',
   },
 ];
 

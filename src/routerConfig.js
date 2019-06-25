@@ -10,6 +10,7 @@ import Step from './pages/Step';
 // import Export from './pages/Export';
 import ModelOcr from './pages/ModelOcr';
 import ModelFace from './pages/ModelFace';
+import Test from './pages/Test';
 import { asideMenuConfig } from './menuConfig';
 
 const UserLogin = React.lazy(() => import('./pages/UserLogin'));
@@ -32,6 +33,10 @@ const NotFound = React.lazy(() => import('./pages/Exception/NotFound'));
 const ServerError = React.lazy(() => import('./pages/Exception/ServerError'));
 
 const routerConfig = [
+  {
+    path: '/user/login',
+    component: UserLogin,
+  },
   // {
   //   path: '/profile/general',
   //   component: Terms,
@@ -43,10 +48,6 @@ const routerConfig = [
   {
     path: '/account/setting',
     component: Setting,
-  },
-  {
-    path: '/exception/204',
-    component: Empty,
   },
   // {
   //   path: '/chart/basic',
@@ -89,8 +90,8 @@ const routerConfig = [
     component: NotFound,
   },
   {
-    path: '/user/login',
-    component: UserLogin,
+    path: '/exception/204',
+    component: Empty,
   },
   {
     path: '/user/register',
@@ -115,6 +116,10 @@ const routerConfig = [
   {
     path: '/ModelFace',
     component: ModelFace,
+  },
+  {
+    path: '/test',
+    component: Test,
   },
 ];
 
