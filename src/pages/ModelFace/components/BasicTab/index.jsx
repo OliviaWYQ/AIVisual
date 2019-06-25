@@ -74,7 +74,7 @@ export default class BasicTab extends Component {
             <Upload
               action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
               multiple>
-              <Button type="primary" style={{ margin: '25px 0 15px' }}>上传图片</Button> &nbsp;&nbsp;
+              <Button type="primary" style={{ margin: '30px 0 10px' }}>上传图片</Button> &nbsp;&nbsp;
             </Upload>
             <ImgBlock url1={item.url1} url2={item.url2} alt={item.key} title1={item.title1} title2={item.title2}/>
             </Tab.Item>)}

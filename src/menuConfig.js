@@ -82,6 +82,11 @@ const asideMenuConfig = [
         name: 'general',
         path: '/chart/general',
       },
+      {
+        name: 'Nav_ProjectKL',
+        path: '/ProjectKL',
+        // icon: 'home',
+      },
     ],
   },
   {
@@ -96,11 +101,7 @@ const asideMenuConfig = [
       },
     ],
   },
-  {
-    name: 'test',
-    path: '/test',
-    icon: 'home',
-  },
+  
 ];
 
 export { headerMenuConfig, asideMenuConfig };

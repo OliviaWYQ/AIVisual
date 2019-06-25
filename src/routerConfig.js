@@ -10,7 +10,8 @@ import Step from './pages/Step';
 // import Export from './pages/Export';
 import ModelOcr from './pages/ModelOcr';
 import ModelFace from './pages/ModelFace';
-import Test from './pages/Test';
+
+import ProjectKl from './pages/ProjectKl';
 import { asideMenuConfig } from './menuConfig';
 
 const UserLogin = React.lazy(() => import('./pages/UserLogin'));
@@ -34,20 +35,12 @@ const ServerError = React.lazy(() => import('./pages/Exception/ServerError'));
 
 const routerConfig = [
   {
+    path: '/exception/204',
+    component: Empty,
+  },
+  {
     path: '/user/login',
     component: UserLogin,
-  },
-  // {
-  //   path: '/profile/general',
-  //   component: Terms,
-  // },
-  // {
-  //   path: '/table/general',
-  //   component: ,
-  // },
-  {
-    path: '/account/setting',
-    component: Setting,
   },
   // {
   //   path: '/chart/basic',
@@ -89,9 +82,17 @@ const routerConfig = [
     path: '/exception/404',
     component: NotFound,
   },
+  // {
+  //   path: '/profile/general',
+  //   component: Terms,
+  // },
+  // {
+  //   path: '/table/general',
+  //   component: ,
+  // },
   {
-    path: '/exception/204',
-    component: Empty,
+    path: '/account/setting',
+    component: Setting,
   },
   {
     path: '/user/register',
@@ -118,8 +119,8 @@ const routerConfig = [
     component: ModelFace,
   },
   {
-    path: '/test',
-    component: Test,
+    path: '/ProjectKL',
+    component: ProjectKl,
   },
 ];
 

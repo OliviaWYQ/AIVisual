@@ -93,7 +93,7 @@ export default class BasicTab extends Component {
                     //   imgURL: 'https://img.alicdn.com/tps/TB19O79MVXXXXcZXVXXXXXXXXXX-1024-1024.jpg'
                     // }]}
                   >
-                    <Button type="primary" style={{ margin: '25px 0 15px' }}>上传图片</Button> &nbsp;&nbsp;
+                    <Button type="primary" style={{ margin: '30px 0 10px' }}>上传图片</Button> &nbsp;&nbsp;
 
                   </Upload>
 

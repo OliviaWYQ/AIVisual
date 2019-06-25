@@ -46,6 +46,8 @@ export default {
 
   'app.menu.ModelFace': '人脸识别',
 
+  'app.menu.ProjectKL': '客流预测',
+
   // Top Header
   'app.header.feedback': '反馈',
   'app.header.help': '帮助',

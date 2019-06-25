@@ -46,6 +46,8 @@ export default {
 
   'app.menu.ModelFace': 'Face Recognition',
 
+  'app.menu.ProjectKL': 'Passenger Forecast',
+
   // Top Header
   'app.header.feedback': 'Feedback',
   'app.header.help': 'Help',

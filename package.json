@@ -15,6 +15,7 @@
     "@icedesign/layout": "^1.x",
     "@icedesign/panel": "^1.0.2",
     "@icedesign/theme": "^1.x",
+    "@icedesign/title": "^1.0.2",
     "axios": "^0.19.0",
     "bizcharts": "^3.2.2",
     "bizgoblin": "0.0.1",
