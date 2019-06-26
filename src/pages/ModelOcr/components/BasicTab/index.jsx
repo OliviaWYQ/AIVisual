@@ -75,7 +75,7 @@ export default class BasicTab extends Component {
   render() {
     return (
       <div className="basic-tab">
-         <IceContainer title='识别项目' className={styles.tabCardStyle}>
+         <IceContainer title='OCR 识别项目' className={styles.tabCardStyle}>
             {/* <Tab shape="wrapped" contentStyle={detachedContentStyle}>
               {this.state.tabs.map(pane => <Tab.Item title={pane.tab} key={pane.key} onClick={this.changeState.bind(this, pane.url, pane.id)}>
               {pane.content}

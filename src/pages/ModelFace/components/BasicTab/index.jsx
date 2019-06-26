@@ -36,7 +36,7 @@ export default class BasicTab extends Component {
           url1:'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgDR.jpg',
           url2:'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgDR_out.jpg',
           title1: '原始图片', title2: '识别结果',
-          content: '多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍', 
+          content: '人数统计介绍人数统计介绍人数统计介绍人数统计介绍人数统计介绍人数统计介绍人数统计介绍人数统计介绍人数统计介绍人数统计介绍人数统计介绍人数统计介绍人数统计介绍人数统计介绍人数统计介绍人数统计介绍人数统计介绍人数统计介绍人数统计介绍人数统计介绍人数统计介绍人数统计介绍人数统计介绍', 
           result: '总人数：'  },
       ],
       currenttab: 'tab',
@@ -124,7 +124,7 @@ export default class BasicTab extends Component {
   render() {
     return (
       <div className="basic-tab">
-        <IceContainer title='识别项目' className={styles.tabCardStyle}>
+        <IceContainer title='人脸识别项目' className={styles.tabCardStyle}>
           <Tab shape='wrapped' onChange={this.handleTabChange}>
             {this.state.tabs.map((item) => <Tab.Item key={item.key} title={item.tab} onClick={this.changeState.bind(this, item.url, item.tab, item.result)}>
             {/* <Table dataSource={[item]}>
