@@ -24,17 +24,20 @@ export default class BasicTab extends Component {
           url1: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgRL.jpg',
           url2: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgRL_out.jpg',
           title1: '原始图片', title2: '识别结果',
-          content: '人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍人脸识别人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍人脸识别人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍' },
+          content: '人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍人脸识别人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍人脸识别人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍人脸识别介绍', 
+          result: '姓名：性别：年龄：' },
         { tab: '人脸对比', key: 'face_compare',
           url1:'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgDB1.jpg',
           url2:'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgDB2.jpg',
           title1: '对比图片1', title2: '对比图片2',
-          content: '人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍' },
+          content: '人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍人脸对比介绍', 
+          result: '相似度：'  },
         { tab: '多人脸检测', key: 'face_many',
           url1:'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgDR.jpg',
           url2:'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgDR_out.jpg',
           title1: '原始图片', title2: '识别结果',
-          content: '多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍' },
+          content: '多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍多人脸检测介绍', 
+          result: '人数：'  },
       ],
       currentId: 1,
       currenturl: '',
@@ -73,10 +76,11 @@ export default class BasicTab extends Component {
               </Row> */}
             <Upload
               action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
-              multiple>
+              multiple
+              listType="text">
               <Button type="primary" style={{ margin: '30px 0 10px' }}>上传图片</Button> &nbsp;&nbsp;
             </Upload>
-            <ImgBlock url1={item.url1} url2={item.url2} alt={item.key} title1={item.title1} title2={item.title2}/>
+            <ImgBlock url1={item.url1} url2={item.url2} alt={item.key} title1={item.title1} title2={item.title2} result={item.result} />
             </Tab.Item>)}
           </Tab>
         </IceContainer>

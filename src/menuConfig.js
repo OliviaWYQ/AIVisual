@@ -68,20 +68,20 @@ const asideMenuConfig = [
     path: '/select',
     icon: 'copy',
     children: [
-      {
-        name: 'Nav_select',
-        path: '/select/db',
-        // icon: 'home',
-      },
-      {
-        name: 'Nav_step',
-        path: '/step',
-        // icon: 'home',
-      },
-      {
-        name: 'general',
-        path: '/chart/general',
-      },
+      // {
+      //   name: 'Nav_select',
+      //   path: '/select/db',
+      //   // icon: 'home',
+      // },
+      // {
+      //   name: 'Nav_step',
+      //   path: '/step',
+      //   // icon: 'home',
+      // },
+      // {
+      //   name: 'general',
+      //   path: '/chart/general',
+      // },
       {
         name: 'Nav_ProjectKL',
         path: '/ProjectKL',
@@ -101,7 +101,16 @@ const asideMenuConfig = [
       },
     ],
   },
-  
+  {
+    name: 'Nav_ModelSound',
+    path: '/ModelSound',
+    icon: 'home',
+  },
+  {
+    name: 'Nav_ProjectFraud',
+    path: '/ProjectFraud',
+    icon: 'home',
+  },
 ];
 
 export { headerMenuConfig, asideMenuConfig };

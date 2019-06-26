@@ -17,10 +17,18 @@ export default class ImgBlock extends Component {
     title1: this.props.title1,
     title2: this.props.title2,
     percent: 0,
+    result: this.props.result,
+  };
+
+  renderResult= (title2)  => {
+    if (title2 == '识别结果') {
+     return (<p>{this.state.result}</p>);
+    } else {
+      return (<img src={this.state.url2} alt={this.state.alt+'_out'} ></img>);
+    }
   };
 
   render() {
-
     const textRender = percent => {
       if (percent === 100) {
         return <Icon type="select" size="medium" />;
@@ -39,11 +47,11 @@ export default class ImgBlock extends Component {
         {/*  </Button.Group> */}
         {/* </div> */}
 
-        <Progress style={{ margin: '15px 0 10px' }} percent={this.state.percent} progressive size="large" textRender={textRender} />
+        {/* <Progress style={{ margin: '15px 0 10px' }} percent={this.state.percent} progressive size="large" textRender={textRender} /> */}
         
         <Row wrap>
           <Col>
-            <IcePanel style={{ marginTop: '10px', marginBottom: '10px', marginRight: '10px' }}>
+            <IcePanel style={{ marginTop: '20px', marginBottom: '10px', marginRight: '10px' }}>
               <IcePanel.Header>
                 {this.state.title1}
               </IcePanel.Header>
@@ -61,7 +69,7 @@ export default class ImgBlock extends Component {
             </IcePanel>
           </Col>
           <Col>
-            <IcePanel style={{ marginTop: '10px', marginBottom: '10px' }}>
+            <IcePanel style={{ marginTop: '20px', marginBottom: '10px' }}>
               <IcePanel.Header>
                 {this.state.title2}
               </IcePanel.Header>
@@ -74,23 +82,22 @@ export default class ImgBlock extends Component {
                 {/*  type="contain"*/}
                 {/*  style={{ margin: '10px' }}*/}
                 {/*/>*/}
-                <img src={this.state.url2} alt={this.props.alt+'_out'}/>
+                {this.renderResult(this.state.title2)}
+                {/* <img src={this.state.url2} alt={this.state.alt+'_out'}/> */}
               </IcePanel.Body>
             </IcePanel>
           </Col>
         </Row>
-        <IcePanel style={{ marginTop: '10px', marginBottom: '10px' }}>
+        {/* <IcePanel style={{ marginTop: '10px', marginBottom: '10px' }}>
           <IcePanel.Header>
             识别结果
           </IcePanel.Header>
           <IcePanel.Body>
             <p>识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果</p>
           </IcePanel.Body>
-        </IcePanel>
+        </IcePanel> */}
         {/*</IceContainer>*/}
-
       </div>
-
     );
   }
 }

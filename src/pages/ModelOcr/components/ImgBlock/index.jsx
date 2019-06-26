@@ -13,6 +13,7 @@ export default class ImgBlock extends Component {
   state = {
     url1: this.props.url,
     alt: this.props.alt,
+    result: this.props.result,
     percent: 0,
   };
 
@@ -79,7 +80,7 @@ export default class ImgBlock extends Component {
                 识别结果
               </IcePanel.Header>
               <IcePanel.Body>
-                <p>识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果</p>
+                <p>{this.state.result.split('：').join('：\n\n')}</p>
               </IcePanel.Body>
             </IcePanel>
           </Col>

@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import IceContainer from '@icedesign/container';
-import { Table, Step, Grid, Input, Button, Form } from '@alifd/next';
+import { Upload, Select, Table, Step, Grid, Input, Button, Form } from '@alifd/next';
 import styles from './index.module.scss';
 import IcePanel from '@icedesign/panel';
+import Image from '../BizchartsHeatmapImage/index';
+import Demo from '../BizchartsBizgoblinLineBasic/index';
 
 const { Row, Col } = Grid;
 const FormItem = Form.Item;
@@ -28,18 +30,22 @@ export default class SimpleFluencyForm extends Component {
   nextStep = (values, errors) => {
     console.log('error', errors, 'value', values);
     if (!errors) {
-      this.setState({ step: this.state.step + 1 });
+      const s = this.state.step + 1;
+      this.setState({ 
+        // step: this.state.step + 1 
+        step: s > 7 ? 7 : s
+      });
     } else {
       // 处理表单报错
     }
   };
 
-  next = () => {
-    const s = this.state.step + 1;
-    this.setState({
-      step: s > 7 ? 7 : s,
-    });
-  };
+  // next = () => {
+  //   const s = this.state.step + 1;
+  //   this.setState({
+  //     step: s > 7 ? 7 : s,
+  //   });
+  // };
 
   prev = () => {
     const s = this.state.step - 1;
@@ -52,25 +58,38 @@ export default class SimpleFluencyForm extends Component {
     if (step === 0) {
       return (
         <IceContainer className={styles.form}>
-          <Form onChange={this.formChange} >
+          <div className={styles.select}>
+            <Upload 
+            action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
+            listType="text"
+            >
+            <Button type="primary" >上传文件</Button>
+            </Upload>
+          </div>
+          <div className={styles.select}>
+          <Button onClick={this.nextStep} validate type="primary">下一步</Button>
+          </div>
+          {/* <Form onChange={this.formChange} >
             <FormItem label="数据源：" {...formItemLayout} required requiredMessage="必填项" >
               <Input name="database" autoComplete="on" />
             </FormItem>
-            <div className={styles.buttonGroup}>
-              <FormItem {...formItemLayout} label=" ">
-                <Form.Submit onClick={this.nextStep} validate type="primary">下一步</Form.Submit>
-              </FormItem>
-            </div>
-          </Form>
+            <FormItem {...formItemLayout} label=" ">
+              <Form.Submit onClick={this.nextStep} validate type="primary">下一步</Form.Submit>
+          </FormItem>
+          </Form> */}
         </IceContainer>
       );
     } else if (step === 1) {
       return (
         <IceContainer className={styles.form}>
-          <Form onChange={this.formChange} >
-            <FormItem label="数据清理：" {...formItemLayout} required requiredMessage="必填项" >
+          {/* <Form onChange={this.formChange} > */}
+            {/* <FormItem label="数据清理：" {...formItemLayout} required requiredMessage="必填项" >
               <Input name="dataclean" autoComplete="on" />
-            </FormItem>
+            </FormItem> */}
+            <h4 align='center' >是否进行数据清理?</h4>
+            <div className={styles.select}>
+              <Select dataSource={['是', '否']} useVirtual defaultValue="是" />
+            </div>
             <div className={styles.buttonGroup}>
               <Button onClick={this.prev}
                 type="primary"
@@ -79,7 +98,7 @@ export default class SimpleFluencyForm extends Component {
                 <Form.Submit onClick={this.nextStep} validate type="primary">下一步</Form.Submit>
               </FormItem>
             </div>
-          </Form>
+          {/* </Form> */}
         </IceContainer>
       );
     } else if (step === 2) {
@@ -157,11 +176,18 @@ export default class SimpleFluencyForm extends Component {
     } else if (step === 6) {
       return (
         <IceContainer title='分析结果' >
-          <Table>
+          {/* 表格 */}
+          {/* <Table>
               <Table.Column title="Id" dataIndex="id"/>
               <Table.Column title="Time" dataIndex="time"/>
               <Table.Column title="Number" dataIndex="number" />
-          </Table>
+          </Table> */}
+          <h4>客流热力图</h4>
+          <br />
+          {/* 热力图 */}
+          <Image />
+          {/* 折线图 */}
+          {/* <Demo /> */}
           <div className={styles.buttonGroup}>
             <Button onClick={this.prev}
                 type="primary"
