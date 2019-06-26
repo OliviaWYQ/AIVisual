@@ -93,24 +93,11 @@ export default class BasicTab extends Component {
                 {<div>
                   <Upload
                     action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
-                    // beforeUpload={beforeUpload}
-                    // onChange={ onChange }
-                    // onChange={this.changeurl.bind(this, item.url)}
-                    // onSuccess={onSuccess}
                     multiple
-                    // defaultValue={[{
-                    //   name: 'IMG.png',
-                    //   state: 'done',
-                    //   size: 1024,
-                    //   downloadURL: 'https://img.alicdn.com/tps/TB19O79MVXXXXcZXVXXXXXXXXXX-1024-1024.jpg',
-                    //   fileURL: 'https://img.alicdn.com/tps/TB19O79MVXXXXcZXVXXXXXXXXXX-1024-1024.jpg',
-                    //   imgURL: 'https://img.alicdn.com/tps/TB19O79MVXXXXcZXVXXXXXXXXXX-1024-1024.jpg'
-                    // }]}
+                    listType="text"
                   >
-                    <Button type="primary" style={{ margin: '30px 0 10px' }}>上传图片</Button> &nbsp;&nbsp;
-
+                    <Button type="primary" style={{ margin: '30px 0 0' }}> 上传图片 </Button> &nbsp;&nbsp;
                   </Upload>
-
                   <ImgBlock url={item.url} alt={item.key} result={item.result}/>
                 </div>}
               </Tab.Item>))}

@@ -46,7 +46,14 @@ export default {
 
   'app.menu.ModelFace': '人脸识别',
 
+  'app.menu.ModelSound': '声音识别',
+  
+  'app.menu.ModelImg': '图片识别',
+
   'app.menu.ProjectKL': '客流预测',
+
+  'app.menu.ProjectFraud': '电信反欺诈',
+
 
   // Top Header
   'app.header.feedback': '反馈',

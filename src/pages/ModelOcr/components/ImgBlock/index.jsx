@@ -53,7 +53,7 @@ export default class ImgBlock extends Component {
         {/*  </Button.Group> */}
         {/* </div> */}
 
-        <Progress style={{ margin: '15px 0 10px' }} percent={this.state.percent} progressive size="large" textRender={textRender} />
+        {/* <Progress style={{ margin: '15px 0 10px' }} percent={this.state.percent} progressive size="large" textRender={textRender} /> */}
         
         <Row wrap>
           <Col>

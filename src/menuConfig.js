@@ -60,6 +60,16 @@ const asideMenuConfig = [
         path: '/ModelFace',
         // icon: 'home',
       },
+      {
+        name: 'Nav_ModelImg',
+        path: '/ModelImg',
+        // icon: 'home',
+      },
+      {
+        name: 'Nav_ModelSound',
+        path: '/ModelSound',
+        icon: 'home',
+      },
     ],
   },
   {
@@ -87,6 +97,11 @@ const asideMenuConfig = [
         path: '/ProjectKL',
         // icon: 'home',
       },
+      {
+        name: 'Nav_ProjectFraud',
+        path: '/ProjectFraud',
+        icon: 'home',
+      },
     ],
   },
   {
@@ -101,16 +116,7 @@ const asideMenuConfig = [
       },
     ],
   },
-  {
-    name: 'Nav_ModelSound',
-    path: '/ModelSound',
-    icon: 'home',
-  },
-  {
-    name: 'Nav_ProjectFraud',
-    path: '/ProjectFraud',
-    icon: 'home',
-  },
+  
 ];
 
 export { headerMenuConfig, asideMenuConfig };

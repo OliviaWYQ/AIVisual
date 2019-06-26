@@ -46,7 +46,14 @@ export default {
 
   'app.menu.ModelFace': 'Face Recognition',
 
+  'app.menu.ModelSound': 'Sound Recognition',
+  
+  'app.menu.ModelImg': 'Image Recognition',
+
   'app.menu.ProjectKL': 'Passenger Forecast',
+
+  'app.menu.ProjectFraud': 'Anti-Fraud',
+
 
   // Top Header
   'app.header.feedback': 'Feedback',
