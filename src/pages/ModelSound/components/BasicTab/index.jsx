@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {  Overlay, Table, Button, Tab, Upload, Grid } from '@alifd/next';
 import IceContainer from '@icedesign/container';
 import styles from './index.module.scss';
-
+import IcePanel from '@icedesign/panel';
 // import CustomBlock from './components/CustomBlock';
 // import data from './data';
 
@@ -20,22 +20,17 @@ export default class BasicTab extends Component {
     this.state = {
       tabs: [
         { tab: '声音预警', key: 'sound_warning',
-          url1: '#',
-          url2: '#',
           title1: '声音源', title2: '识别结果',
-          content: '声音预警介绍', 
+          content: '声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍', 
           result: '设备是否正常：' },
         { tab: '声音识别', key: 'sound_recognition',
-          url1:'#',
-          url2:'#',
           title1: '声音源', title2: '识别结果',
-          content: '声音识别介绍', 
+          content: '声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍', 
           result: '文字内容：'  },
       ],
-      currenttab: 'tab',
-      currenturl: '',
+      currenttab: '声音预警',
       visible: false,
-      currentResult: 'none',
+      currentResult: '设备是否正常：',
     }
   }
 
@@ -45,10 +40,10 @@ export default class BasicTab extends Component {
     });
   };
 
-  changeState = (url, tab, result) => {
+  changeState = (tab, result) => {
     setTimeout(() => {
-        this.setState({currentResult: result, currenttab:tab, currenturl:url}, ()=>{
-          // console.log("setTimeout setState callback " + this.state.currenttab, this.state.currenturl, this.state.currentResult);
+        this.setState({currentResult: result, currenttab:tab}, ()=>{
+          // console.log("setTimeout setState callback " + this.state.currenttab, this.state.currentResult);
         });
     }, 0);
   }
@@ -58,14 +53,30 @@ export default class BasicTab extends Component {
       <div className="basic-tab">
         <IceContainer title='声音识别项目' className={styles.tabCardStyle}>
           <Tab shape='wrapped' onChange={this.handleTabChange}>
-            {this.state.tabs.map((item) => <Tab.Item key={item.key} title={item.tab} onClick={this.changeState.bind(this, item.url, item.tab, item.result)}>
+            {this.state.tabs.map((item) => <Tab.Item key={item.key} title={item.tab} onClick={this.changeState.bind(this, item.tab, item.result)}>
             <div className={styles.detached}>
               {item.content}
             </div>
             </Tab.Item>)}
           </Tab>
+          <Upload
+            action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
+            multiple
+            listType="text">
+            <Button type="primary" style={{ margin: '30px 0 10px' }}>上传音频</Button> &nbsp;&nbsp;
+          </Upload>
+
+          <IcePanel style={{ marginTop: '20px', marginBottom: '10px' }}>
+              <IcePanel.Header>
+                识别结果
+              </IcePanel.Header>
+              <IcePanel.Body>
+                {this.state.currentResult}
+              </IcePanel.Body>
+            </IcePanel>
+
         </IceContainer>
       </div>
     );
   }
-}
+} 

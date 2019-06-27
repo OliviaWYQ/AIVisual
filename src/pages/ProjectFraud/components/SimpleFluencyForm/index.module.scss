@@ -1,5 +1,6 @@
 
     .form {
+      margin-top: 40px;
       padding: 40px 20px;
     }
     .formLabel {
@@ -13,7 +14,24 @@
     .formErrorWrapper {
       margin-top: 5px;
     }
-    // .simpleFluencyForm {
-
-    // }
   
+    .buttonGroup {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0 0;
+    }
+  
+    .select {
+      display: flex;
+      justify-content: center;
+      // justify-content: space-between; 
+      align-items: center;
+      margin: 40px 0 0;
+      // flex-direction: column;
+    }
+
+    .formTable {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0 0;
+    }

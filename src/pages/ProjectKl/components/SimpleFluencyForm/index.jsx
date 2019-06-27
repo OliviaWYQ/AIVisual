@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import IceContainer from '@icedesign/container';
-import { Upload, Select, Table, Step, Grid, Input, Button, Form } from '@alifd/next';
+import { Upload, Select, DatePicker, Table, Step, Grid, Input, Button, Form } from '@alifd/next';
 import styles from './index.module.scss';
 import IcePanel from '@icedesign/panel';
 import Image from '../BizchartsHeatmapImage/index';
-import Demo from '../BizchartsBizgoblinLineBasic/index';
+import LineBarChart from '../LineBarChart/index';
+import moment from 'moment';
 
 const { Row, Col } = Grid;
 const FormItem = Form.Item;
@@ -14,13 +15,20 @@ const formItemLayout = {
   wrapperCol: { s: 14, l: 12 }
 };
 
+// const currentDate = moment();
+
+// console.log('now', currentDate.format('YYYY-MM-DD') );
+
+const startValue = moment('2018-09-01', 'YYYY-MM-DD', true);
+const endValue = moment('2018-09-09', 'YYYY-MM-DD', true);
+
 const { Group: ButtonGroup } = Button;
 
 export default class SimpleFluencyForm extends Component {
   static displayName = 'SimpleFluencyForm';
 
   state = {
-    step: 6
+    step: 6,
   }
 
   formChange = (values, field) => {
@@ -52,6 +60,14 @@ export default class SimpleFluencyForm extends Component {
     this.setState({
       step: s < 0 ? 0 : s,
     });
+  };
+
+  disabledDate = function (date, view) {
+    switch (view) {
+        case 'date':
+            return (endValue+1).valueOf() <= date.valueOf() || date.valueOf() <= (startValue-1).valueOf();
+        default: return false;
+    }
   };
 
   renderStep = (step) => {
@@ -176,18 +192,19 @@ export default class SimpleFluencyForm extends Component {
     } else if (step === 6) {
       return (
         <IceContainer title='分析结果' >
-          {/* 表格 */}
-          {/* <Table>
-              <Table.Column title="Id" dataIndex="id"/>
-              <Table.Column title="Time" dataIndex="time"/>
-              <Table.Column title="Number" dataIndex="number" />
-          </Table> */}
-          <h4>客流热力图</h4>
-          <br />
-          {/* 热力图 */}
-          <Image />
-          {/* 折线图 */}
-          {/* <Demo /> */}
+          {/* <h4>选择日期：</h4>
+          <div className={styles.filterbox}>
+           <DatePicker
+            locale={{ datePlaceholder: '查看日期' }}
+            defaultValue={startValue} 
+            onChange={val => console.log(val.format('YYYY-MM-DD'))}
+            dateInputAriaLabel="date input" 
+            inputProps={{"aria-label": "date picker main"}}
+            disabledDate={this.disabledDate}
+            />
+          </div> */}
+          <LineBarChart />
+          {/* <Image /> */}
           <div className={styles.buttonGroup}>
             <Button onClick={this.prev}
                 type="primary"
