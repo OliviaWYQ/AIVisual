@@ -203,6 +203,7 @@ export default class SimpleFluencyForm extends Component {
             disabledDate={this.disabledDate}
             />
           </div> */}
+          {/* 折线图和柱状图 */}
           <LineBarChart />
           {/* <Image /> */}
           <div className={styles.buttonGroup}>

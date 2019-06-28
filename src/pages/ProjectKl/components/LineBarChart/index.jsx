@@ -29,6 +29,7 @@ export default class LineBarChart extends Component {
             <BarChart />
           </Col>
         </Row>
+        {/* 热力图 */}
         <Image />
       </div>
     );
