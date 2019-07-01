@@ -5,6 +5,7 @@ import styles from './index.module.scss';
 import IcePanel from '@icedesign/panel';
 // import CustomBlock from './components/CustomBlock';
 // import data from './data';
+import MicAPI from '../MicAPI/index';
 
 const { Row, Col } = Grid;
 
@@ -63,10 +64,11 @@ export default class BasicTab extends Component {
             action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
             multiple
             listType="text">
-            <Button type="primary" style={{ margin: '30px 0 10px' }}>上传音频</Button> &nbsp;&nbsp;
+            <Button type="primary" style={{ margin: '30px 0 0px' }}>上传音频</Button> &nbsp;&nbsp;
           </Upload>
-
-          <IcePanel style={{ marginTop: '20px', marginBottom: '10px' }}>
+          {/* 录音模块 */}
+          <MicAPI />
+          <IcePanel style={{ marginTop: '30px', marginBottom: '10px' }}>
               <IcePanel.Header>
                 识别结果
               </IcePanel.Header>
@@ -76,6 +78,8 @@ export default class BasicTab extends Component {
             </IcePanel>
 
         </IceContainer>
+
+       
       </div>
     );
   }
