@@ -3,6 +3,7 @@ import BasicTab from './components/BasicTab';
 // import ImgBlock from './components/ImgBlock';
 // import IceContainer from '@icedesign/container';
 // import styles from './components/BasicTab/index.module.scss';
+// import CameraAPI from './components/CameraAPI/index';
 
 export default class ModelOcr extends Component {
   constructor(props) {
@@ -18,8 +19,9 @@ export default class ModelOcr extends Component {
           <BasicTab />
           {/* 上传图片组件 */}
           {/*<ImgBlock />*/}
+          {/* 调用摄像头 */}
+          {/* <CameraAPI /> */}
         {/*</IceContainer>*/}
-
       </div>
     );
   }

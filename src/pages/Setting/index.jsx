@@ -13,7 +13,9 @@ export default class Setting extends Component {
   render() {
     return (
       <div>
+        {/* 基本设置 */}
         <BaseSetting />
+        {/* 修改密码 */}
         <ChangePasswordForm />
       </div>
     );

@@ -3,6 +3,7 @@ import {  Overlay, Table, Button, Tab, Upload, Grid } from '@alifd/next';
 import IceContainer from '@icedesign/container';
 import styles from './index.module.scss';
 import ImgBlock from '../ImgBlock/index';
+import CameraAPI from '../CameraAPI/index';
 
 // import CustomBlock from './components/CustomBlock';
 // import data from './data';
@@ -112,12 +113,20 @@ export default class BasicTab extends Component {
         </div>
       );
     } return (
-      <Upload
-        action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
-        multiple
-        listType="text">
-        <Button type="primary" style={{ margin: '30px 0 10px' }}>上传图片</Button> &nbsp;&nbsp;
-      </Upload>
+      <div>
+        {/* 调用摄像头 */}
+        <div style={{ position: 'relative', margin: '30px 95px 0px' }}>
+          <CameraAPI />
+        </div>
+        <div style={{ margin: '-62px 0 10px' }}>
+          <Upload
+            action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
+            multiple
+            listType="text">
+            <Button type="primary" style={{ margin: '30px 0 10px' }}>上传图片</Button> &nbsp;&nbsp;
+          </Upload>
+        </div>
+      </div>
     )
   }
 

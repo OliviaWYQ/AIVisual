@@ -25,7 +25,7 @@ export default class ProjectKl extends Component {
             </IceContainer>
           {/* </IcePanel.Body> */}
         {/* </IcePanel> */}
-          {/* SimpleFluencyForm */}
+          {/* 算法流程图 */}
           <SimpleFluencyForm />
         </IceContainer>
       </div>

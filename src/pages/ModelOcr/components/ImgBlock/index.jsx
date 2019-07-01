@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Progress, Icon, Grid, Upload, Button } from '@alifd/next';
 import IcePanel from '@icedesign/panel';
+import CameraAPI from '../CameraAPI/index';
 
 const { Row, Col } = Grid;
 
@@ -18,15 +19,23 @@ export default class ImgBlock extends Component {
 
     return (
       <div>
-        <Upload
+        
+        {/* 调用摄像头 */}
+        <div style={{ position: 'relative', margin: '30px 95px 0px' }}>
+          <CameraAPI />
+        </div>
+        {/* 上传 */}
+        <div style={{ margin: '-62px 0 10px' }}>
+          <Upload
           action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
           multiple
           listType="text">
           <Button type="primary" style={{ margin: '30px 0 0' }}> 上传图片 </Button> &nbsp;&nbsp;
         </Upload>
+        </div>
         <Row wrap>
           <Col>
-            <IcePanel style={{ marginTop: '10px', marginBottom: '10px', marginRight: '10px' }}>
+            <IcePanel style={{ marginTop: '30px', marginBottom: '10px', marginRight: '10px' }}>
               <IcePanel.Header>
                 原始图片
               </IcePanel.Header>
@@ -36,7 +45,7 @@ export default class ImgBlock extends Component {
             </IcePanel>
           </Col>
           <Col>
-            <IcePanel style={{ marginTop: '10px', marginBottom: '10px' }}>
+            <IcePanel style={{ marginTop: '30px', marginBottom: '10px' }}>
               <IcePanel.Header>
                 识别结果
               </IcePanel.Header>
