@@ -1,7 +1,7 @@
 export default {
   // Aside Menu
   'app.menu.dashboard': '控制台',
-  'app.menu.dashboard.monitor': '监控页',
+  'app.menu.dashboard.monitor': '我的项目',
 
   // 'app.menu.chart': '分析报告',
   // 'app.menu.chart.basic': '基础图表',
@@ -37,7 +37,7 @@ export default {
   'app.menu.Introduction': '平台介绍',
   'app.menu.Introduction.detail': '功能简介',
   
-  'app.menu.select': '项目分析',
+  'app.menu.select': '应用场景',
   'app.menu.select.db': '选择数据',
 
   'app.menu.step': '项目流程',

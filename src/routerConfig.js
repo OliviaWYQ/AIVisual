@@ -15,6 +15,7 @@ import ProjectKl from './pages/ProjectKl';
 import ModelSound from './pages/ModelSound';
 import ProjectFraud from './pages/ProjectFraud';
 import ModelImg from './pages/ModelImg';
+import First from './pages/First';
 import { asideMenuConfig } from './menuConfig';
 
 const UserLogin = React.lazy(() => import('./pages/UserLogin'));
@@ -38,12 +39,12 @@ const ServerError = React.lazy(() => import('./pages/Exception/ServerError'));
 
 const routerConfig = [
   {
-    path: '/Introduction/detail',
-    component: Introduction,
+    path: '/user/register',
+    component: UserRegister,
   },
   {
-    path: '/user/login',
-    component: UserLogin,
+    path: '/Introduction/detail',
+    component: Introduction,
   },
   // {
   //   path: '/chart/basic',
@@ -102,8 +103,8 @@ const routerConfig = [
     component: Empty,
   },
   {
-    path: '/user/register',
-    component: UserRegister,
+    path: '/user/login',
+    component: UserLogin,
   },
   {
     path: '/select/db',
@@ -136,6 +137,10 @@ const routerConfig = [
   {
     path: '/ModelImg',
     component: ModelImg,
+  },
+  {
+    path: '/First',
+    component: First,
   },
 ];
 

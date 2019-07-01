@@ -44,34 +44,34 @@ const asideMenuConfig = [
   //     },
   //   ],
   // },
-  {
-    // 算法模型
-    name: '表格页',
-    path: '/table',
-    icon: 'table',
-    children: [
-      {
-        name: 'Nav_ModelOCR',
-        path: '/ModelOCR',
-        // icon: 'home',
-      },
-      {
-        name: 'Nav_ModelFace',
-        path: '/ModelFace',
-        // icon: 'home',
-      },
-      {
-        name: 'Nav_ModelImg',
-        path: '/ModelImg',
-        // icon: 'home',
-      },
-      {
-        name: 'Nav_ModelSound',
-        path: '/ModelSound',
-        icon: 'home',
-      },
-    ],
-  },
+  // {
+  //   // 算法模型
+  //   name: '表格页',
+  //   path: '/table',
+  //   icon: 'table',
+  //   children: [
+  //     {
+  //       name: 'Nav_ModelOCR',
+  //       path: '/ModelOCR',
+  //       // icon: 'home',
+  //     },
+  //     {
+  //       name: 'Nav_ModelFace',
+  //       path: '/ModelFace',
+  //       // icon: 'home',
+  //     },
+  //     {
+  //       name: 'Nav_ModelImg',
+  //       path: '/ModelImg',
+  //       // icon: 'home',
+  //     },
+  //     {
+  //       name: 'Nav_ModelSound',
+  //       path: '/ModelSound',
+  //       icon: 'home',
+  //     },
+  //   ],
+  // },
   {
     // 项目分析
     name: 'Nav_select',
@@ -92,6 +92,26 @@ const asideMenuConfig = [
       //   name: 'general',
       //   path: '/chart/general',
       // },
+      {
+        name: 'Nav_ModelOCR',
+        path: '/ModelOCR',
+        // icon: 'home',
+      },
+      {
+        name: 'Nav_ModelFace',
+        path: '/ModelFace',
+        // icon: 'home',
+      },
+      {
+        name: 'Nav_ModelImg',
+        path: '/ModelImg',
+        // icon: 'home',
+      },
+      {
+        name: 'Nav_ModelSound',
+        path: '/ModelSound',
+        icon: 'home',
+      },
       {
         name: 'Nav_ProjectKL',
         path: '/ProjectKL',
@@ -114,9 +134,17 @@ const asideMenuConfig = [
         name: 'setting',
         path: '/account/setting',
       },
+      {
+        name: 'monitor',
+        path: '/dashboard/monitor',
+      },
     ],
   },
-  
+  {
+    name: 'Nav_First',
+    path: '/First',
+    icon: 'home',
+  },
 ];
 
 export { headerMenuConfig, asideMenuConfig };

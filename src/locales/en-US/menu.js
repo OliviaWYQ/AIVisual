@@ -1,7 +1,7 @@
 export default {
   // Aside Menu
   'app.menu.dashboard': 'Dashboard',
-  'app.menu.dashboard.monitor': 'Monitor',
+  'app.menu.dashboard.monitor': 'My Projects',
 
   // 'app.menu.chart': 'Analysis',
   // 'app.menu.chart.basic': 'Basic Chart',
@@ -37,7 +37,7 @@ export default {
   'app.menu.Introduction': 'About',
   'app.menu.Introduction.detail': 'Introduction',
 
-  'app.menu.select': 'Projects',
+  'app.menu.select': 'Scenes',
   'app.menu.select.db': 'Database',
 
   'app.menu.step': 'Flow Chart',
