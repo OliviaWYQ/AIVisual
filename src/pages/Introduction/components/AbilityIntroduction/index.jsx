@@ -11,20 +11,20 @@ const abilities = [
   {
     icon: frameworkIcon,
     title: '框架',
-    content: '熟悉的社区开发模式，彻底的组件化能力',
-    link: '/framework/',
+    content: '多场景应用高效便捷',
+    link: '#',
   },
   {
     icon: componentIcon,
     title: '组件',
-    content: '为开发者提供了一系列基础组件，通过组件组合进行高效开发',
-    link: '/components/',
+    content: '彻底的组件化开发模式',
+    link: '#',
   },
   {
     icon: apiIcon,
     title: 'API',
-    content: '手机淘宝能力支持和保障',
-    link: '/api/',
+    content: '调用算法的支持和保障',
+    link: '#',
   },
 ];
 
@@ -59,8 +59,9 @@ export default class Index extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <div className={styles.title}>我们的能力</div>
-        <div className={styles.subtitle}>&lt; Distinguishing Feature &gt;</div>
+        <div className={styles.title}> AI 可视化分析平台</div>
+        <hr style={{width: '50%', height: '10px'}} />
+        <div className={styles.subtitle}> 让算法触手可及 </div>
         <Row wrap className={styles.group}>
           {this.renderAblities()}
         </Row>

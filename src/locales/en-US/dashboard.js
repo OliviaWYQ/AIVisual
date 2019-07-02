@@ -27,7 +27,7 @@ export default {
   'app.dashboard.todo.title': 'Todo List',
   'app.dashboard.todo.index': 'Index',
   'app.dashboard.todo.item': 'Todo',
-  'app.dashboard.todo.item.value': 'To-do list',
+  'app.dashboard.todo.item.value': 'Database',
   'app.dashboard.todo.remark': 'Remark',
   'app.dashboard.todo.remark.value': 'Remark',
   'app.dashboard.todo.time': 'Time',

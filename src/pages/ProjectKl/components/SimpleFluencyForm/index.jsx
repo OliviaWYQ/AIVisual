@@ -221,7 +221,7 @@ export default class SimpleFluencyForm extends Component {
       <div className="simple-fluency-form">
         {/* <IcePanel style={{marginBottom: '10px'}}> */}
           {/* <IcePanel.Body> */}
-          <IceContainer  title='项目流程图'>
+          <IceContainer  title='流程图'>
           <br />
           <Step shape="circle" current={this.state.step}>
             <Step.Item key={0} title="输入数据" content='选择数据源'/>

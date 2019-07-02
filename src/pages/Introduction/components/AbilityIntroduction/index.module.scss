@@ -1,11 +1,20 @@
 .container {
-  background: #fafafa;
+  // background: #fafafa;
+  background: url(https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/background2.png);
+  background-position: left left;
+  background-repeat: no-repeat;
   padding: 70px 70px 140px;
   text-align: center;
 }
 .title {
   color: #333;
   font-size: 48px;
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+.subtitle {
+  color: #333;
+  font-size: 20px;
   white-space: nowrap;
   margin-bottom: 10px;
 }

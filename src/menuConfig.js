@@ -131,20 +131,20 @@ const asideMenuConfig = [
     icon: 'person',
     children: [
       {
-        name: 'setting',
-        path: '/account/setting',
-      },
-      {
         name: 'monitor',
         path: '/dashboard/monitor',
       },
+      {
+        name: 'setting',
+        path: '/account/setting',
+      },
     ],
   },
-  {
-    name: 'Nav_First',
-    path: '/First',
-    icon: 'home',
-  },
+  // {
+  //   name: 'Nav_First',
+  //   path: '/First',
+  //   icon: 'home',
+  // },
 ];
 
 export { headerMenuConfig, asideMenuConfig };

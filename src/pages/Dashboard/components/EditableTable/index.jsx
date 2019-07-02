@@ -95,7 +95,7 @@ export default class EditableTable extends Component {
     } = this.props;
 
     return (
-      <IceContainer title={formatMessage({ id: 'app.dashboard.todo.title' })}>
+      <IceContainer title='数据管理'>
         <Table
           dataSource={this.state.dataSource}
           hasBorder={false}

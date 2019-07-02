@@ -15,7 +15,7 @@ import ProjectKl from './pages/ProjectKl';
 import ModelSound from './pages/ModelSound';
 import ProjectFraud from './pages/ProjectFraud';
 import ModelImg from './pages/ModelImg';
-import First from './pages/First';
+// import First from './pages/First';
 import { asideMenuConfig } from './menuConfig';
 
 const UserLogin = React.lazy(() => import('./pages/UserLogin'));
@@ -137,10 +137,6 @@ const routerConfig = [
   {
     path: '/ModelImg',
     component: ModelImg,
-  },
-  {
-    path: '/First',
-    component: First,
   },
 ];
 

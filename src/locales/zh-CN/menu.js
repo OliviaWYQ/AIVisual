@@ -35,7 +35,7 @@ export default {
   'app.menu.download': '数据下载',
 
   'app.menu.Introduction': '平台介绍',
-  'app.menu.Introduction.detail': '功能简介',
+  'app.menu.Introduction.detail': '新特性',
   
   'app.menu.select': '应用场景',
   'app.menu.select.db': '选择数据',
