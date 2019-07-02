@@ -25,7 +25,7 @@ export default class ImgBlock extends Component {
           <CameraAPI />
         </div>
         {/* 上传 */}
-        <div style={{ margin: '-62px 0 10px' }}>
+        <div style={{ margin: '-62px 0 5px' }}>
           <Upload
           action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
           multiple

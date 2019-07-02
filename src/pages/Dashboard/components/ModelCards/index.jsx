@@ -5,10 +5,31 @@ import IceContainer from '@icedesign/container';
 
 const { Row, Col } = Grid;
 
-const getData = () => {
-  return Array.from({ length: 4 }).map((item, index) => {
-    return {
-      title: `算法名称 0${index + 1}`,
+const input = {
+  project: [
+    {
+      title: '项目1',
+      body: [
+        {
+          label: '场景',
+          value: '客流预测',
+        },
+        {
+          label: '时间',
+          value: '2019-01-02',
+        },
+        {
+          label: '用户',
+          value: '用户名',
+        },
+        {
+          label: '备注',
+          value: '使用参数1',
+        },
+      ],
+    },
+    {
+      title: '项目2',
       body: [
         {
           label: '场景',
@@ -27,7 +48,59 @@ const getData = () => {
           value: '无',
         },
       ],
-    };
+    },
+    {
+      title: '项目3',
+      body: [
+        {
+          label: '场景',
+          value: '客流预测',
+        },
+        {
+          label: '时间',
+          value: '2019-05-20',
+        },
+        {
+          label: '用户',
+          value: '用户名',
+        },
+        {
+          label: '备注',
+          value: '使用参数2',
+        },
+      ],
+    },
+    {
+      title: '项目4',
+      body: [
+        {
+          label: '场景',
+          value: '声音识别',
+        },
+        {
+          label: '时间',
+          value: '2019-04-27',
+        },
+        {
+          label: '用户',
+          value: '用户名',
+        },
+        {
+          label: '备注',
+          value: '无',
+        },
+      ],
+    },
+  ]
+}
+
+const getData = (input) => {
+  return Array.from(input).map((item, index) => {
+      return {
+        key: index + 1,
+        title: item.title,
+        body: item.body,
+      };
   });
 };
 
@@ -40,11 +113,13 @@ export default class ModelCards extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      dataSource: input.project
+    };
   }
 
   render() {
-    const mockData = getData();
+    const mockData = getData(this.state.dataSource);
     return (
       <IceContainer title='项目管理'>
         <Row wrap gutter="40" className={styles.row}>
@@ -55,6 +130,7 @@ export default class ModelCards extends Component {
                 <div className={styles.head}>
                   <Icon type="electronics" className={styles.icon} /> {data.title}
                 </div>
+
                 <div className={styles.body}>
                   {data.body.map((item, key) => {
                     return (
@@ -62,8 +138,8 @@ export default class ModelCards extends Component {
                         <span className={styles.label}>{item.label}：</span>
                         <span className={styles.value}>{item.value}</span>
                       </div>
-                    );
-                  })}
+                   );
+                })}
                 </div>
                 <div className={styles.footer}>
                   <a className={styles.lightBlue }>

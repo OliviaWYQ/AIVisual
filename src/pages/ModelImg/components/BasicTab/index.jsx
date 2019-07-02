@@ -94,7 +94,7 @@ export default class BasicTab extends Component {
               action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
               multiple
               listType="text">
-              <Button type="primary" style={{ margin: '-42px 0 10px' }}>上传图片</Button> &nbsp;&nbsp;
+              <Button type="primary" style={{ margin: '-38px 0 10px' }}>上传图片</Button> &nbsp;&nbsp;
             </Upload>
         </div>
       );
@@ -104,7 +104,7 @@ export default class BasicTab extends Component {
         <div style={{ position: 'relative', margin: '30px 95px 0px' }}>
           <CameraAPI />
         </div>
-        <div style={{ margin: '-62px 0 10px' }}>
+        <div style={{ margin: '-62px 0 5px' }}>
           <Upload
           action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
           multiple
