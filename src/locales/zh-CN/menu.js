@@ -1,7 +1,7 @@
 export default {
   // Aside Menu
   'app.menu.dashboard': '控制台',
-  'app.menu.dashboard.monitor': '我的项目',
+  'app.menu.dashboard.monitor': '项目管理',
 
   // 'app.menu.chart': '分析报告',
   // 'app.menu.chart.basic': '基础图表',

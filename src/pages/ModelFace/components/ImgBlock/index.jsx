@@ -25,18 +25,19 @@ export default class ImgBlock extends Component {
      return (
        <div>
         <table width="200">
-        <tr>
-          <td><p>{this.state.result.split('：')[0]}</p></td>
-          <td><p>{this.state.result.split('：')[0]}</p></td>
-        </tr>
-        <tr>
-          <td><p>{this.state.result.split('：')[1]}</p></td>
-          <td><p>{this.state.result.split('：')[1]}</p></td>
-        </tr>
-        <tr>
-          <td><p>{this.state.result.split('：')[2]}</p></td>
-          <td><p>{this.state.result.split('：')[2]}</p></td>
-        </tr>
+          {
+            Array.from(this.state.result.split('；')).map((item, index) => {
+              // console.log(item);
+              return (
+                <tbody key={index}>
+                  <tr key={index}>
+                    <td><p>{item.split('：')[0]}</p></td>
+                    <td><p>{item.split('：')[1]}</p></td>
+                  </tr>
+                </tbody>
+              );
+            })
+          }
         </table>
        </div>
       );

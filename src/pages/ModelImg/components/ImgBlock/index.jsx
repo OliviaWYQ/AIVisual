@@ -22,7 +22,26 @@ export default class ImgBlock extends Component {
 
   renderResult= (title2)  => {
     if (title2 == '识别结果') {
-     return (<p>{this.state.result}</p>);
+    //  return (<p>{this.state.result}</p>);
+      return (
+        <div>
+        <table width="200">
+          {
+            Array.from(this.state.result.split('；')).map((item, index) => {
+              // console.log(item);
+              return (
+                <tbody key={index}>
+                  <tr key={index}>
+                    <td><p>{item.split('：')[0]}</p></td>
+                    <td><p>{item.split('：')[1]}</p></td>
+                  </tr>
+                </tbody>
+              );
+            })
+          }
+        </table>
+        </div>
+      );
     } else {
       return (<img src={this.state.url2} alt={this.state.alt+'_out'} ></img>);
     }

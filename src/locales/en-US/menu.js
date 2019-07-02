@@ -1,7 +1,7 @@
 export default {
   // Aside Menu
   'app.menu.dashboard': 'Dashboard',
-  'app.menu.dashboard.monitor': 'History',
+  'app.menu.dashboard.monitor': 'Project Management',
 
   // 'app.menu.chart': 'Analysis',
   // 'app.menu.chart.basic': 'Basic Chart',

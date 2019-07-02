@@ -32,74 +32,74 @@ export default class BasicTab extends Component {
       { tab: '车牌 OCR', key: 'chepai', id: 5, 
         url: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgCP.jpg',
         content: '车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍车牌 OCR 介绍', 
-        result:'车牌号：' 
+        result:'车牌号：京H 44444' 
       }],
     tabs2: [
       { tab: '身份证 OCR', key: 'shenfen', id: 6, 
         url: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgSFZ.jpg',
         content: '身份证 OCR 介绍身份证 OCR 介绍身份证 OCR 介绍身份证 OCR 介绍身份证 OCR 介绍身份证 OCR 介绍身份证 OCR 介绍身份证 OCR 介绍身份证 OCR 介绍身份证 OCR 介绍身份证 OCR 介绍身份证 OCR 介绍身份证 OCR 介绍身份证 OCR 介绍身份证 OCR 介绍身份证 OCR 介绍身份证 OCR 介绍身份证 OCR 介绍身份证 OCR 介绍身份证 OCR 介绍身份证 OCR 介绍身份证 OCR 介绍', 
-        result:'姓名：性别：民族：出生：住址：身份证号：签证机关：有效期：' 
+        result:'姓名：；性别：；民族：；出生：；住址：；身份证号：；签证机关：；有效期：' 
       },
       { tab: '名片 OCR', key: 'mingpian', id: 7, 
         url: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgMP.jpg',
         content: '名片 OCR名片 OCR名片 OCR名片 OCR名片 OCR名片 OCR名片 OCR名片 OCR名片 OCR名片 OCR名片 OCR名片 OCR名片 OCR名片 OCR名片 OCR名片 OCR名片 OCR名片 OCR名片 OCR', 
-        result:'姓名：公司：职位：邮编：邮箱：电话：网址：地址：手机号：' 
+        result:'姓名：；公司：；职位：；邮编：；邮箱：；电话：；网址：；地址：；手机号：' 
       },
       { tab: '护照 OCR', key: 'huzhao', id: 8, 
         url: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgHZ.jpg',
         content: '护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR护照 OCR', 
-        result:'国家码：护照号：姓名：姓名拼音：性别：出生地点：出生日期：签发地点：签发日期：有效期：' 
+        result:'国家码：；护照号：；姓名：；姓名拼音：；性别：；出生地点：；出生日期：；签发地点：；签发日期：；有效期：' 
       },
       { tab: '通行证 OCR', key: 'tongxing', id: 9, 
         url: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgTXZ.jpg',
         content: '通行证 OCR通行证 OCR通行证 OCR通行证 OCR通行证 OCR通行证 OCR通行证 OCR通行证 OCR通行证 OCR通行证 OCR通行证 OCR通行证 OCR通行证 OCR通行证 OCR通行证 OCR通行证 OCR通行证 OCR通行证 OCR通行证 OCR通行证 OCR通行证 OCR通行证 OCR', 
-        result:'证件号：姓名：性别：出生日期：有效期限：签证机关：签发地：种类：有效期：备注：' 
+        result:'证件号：；姓名：；性别：；出生日期：；有效期限：；签证机关：；签发地：；种类：；有效期：；备注：' 
       },
       { tab: '驾驶证 OCR', key: 'jiashi', id: 10, 
         url: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgJSZ.jpg',
         content: '驾驶证 OCR驾驶证 OCR驾驶证 OCR驾驶证 OCR驾驶证 OCR驾驶证 OCR驾驶证 OCR驾驶证 OCR驾驶证 OCR驾驶证 OCR驾驶证 OCR驾驶证 OCR驾驶证 OCR驾驶证 OCR驾驶证 OCR驾驶证 OCR驾驶证 OCR驾驶证 OCR驾驶证 OCR驾驶证 OCR驾驶证 OCR', 
-        result:'证件号：姓名：性别：国籍：住址：出生日期：初次领证日期：准驾车型：有效期限：' 
+        result:'证件号：；姓名：；性别：；国籍：；住址：；出生日期：；初次领证日期：；准驾车型：；有效期限：' 
       },
       { tab: '行驶证 OCR', key: 'xingshi', id: 11, 
         url: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgXSZ.jpg',
         content: '行驶证 OCR行驶证 OCR行驶证 OCR行驶证 OCR行驶证 OCR行驶证 OCR行驶证 OCR行驶证 OCR行驶证 OCR行驶证 OCR行驶证 OCR行驶证 OCR行驶证 OCR行驶证 OCR行驶证 OCR行驶证 OCR行驶证 OCR行驶证 OCR行驶证 OCR行驶证 OCR行驶证 OCR行驶证 OCR', 
-        result:'号牌号码：车型：所有人：住址：品牌型号：使用性质、签证机关：发动机号码：车辆识别代码（VIN）：注册登记日期：发证日期：核定载质量：准牵引总质量：核定载客：外形轮廓：检验记录：' 
+        result:'号牌号码：；车型：；所有人：；住址：；品牌型号：；使用性质：；签证机关：；发动机号码：；车辆识别代码（VIN）：；注册登记日期：；发证日期：；核定载质量：；准牵引总质量：；核定载客：；外形轮廓：；检验记录：' 
       },
       { tab: '营业执照 OCR', key: 'yinyezhizhao', id: 12, 
         url: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgYYZZ.jpg',
         content: '营业执照 OCR 介绍营业执照 OCR 介绍营业执照 OCR 介绍营业执照 OCR 介绍营业执照 OCR 介绍营业执照 OCR 介绍营业执照 OCR 介绍营业执照 OCR 介绍营业执照 OCR 介绍营业执照 OCR 介绍营业执照 OCR 介绍营业执照 OCR 介绍营业执照 OCR 介绍营业执照 OCR 介绍营业执照 OCR 介绍营业执照 OCR 介绍营业执照 OCR 介绍营业执照 OCR 介绍营业执照 OCR 介绍', 
-        result:'编号：注册号：统一社会信用码：公司名称：类型：地址：负责人：注册资本：成立时间：经营日期：经营范围：' 
+        result:'编号：；注册号：；统一社会信用码：；公司名称：；类型：；地址：；负责人：；注册资本：；成立时间：；经营日期：；经营范围：' 
       }],
     tabs3: [
       { tab: '银行卡 OCR', key: 'yinhang', id: 13, 
         url: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgYHK.jpg',
         content: '银行卡 OCR银行卡 OCR银行卡 OCR银行卡 OCR银行卡 OCR银行卡 OCR银行卡 OCR银行卡 OCR银行卡 OCR银行卡 OCR银行卡 OCR银行卡 OCR银行卡 OCR银行卡 OCR银行卡 OCR银行卡 OCR银行卡 OCR银行卡 OCR银行卡 OCR银行卡 OCR银行卡 OCR银行卡 OCR银行卡 OCR', 
-        result:'卡号：有效期：发卡行：卡片类型：' 
+        result:'卡号：；有效期：；发卡行：；卡片类型：' 
       },
       { tab: '飞机票 OCR', key: 'feiji', id: 14, 
         url: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgFJP.jpg',
         content: '飞机票 OCR飞机票 OCR飞机票 OCR飞机票 OCR飞机票 OCR飞机票 OCR飞机票 OCR飞机票 OCR飞机票 OCR飞机票 OCR飞机票 OCR飞机票 OCR飞机票 OCR飞机票 OCR飞机票 OCR飞机票 OCR飞机票 OCR飞机票 OCR飞机票 OCR飞机票 OCR',
-        result:'起飞港：到达港：日期：航班号：姓名：机票费：税额：含税价额：' 
+        result:'起飞港：；到达港：；日期：；航班号：；姓名：；机票费：；税额：；含税价额：' 
       },
       { tab: '火车票 OCR', key: 'huoche', id: 15, 
         url: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgHCP.jpg',
         content: '火车票 OCR 介绍火车票 OCR 介绍火车票 OCR 介绍火车票 OCR 介绍火车票 OCR 介绍火车票 OCR 介绍火车票 OCR 介绍火车票 OCR 介绍火车票 OCR 介绍火车票 OCR 介绍火车票 OCR 介绍火车票 OCR 介绍火车票 OCR 介绍火车票 OCR 介绍火车票 OCR 介绍火车票 OCR 介绍火车票 OCR 介绍火车票 OCR 介绍火车票 OCR 介绍火车票 OCR 介绍火车票 OCR 介绍火车票 OCR 介绍',
-        result:'车票号码：始发站：目的站：车次：日期：票价：席别：姓名：' 
+        result:'车票号码：；始发站：；目的站：；车次：；日期：；票价：；席别：；姓名：' 
       },
       { tab: '出租车票 OCR', key: 'chuzuche', id: 16, 
         url: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgCZCP.jpg',
         content: '出租车票 OCR出租车票 OCR出租车票 OCR出租车票 OCR出租车票 OCR出租车票 OCR出租车票 OCR出租车票 OCR出租车票 OCR出租车票 OCR出租车票 OCR出租车票 OCR出租车票 OCR出租车票 OCR出租车票 OCR出租车票 OCR出租车票 OCR出租车票 OCR', 
-        result:'发票号码：代码：车号：日期：时间：金额：' 
+        result:'发票号码：；代码：；车号：；日期：；时间：；金额：' 
       },
       { tab: '增值税发票 OCR', key: 'zengzhishui', id: 17, 
         url: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgFP.jpg',
         content: '增值税发票 OCR增值税发票 OCR增值税发票 OCR增值税发票 OCR增值税发票 OCR增值税发票 OCR增值税发票 OCR增值税发票 OCR增值税发票 OCR增值税发票 OCR增值税发票 OCR增值税发票 OCR增值税发票 OCR增值税发票 OCR增值税发票 OCR增值税发票 OCR增值税发票 OCR',
-         result:'发票类型、发票名称、发票代码、发票号码、开票日期、收款人、复核、开票人；购买方：名称、纳税人识别码、地址和电话、开户行及账号；销售方：名称、纳税人识别码、地址和电话、开户行和账号；货物及税信息：名称、单位、数量、金额、税率、税额，金额合计、税额合计、价税合计（大写）、价税合计（小写）' 
+         result:'发票类型：；发票名称：；发票代码：；发票号码：；开票日期：；收款人：；复核：；开票人：；购买方：名称：；：纳税人识别码：；：地址和电话：；：开户行及账号：；销售方：名称：；：纳税人识别码：；：地址和电话：；：开户行和账号：；货物信息：名称：；：单位：；：数量：；金额：；税率：；税额：；金额合计：；税额合计：；价税合计（大写）：；价税合计（小写）' 
       },
       { tab: '定额发票 OCR', key: 'dinge', id: 18, 
         url: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgDEFP.jpg',
         content: '定额发票 OCR定额发票 OCR定额发票 OCR定额发票 OCR定额发票 OCR定额发票 OCR定额发票 OCR定额发票 OCR定额发票 OCR定额发票 OCR定额发票 OCR定额发票 OCR定额发票 OCR定额发票 OCR定额发票 OCR定额发票 OCR定额发票 OCR定额发票 OCR定额发票 OCR',
-        result:'发票代码：发票号码：金额：' 
+        result:'发票代码：；发票号码：；金额：' 
       },
     ],
     currentkey: 'none',
