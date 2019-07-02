@@ -3,7 +3,7 @@ import SimpleFluencyForm from './components/SimpleFluencyForm';
 import IceContainer from '@icedesign/container';
 import { Paragraph } from '@alifd/next';
 
-const content = '电信反欺诈项目介绍电信反欺诈项目介绍电信反欺诈项目介绍电信反欺诈项目介绍电信反欺诈项目介绍电信反欺诈项目介绍电信反欺诈项目介绍电信反欺诈项目介绍电信反欺诈项目介绍电信反欺诈项目介绍电信反欺诈项目介绍电信反欺诈项目介绍电信反欺诈项目介绍电信反欺诈项目介绍电信反欺诈项目介绍电信反欺诈项目介绍电信反欺诈项目介绍电信反欺诈项目介绍电信反欺诈项目介绍电信反欺诈项目介绍电信反欺诈项目介绍电信反欺诈项目介绍电信反欺诈项目介绍';
+const content = 'Eu magna zril ancillae quo, et has nusquam volutpat, an stet vivendo definitionem per. Ei deleniti salutandi his. Eros deleniti persequeris ne cum, has ei quod audiam deserunt, at sea homero graeci torquatos. Id tacimates molestiae cum, per tota solum ne, ei eius veniam detraxit vix. Melius consulatu ius ea, lobortis scripserit pro cu, ex nobis putent iriure est. Nec ubique principes vulputate ut.';
 
 export default class ProjectFraud extends Component {
   constructor(props) {

@@ -20,16 +20,16 @@ export default class BasicTab extends Component {
     super(props);
     this.state = {
       tabs: [
-        { tab: '声音预警', key: 'sound_warning',
+        { tab: '声音识别', key: 'sound_warning',
           title1: '声音源', title2: '识别结果',
-          content: '声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍声音预警介绍', 
+          content: '声音识别介绍', 
           result: '设备是否正常：' },
-        { tab: '声音识别', key: 'sound_recognition',
+        { tab: '语言识别', key: 'sound_recognition',
           title1: '声音源', title2: '识别结果',
-          content: '声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍声音识别介绍', 
+          content: '语言识别介绍', 
           result: '文字内容：'  },
       ],
-      currenttab: '声音预警',
+      currenttab: '声音识别',
       visible: false,
       currentResult: '设备是否正常：',
     }
