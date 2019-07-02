@@ -15,7 +15,7 @@ export default class ProjectFraud extends Component {
     return (
       <div className="project-fraud-page">
         <IceContainer>
-          <h2 align="center" >电信反欺诈算法</h2>
+          <h2 align="center" >电信反欺诈</h2>
           <IceContainer title='功能介绍' >
             <Paragraph>{content}</Paragraph>
           </IceContainer>

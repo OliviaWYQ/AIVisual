@@ -17,14 +17,14 @@ export default class ProjectKl extends Component {
     return (
       <div className="project-kl-page">
         <IceContainer>
-        <h2 align="center" >客流预测算法</h2>
-        {/* <IcePanel style={{marginBottom: '10px'}}> */}
-          {/* <IcePanel.Body> */}
-            <IceContainer title='功能介绍' >
-              <Paragraph>{content}</Paragraph>
-            </IceContainer>
-          {/* </IcePanel.Body> */}
-        {/* </IcePanel> */}
+        <h2 align="center" >客流预测</h2>
+          {/* <IcePanel style={{marginBottom: '10px'}}> */}
+            {/* <IcePanel.Body> */}
+              <IceContainer title='功能介绍' >
+                <Paragraph>{content}</Paragraph>
+              </IceContainer>
+            {/* </IcePanel.Body> */}
+          {/* </IcePanel> */}
           {/* 算法流程图 */}
           <SimpleFluencyForm />
         </IceContainer>

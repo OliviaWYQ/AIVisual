@@ -10,15 +10,15 @@ const apiIcon = require('./images/api_icon.png');
 const abilities = [
   {
     icon: frameworkIcon,
-    title: '框架',
-    content: '多场景应用高效便捷',
-    link: '#',
+    title: '多场景应用',
+    content: '高效便捷满足多种需求',
+    link: '/#/ModelOCR',
   },
   {
     icon: componentIcon,
-    title: '组件',
-    content: '彻底的组件化开发模式',
-    link: '#',
+    title: '算法模块化',
+    content: '定制个性化数据分析流程',
+    link: '/#/ProjectKL',
   },
   {
     icon: apiIcon,

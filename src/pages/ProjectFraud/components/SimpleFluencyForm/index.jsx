@@ -20,8 +20,28 @@ const dataSource = [{key: 1, number: '198237346429384', result: '否'},
 export default class SimpleFluencyForm extends Component {
   static displayName = 'SimpleFluencyForm';
 
-  state = {
-    step: 6
+  // state = {
+  //   step: 6
+  // }
+
+  constructor(props) {
+      super(props);
+
+      this.state = {
+          step: 6,
+          stepType: 'circle',
+          stepAnimation: true,
+          labelPlacement: 'ver'
+      };
+
+      this.onClick = this.onClick.bind(this);
+  }
+
+  onClick(currentStep) {
+      // console.log(currentStep);
+      this.setState({
+          step: currentStep
+      });
   }
 
   formChange = (values, field) => {
@@ -71,7 +91,7 @@ export default class SimpleFluencyForm extends Component {
             </Upload>
           </div>
           <div className={styles.buttonGroup}>
-          <Button onClick={this.nextStep} validate type="primary">下一步</Button>
+          <Button onClick={this.nextStep} validate type="primary">保存</Button>
           </div>
           {/* <Form onChange={this.formChange} >
             <FormItem label="数据源：" {...formItemLayout} required requiredMessage="必填项" >
@@ -95,11 +115,11 @@ export default class SimpleFluencyForm extends Component {
               <Select dataSource={['是', '否']} useVirtual defaultValue="是" />
             </div>
             <div className={styles.buttonGroup}>
-              <Button onClick={this.prev}
+              {/* <Button onClick={this.prev}
                 type="primary"
-                disabled={this.state.step === 0}>上一步</Button>
+                disabled={this.state.step === 0}>上一步</Button> */}
               <FormItem {...formItemLayout} label=" ">
-                <Form.Submit onClick={this.nextStep} validate type="primary">下一步</Form.Submit>
+                <Form.Submit onClick={this.nextStep} validate type="primary">保存</Form.Submit>
               </FormItem>
             </div>
           {/* </Form> */}
@@ -113,11 +133,11 @@ export default class SimpleFluencyForm extends Component {
               <Input name="primary" autoComplete="on" />
             </FormItem>
             <div className={styles.buttonGroup}>
-              <Button onClick={this.prev}
+              {/* <Button onClick={this.prev}
                 type="primary"
-                disabled={this.state.step === 0}>上一步</Button>
+                disabled={this.state.step === 0}>上一步</Button> */}
               <FormItem {...formItemLayout} label=" ">
-                <Form.Submit onClick={this.nextStep} validate type="primary">下一步</Form.Submit>
+                <Form.Submit onClick={this.nextStep} validate type="primary">保存</Form.Submit>
               </FormItem>
             </div>
           </Form>
@@ -131,11 +151,11 @@ export default class SimpleFluencyForm extends Component {
               <Input name="number1" autoComplete="on" />
             </FormItem>
             <div className={styles.buttonGroup}>
-              <Button onClick={this.prev}
+              {/* <Button onClick={this.prev}
                 type="primary"
-                disabled={this.state.step === 0}>上一步</Button>
+                disabled={this.state.step === 0}>上一步</Button> */}
               <FormItem {...formItemLayout} label=" ">
-                <Form.Submit onClick={this.nextStep} validate type="primary">下一步</Form.Submit>
+                <Form.Submit onClick={this.nextStep} validate type="primary">保存</Form.Submit>
               </FormItem>
             </div>
           </Form>
@@ -149,11 +169,11 @@ export default class SimpleFluencyForm extends Component {
               <Input name="number2" autoComplete="on" />
             </FormItem>
             <div className={styles.buttonGroup}>
-              <Button onClick={this.prev}
+              {/* <Button onClick={this.prev}
                 type="primary"
-                disabled={this.state.step === 0}>上一步</Button>
+                disabled={this.state.step === 0}>上一步</Button> */}
               <FormItem {...formItemLayout} label=" ">
-                <Form.Submit onClick={this.nextStep} validate type="primary">下一步</Form.Submit>
+                <Form.Submit onClick={this.nextStep} validate type="primary">保存</Form.Submit>
               </FormItem>
             </div>
           </Form>
@@ -167,11 +187,11 @@ export default class SimpleFluencyForm extends Component {
               <Input name="number3" autoComplete="on" />
             </FormItem>
             <div className={styles.buttonGroup}>
-              <Button onClick={this.prev}
+              {/* <Button onClick={this.prev}
                 type="primary"
-                disabled={this.state.step === 0}>上一步</Button>
+                disabled={this.state.step === 0}>上一步</Button> */}
               <FormItem {...formItemLayout} label=" ">
-                <Form.Submit onClick={this.nextStep} validate type="primary">下一步</Form.Submit>
+                <Form.Submit onClick={this.nextStep} validate type="primary">保存</Form.Submit>
               </FormItem>
             </div>
           </Form>
@@ -206,13 +226,13 @@ export default class SimpleFluencyForm extends Component {
           <IceContainer  title='流程图'>
           <br />
           <Step shape="circle" current={this.state.step}>
-            <Step.Item key={0} title="输入数据" content='选择数据源'/>
-            <Step.Item key={1} title="数据清理" content='清除无效数据'/>
-            <Step.Item key={2} title="特征提取" content='选择特征值'/>
-            <Step.Item key={3} title="算法1" content='调整参数' />
-            <Step.Item key={4} title="算法2" content='调整参数' />
-            <Step.Item key={5} title="算法3" content='调整参数' />
-            <Step.Item key={6} title="完成" content='分析结果'/>
+            <Step.Item key={0} title="输入数据" content='选择数据源' onClick={this.onClick}/>
+            <Step.Item key={1} title="数据清理" content='清除无效数据' onClick={this.onClick}/>
+            <Step.Item key={2} title="特征提取" content='选择特征值' onClick={this.onClick}/>
+            <Step.Item key={3} title="算法1" content='调整参数' onClick={this.onClick}/>
+            <Step.Item key={4} title="算法2" content='调整参数' onClick={this.onClick}/>
+            <Step.Item key={5} title="算法3" content='调整参数' onClick={this.onClick}/>
+            <Step.Item key={6} title="完成" content='分析结果' onClick={this.onClick}/>
           </Step>
           </IceContainer>
           {/* </IcePanel.Body> */}
