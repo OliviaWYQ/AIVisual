@@ -33,20 +33,6 @@ class Image extends React.Component {
     const { Image } = Guide;
     return (
       <IceContainer title='客流热力图'>
-        {/* <h4>日期：2018-09-06</h4> */}
-        {/* <h4>选择日期：</h4>
-          <div style={{marginTop: '20px', marginBottom: '10px'}}>
-           <DatePicker
-            locale={{ datePlaceholder: '查看日期' }}
-            defaultValue={startValue} 
-            onChange={val => console.log(val.format('YYYY-MM-DD'))}
-            dateInputAriaLabel="date input" 
-            inputProps={{"aria-label": "date picker main"}}
-            disabledDate={this.disabledDate}
-            />
-          </div> */}
-
-        {/* <h4 align='center' style={{color: 'rgb(51, 51, 51)'}} className={styles.custometitle}>客流热力图</h4> */}
         <br />
         <Chart
           height={window.innerHeight}

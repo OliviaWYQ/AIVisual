@@ -50,11 +50,10 @@ export default class ImgBlock extends Component {
                 识别结果
               </IcePanel.Header>
               <IcePanel.Body>
-                {/* <p>{this.state.result}</p> */}
-                {/* return ( */}
                   <div>
                   <table width="300">
                     {
+                      // 拆分 result 返回的字符串
                       Array.from(this.state.result.split('；')).map((item, index) => {
                         // console.log(item);
                         return (

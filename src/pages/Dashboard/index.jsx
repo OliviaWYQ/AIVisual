@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import EditableTable from './components/EditableTable';
 import ModelCards from './components/ModelCards';
 
+// 个人中心->历史记录
 export default class Dashboard extends Component {
   render() {
     return (

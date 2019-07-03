@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import { Progress, Icon, Grid, Upload, Button } from '@alifd/next';
-// import IceContainer from '@icedesign/container';
-// import styles from './index.module.scss';
+import { Icon, Grid } from '@alifd/next';
 import IcePanel from '@icedesign/panel';
-import Img from '@icedesign/img';
 
 const { Row, Col } = Grid;
 
@@ -26,6 +23,7 @@ export default class ImgBlock extends Component {
        <div>
         <table width="200">
           {
+            // 拆分 result 返回的字符串
             Array.from(this.state.result.split('；')).map((item, index) => {
               // console.log(item);
               return (
@@ -47,13 +45,6 @@ export default class ImgBlock extends Component {
   };
 
   render() {
-    const textRender = percent => {
-      if (percent === 100) {
-        return <Icon type="select" size="medium" />;
-      }
-      return `${percent.toFixed(0)}%`;
-    };
-
     return (
       <div>
         <Row wrap>

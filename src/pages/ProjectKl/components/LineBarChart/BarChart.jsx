@@ -55,7 +55,6 @@ export default class BarChart extends Component {
   render() {
     return (
       <IceContainer title="分区统计">
-        {/* <h4>日期：2018-09-06</h4> */}
         <h4>选择日期：</h4>
           <div style={{marginTop: '20px'}}>
            <DatePicker
@@ -67,7 +66,6 @@ export default class BarChart extends Component {
             disabledDate={this.disabledDate}
             />
           </div>
-
         <Chart height={400} padding={[40]} data={data} scale={cols} forceFit>
           <Axis name="name" />
           <Axis name="value" />

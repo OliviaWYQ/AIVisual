@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import { Progress, Icon, Grid, Upload, Button } from '@alifd/next';
-// import IceContainer from '@icedesign/container';
-// import styles from './index.module.scss';
+import { Icon, Grid } from '@alifd/next';
 import IcePanel from '@icedesign/panel';
-import Img from '@icedesign/img';
 
 const { Row, Col } = Grid;
 
@@ -22,13 +19,12 @@ export default class ImgBlock extends Component {
 
   renderResult= (title2)  => {
     if (title2 == '识别结果') {
-    //  return (<p>{this.state.result}</p>);
       return (
         <div>
         <table width="200">
           {
+            // 拆分 result 返回的字符串
             Array.from(this.state.result.split('；')).map((item, index) => {
-              // console.log(item);
               return (
                 <tbody key={index}>
                   <tr key={index}>
@@ -57,17 +53,6 @@ export default class ImgBlock extends Component {
 
     return (
       <div>
-        {/* <IceContainer className={styles.tabCardStyle}>*/}
-
-        {/* <div className="progress-panel"> */}
-        {/*  <Button.Group> */}
-        {/*    <Button onClick={this.minusProgress} disabled={this.state.percent === 0}><Icon type="minus" /></Button> */}
-        {/*    <Button onClick={this.addProgress} disabled={this.state.percent === 100}><Icon type="add" /></Button> */}
-        {/*  </Button.Group> */}
-        {/* </div> */}
-
-        {/* <Progress style={{ margin: '15px 0 10px' }} percent={this.state.percent} progressive size="large" textRender={textRender} /> */}
-        
         <Row wrap>
           <Col>
             <IcePanel style={{ marginTop: '20px', marginBottom: '10px', marginRight: '10px' }}>
@@ -75,14 +60,6 @@ export default class ImgBlock extends Component {
                 {this.state.title1}
               </IcePanel.Header>
               <IcePanel.Body>
-                {/*<Img*/}
-                {/*  enableAliCDNSuffix*/}
-                {/*  width={400}*/}
-                {/*  height={300}*/}
-                {/*  src={this.state.url1}*/}
-                {/*  type="contain"*/}
-                {/*  style={{ margin: '10px' }}*/}
-                {/*/>*/}
                 <img src={this.state.url1} alt={this.state.alt+'_in'}/>
               </IcePanel.Body>
             </IcePanel>
@@ -93,29 +70,11 @@ export default class ImgBlock extends Component {
                 {this.state.title2}
               </IcePanel.Header>
               <IcePanel.Body>
-                {/*<Img*/}
-                {/*  enableAliCDNSuffix*/}
-                {/*  width={400}*/}
-                {/*  height={300}*/}
-                {/*  src={this.state.url2}*/}
-                {/*  type="contain"*/}
-                {/*  style={{ margin: '10px' }}*/}
-                {/*/>*/}
                 {this.renderResult(this.state.title2)}
-                {/* <img src={this.state.url2} alt={this.state.alt+'_out'}/> */}
               </IcePanel.Body>
             </IcePanel>
           </Col>
         </Row>
-        {/* <IcePanel style={{ marginTop: '10px', marginBottom: '10px' }}>
-          <IcePanel.Header>
-            识别结果
-          </IcePanel.Header>
-          <IcePanel.Body>
-            <p>识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果识别结果</p>
-          </IcePanel.Body>
-        </IcePanel> */}
-        {/*</IceContainer>*/}
       </div>
     );
   }

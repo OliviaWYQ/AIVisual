@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table, Button, Tab, Upload } from '@alifd/next';
+import { Tab } from '@alifd/next';
 import IceContainer from '@icedesign/container';
 import styles from './index.module.scss';
 import ImgBlock from '../ImgBlock/index';
@@ -12,22 +12,22 @@ export default class BasicTab extends Component {
       { tab: '通用文本 OCR', key: 'tongyong', id: 1, 
         url: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgTY.jpg',
         content: '通用文本 OCR 介绍',
-        result: '文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本'
+        result: '文本'
       },
       { tab: '手写体 OCR', key: 'shouxieti', id: 2, 
         url: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgSXT.jpg',
         content: '手写体 OCR 介绍',
-        result: '文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本'
+        result: '文本'
       },
       { tab: '二维码 OCR', key: 'erweima', id: 3, 
         url: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgEWM.jpg',
         content: '二维码 OCR 介绍',
-        result: '号码号码号码号码号码号码号码号码号码号码号码'
+        result: '号码'
       },
       { tab: '条形码 OCR', key: 'tiaoxingma', id: 4, 
         url: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgTXM.jpg',
         content: '条形码 OCR 介绍',
-        result: '号码号码号码号码号码号码号码号码号码号码号码'
+        result: '号码'
       },
       { tab: '车牌 OCR', key: 'chepai', id: 5, 
         url: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgCP.jpg',
@@ -107,15 +107,6 @@ export default class BasicTab extends Component {
     currentresult: 'none',
   }
 
-  // changeState = ((url, key, result) => {
-  //   this.setState(() => {
-  //     this.state.currentkey = key;
-  //     this.state.currenturl = url;
-  //     this.state.currentresult = result;
-  //     // console.log('tab:', this.state.currentId, this.state.currenturl);
-  //   });
-  // })
-
   changeState = (url, key, result) => {
     setTimeout(() => {
         this.setState({currentresult: result, currentkey:key, currenturl:url}, ()=>{
@@ -123,10 +114,6 @@ export default class BasicTab extends Component {
         });
     }, 0);
   }
-
-  // componentDidUpdate = () => {
-  //   console.log("update" + this.state.currentkey, this.state.currenturl, this.state.currentresult);
-  // } 
 
   render() {
     return (

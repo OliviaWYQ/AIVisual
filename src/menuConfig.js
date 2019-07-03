@@ -29,98 +29,38 @@ const asideMenuConfig = [
       {
         name: 'detail',
         path: '/Introduction/detail',
-        // icon: 'home',
       },
     ],
   },
-  // { // 控制台
-  //   name: 'Dashboard',
-  //   path: '/dashboard',
-  //   icon: 'home2',
-  //   children: [
-  //     {
-  //       name: 'monitor',
-  //       path: '/dashboard/monitor',
-  //     },
-  //   ],
-  // },
-  // {
-  //   // 算法模型
-  //   name: '表格页',
-  //   path: '/table',
-  //   icon: 'table',
-  //   children: [
-  //     {
-  //       name: 'Nav_ModelOCR',
-  //       path: '/ModelOCR',
-  //       // icon: 'home',
-  //     },
-  //     {
-  //       name: 'Nav_ModelFace',
-  //       path: '/ModelFace',
-  //       // icon: 'home',
-  //     },
-  //     {
-  //       name: 'Nav_ModelImg',
-  //       path: '/ModelImg',
-  //       // icon: 'home',
-  //     },
-  //     {
-  //       name: 'Nav_ModelSound',
-  //       path: '/ModelSound',
-  //       icon: 'home',
-  //     },
-  //   ],
-  // },
   {
     // 项目分析
     name: 'Nav_select',
     path: '/select',
     icon: 'copy',
     children: [
-      // {
-      //   name: 'Nav_select',
-      //   path: '/select/db',
-      //   // icon: 'home',
-      // },
-      // {
-      //   name: 'Nav_step',
-      //   path: '/step',
-      //   // icon: 'home',
-      // },
-      // {
-      //   name: 'general',
-      //   path: '/chart/general',
-      // },
       {
         name: 'Nav_ModelOCR',
         path: '/ModelOCR',
-        // icon: 'home',
       },
       {
         name: 'Nav_ModelFace',
         path: '/ModelFace',
-        // icon: 'home',
       },
       {
         name: 'Nav_ModelImg',
         path: '/ModelImg',
-        // icon: 'home',
       },
       {
         name: 'Nav_ModelSound',
         path: '/ModelSound',
-        icon: 'home',
       },
       {
         name: 'Nav_ProjectKL',
         path: '/ProjectKL',
-        // icon: 'home',
       },
       {
         name: 'Nav_ProjectFraud',
         path: '/ProjectFraud',
-        icon: 'home',
       },
     ],
   },
@@ -140,11 +80,6 @@ const asideMenuConfig = [
       },
     ],
   },
-  // {
-  //   name: 'Nav_First',
-  //   path: '/First',
-  //   icon: 'home',
-  // },
 ];
 
 export { headerMenuConfig, asideMenuConfig };

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import BasicTab from './components/BasicTab';
-// import ImgBlock from './components/ImgBlock';
 
+// 应用场景->人脸识别
 export default class ModelFace extends Component {
   constructor(props) {
     super(props);

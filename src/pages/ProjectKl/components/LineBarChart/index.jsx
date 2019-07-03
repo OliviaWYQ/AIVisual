@@ -23,9 +23,11 @@ export default class LineBarChart extends Component {
       <div>
         <Row gutter="20" wrap>
           <Col l="12">
+            {/* 折线图 */}
             <LineChart />
           </Col>
           <Col l="12">
+            {/* 柱状图 */}
             <BarChart />
           </Col>
         </Row>

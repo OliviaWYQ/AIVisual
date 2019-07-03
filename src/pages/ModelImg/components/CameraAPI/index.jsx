@@ -3,7 +3,7 @@ import Camera, { FACING_MODES, IMAGE_TYPES }from 'react-html5-camera-photo';
 import 'react-html5-camera-photo/build/css/index.css';
 import { Overlay, Button } from '@alifd/next';
 import styles from './index.module.scss';
-import Webcam from "react-webcam";
+
 
 class CameraAPI extends Component {
 

@@ -3,28 +3,8 @@ export default {
   'app.menu.dashboard': 'Dashboard',
   'app.menu.dashboard.monitor': 'History',
 
-  // 'app.menu.chart': 'Analysis',
-  // 'app.menu.chart.basic': 'Basic Chart',
-  'app.menu.chart.general': 'Analysis',
-
-  'app.menu.table': 'Models',
-  'app.menu.table.basic': 'Model Lib',
-  'app.menu.table.general': 'General Table',
-
-  'app.menu.list': 'List',
-  'app.menu.list.basic': 'Basic List',
-  'app.menu.list.general': 'General List',
-
-  // 'app.menu.profile': 'Profile',
-  // 'app.menu.profile.basic': 'Basic Profile',
-  // 'app.menu.profile.general': 'General Profile',
-
   'app.menu.account': 'Account',
   'app.menu.account.setting': 'Account Setting',
-
-  // 'app.menu.result': 'Result',
-  // 'app.menu.result.success': 'Success',
-  // 'app.menu.result.fail': 'Fail',
 
   'app.menu.exception': 'Exception',
   'app.menu.exception.204': 'Empty',
@@ -32,28 +12,16 @@ export default {
   'app.menu.exception.403': 'Not Permission',
   'app.menu.exception.500': 'Server Error',
 
-  'app.menu.download': 'Download',
-
   'app.menu.Introduction': 'About',
   'app.menu.Introduction.detail': 'New Features',
 
   'app.menu.select': 'Scenes',
-  'app.menu.select.db': 'Database',
-
-  'app.menu.step': 'Flow Chart',
-
   'app.menu.ModelOCR': 'OCR',
-
   'app.menu.ModelFace': 'Face Recognition',
-
   'app.menu.ModelSound': 'Sound Recognition',
-  
   'app.menu.ModelImg': 'Image Recognition',
-
   'app.menu.ProjectKL': 'Passenger Forecast',
-
   'app.menu.ProjectFraud': 'Anti-Fraud',
-
 
   // Top Header
   'app.header.feedback': 'Feedback',

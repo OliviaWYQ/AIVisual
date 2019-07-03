@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
-import {  Overlay, Table, Button, Tab, Upload, Grid } from '@alifd/next';
+import {  Overlay, Button, Tab, Upload } from '@alifd/next';
 import IceContainer from '@icedesign/container';
 import styles from './index.module.scss';
 import ImgBlock from '../ImgBlock/index';
 import CameraAPI from '../CameraAPI/index';
-
-// import CustomBlock from './components/CustomBlock';
-// import data from './data';
-
-const { Row, Col } = Grid;
 
 export default class BasicTab extends Component {
   static displayName = 'BasicTab';
@@ -100,8 +95,8 @@ export default class BasicTab extends Component {
       );
     } return (
       <div>
-        {/* 调用摄像头 */}
         <div style={{ position: 'relative', margin: '30px 95px 0px' }}>
+          {/* 调用摄像头 */}
           <CameraAPI />
         </div>
         <div style={{ margin: '-62px 0 5px' }}>

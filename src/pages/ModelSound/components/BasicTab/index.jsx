@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import {  Overlay, Table, Button, Tab, Upload, Grid } from '@alifd/next';
+import { Button, Tab, Upload } from '@alifd/next';
 import IceContainer from '@icedesign/container';
 import styles from './index.module.scss';
 import IcePanel from '@icedesign/panel';
-// import CustomBlock from './components/CustomBlock';
-// import data from './data';
 import MicAPI from '../MicAPI/index';
-
-const { Row, Col } = Grid;
 
 export default class BasicTab extends Component {
   static displayName = 'BasicTab';
@@ -76,10 +72,7 @@ export default class BasicTab extends Component {
                 {this.state.currentResult}
               </IcePanel.Body>
             </IcePanel>
-
         </IceContainer>
-
-       
       </div>
     );
   }

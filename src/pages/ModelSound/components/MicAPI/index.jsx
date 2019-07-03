@@ -47,7 +47,6 @@ export default class MicAPI extends React.Component {
                     // onStop={this.onStop}
                     // onData={this.onData}
                     strokeColor="#000000"
-                    // backgroundColor="#FF4081" 
                     backgroundColor="rgb(220, 222, 227)"
                 />
             </div>

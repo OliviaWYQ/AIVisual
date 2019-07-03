@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
-import {  Overlay, Table, Button, Tab, Upload, Grid } from '@alifd/next';
+import {  Overlay, Button, Tab, Upload } from '@alifd/next';
 import IceContainer from '@icedesign/container';
 import styles from './index.module.scss';
 import ImgBlock from '../ImgBlock/index';
 import CameraAPI from '../CameraAPI/index';
-
-// import CustomBlock from './components/CustomBlock';
-// import data from './data';
-
-const { Row, Col } = Grid;
 
 export default class BasicTab extends Component {
   static displayName = 'BasicTab';
@@ -70,6 +65,7 @@ export default class BasicTab extends Component {
     }, 0);
   }
 
+  // 检查State
   // componentDidUpdate(){
   //     console.log('update', this.state.currenttab, this.state.currentResult)
   // }
@@ -87,7 +83,6 @@ export default class BasicTab extends Component {
   }
 
   renderPop = (tab) => {
-    // console.log('renderpop', tab, this.state.currenttab, this.state.currentResult )
     if (tab == '人脸对比') {
       return(
             <div>
@@ -136,24 +131,10 @@ export default class BasicTab extends Component {
         <IceContainer title='人脸识别项目' className={styles.tabCardStyle}>
           <Tab shape='wrapped' onChange={this.handleTabChange}>
             {this.state.tabs.map((item) => <Tab.Item key={item.key} title={item.tab} onClick={this.changeState.bind(this, item.url, item.tab, item.result)}>
-            {/* <Table dataSource={[item]}>
-              <Table.Column title={'算法模型介绍及使用方法'} dataIndex="content"/>
-            </Table> */}
             <div className={styles.detached}>
               {item.content}
             </div>
-              {/* <Row className={styles.contentStyle}>
-                <Col s="12" l="10">
-                  {item.content}
-                </Col>
-              </Row> */}
             {this.renderPop(item.tab)}
-            {/* <Upload
-              action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
-              multiple
-              listType="text">
-              <Button type="primary" style={{ margin: '30px 0 10px' }}>上传图片</Button> &nbsp;&nbsp;
-            </Upload> */}
             <ImgBlock url1={item.url1} url2={item.url2} alt={item.key} title1={item.title1} title2={item.title2} result={item.result} />
             </Tab.Item>)}
           </Tab>

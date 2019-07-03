@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import IceContainer from '@icedesign/container';
-import { Radio, Upload, Select, DatePicker, Table, Step, Grid, Input, Button, Form } from '@alifd/next';
+import { Radio, Upload, Select, Step, Input, Button, Form } from '@alifd/next';
 import styles from './index.module.scss';
-import IcePanel from '@icedesign/panel';
-import Image from '../BizchartsHeatmapImage/index';
 import LineBarChart from '../LineBarChart/index';
 import moment from 'moment';
 
-const { Row, Col } = Grid;
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
 
@@ -16,10 +13,6 @@ const formItemLayout = {
   wrapperCol: { s: 14, l: 12 }
 };
 
-// const currentDate = moment();
-
-// console.log('now', currentDate.format('YYYY-MM-DD') );
-
 const startValue = moment('2018-09-01', 'YYYY-MM-DD', true);
 const endValue = moment('2018-09-09', 'YYYY-MM-DD', true);
 
@@ -27,10 +20,6 @@ const { Group: ButtonGroup } = Button;
 
 export default class SimpleFluencyForm extends Component {
   static displayName = 'SimpleFluencyForm';
-
-  // state = {
-  //   step: 6,
-  // }
 
   constructor(props) {
       super(props);
@@ -61,7 +50,6 @@ export default class SimpleFluencyForm extends Component {
     if (!errors) {
       const s = this.state.step + 1;
       this.setState({ 
-        // step: this.state.step + 1 
         step: s > 7 ? 7 : s
       });
     } else {
@@ -85,10 +73,13 @@ export default class SimpleFluencyForm extends Component {
   };
 
   renderStep = (step) => {
-    // console.log('state:', step)
     if (step === 0) {
       return (
         <IceContainer className={styles.form}>
+          <Form onChange={this.formChange} >
+          <h4 align='center'>
+            选择客流数据
+          </h4>
           <div className={styles.select}>
             <Upload 
             action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
@@ -100,6 +91,7 @@ export default class SimpleFluencyForm extends Component {
           <div className={styles.select}>
           <Button onClick={this.nextStep} validate type="primary">保存</Button>
           </div>
+          </Form>
         </IceContainer>
       );
     } else if (step === 1) {
@@ -110,22 +102,13 @@ export default class SimpleFluencyForm extends Component {
               <Select dataSource={['是', '否']} useVirtual defaultValue="是" />
             </div>
             <div className={styles.buttonGroup}>
-              {/* <Button onClick={this.prev}
-                type="primary"
-                disabled={this.state.step === 0}>上一步</Button> */}
-              <FormItem {...formItemLayout} label=" ">
-                <Form.Submit onClick={this.nextStep} validate type="primary">保存</Form.Submit>
-              </FormItem>
+              <Button onClick={this.nextStep} validate type="primary">保存</Button>
             </div>
         </IceContainer>
       );
     } else if (step === 2) {
       return (
         <IceContainer className={styles.form}>
-          <Form onChange={this.formChange} >
-            {/* <FormItem label="特征值：" {...formItemLayout} required requiredMessage="必填项" >
-              <Input name="primary" autoComplete="on" />
-            </FormItem> */}
             <div className={styles.select}>
               选择预测范围：
               <Select dataSource={['1天内', '1周内', '1个月内', '1年内']} useVirtual defaultValue="请选择" />
@@ -143,14 +126,8 @@ export default class SimpleFluencyForm extends Component {
                 </RadioGroup>
             </div>
             <div className={styles.buttonGroup}>
-              {/* <Button onClick={this.prev}
-                type="primary"
-                disabled={this.state.step === 0}>上一步</Button> */}
-              <FormItem {...formItemLayout} label=" ">
-                <Form.Submit onClick={this.nextStep} validate type="primary">保存</Form.Submit>
-              </FormItem>
+              <Button onClick={this.nextStep} validate type="primary">保存</Button>
             </div>
-          </Form>
         </IceContainer>
       );
     } else if (step === 3) {
@@ -172,9 +149,6 @@ export default class SimpleFluencyForm extends Component {
               <Input name="number3" autoComplete="on" />
             </FormItem>
             <div className={styles.buttonGroup}>
-              {/* <Button onClick={this.prev}
-                type="primary"
-                disabled={this.state.step === 0}>上一步</Button> */}
               <FormItem {...formItemLayout} label=" ">
                 <Form.Submit onClick={this.nextStep} validate type="primary">保存</Form.Submit>
               </FormItem>

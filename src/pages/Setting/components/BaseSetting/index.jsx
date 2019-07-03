@@ -2,11 +2,9 @@
 import React, { Component } from 'react';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import IceContainer from '@icedesign/container';
-import { Input, Radio, Switch, Upload, Grid, Form } from '@alifd/next';
+import { Input, Upload, Form } from '@alifd/next';
 import styles from './index.module.scss';
 
-const { Row, Col } = Grid;
-const { Group: RadioGroup } = Radio;
 const FormItem = Form.Item;
 
 const formItemLayout = {
@@ -90,7 +88,7 @@ class SettingsForm extends Component {
               <h2 className={styles.formTitle}>
                 <FormattedMessage id="app.setting.pagetitle" />
               </h2>
-
+              {/* 姓名 */}
               <FormItem
                 label={formatMessage({ id: 'app.setting.name' })}
                 {...formItemLayout}
@@ -102,7 +100,7 @@ class SettingsForm extends Component {
               >
                 <Input name="name" placeholder="username" />
               </FormItem>
-
+              {/* 邮箱 */}
               <FormItem
                 label={formatMessage({ id: 'app.setting.email' })}
                 {...formItemLayout}
@@ -113,7 +111,7 @@ class SettingsForm extends Component {
               >
                 <Input htmlType="email" name="email" />
               </FormItem>
-
+              {/* 头像 */}
               <FormItem
                 label={formatMessage({ id: 'app.setting.avatar' })}
                 {...formItemLayout}

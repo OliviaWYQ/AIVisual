@@ -72,7 +72,6 @@ export default class LineChart extends Component {
   render() {
     return (
       <IceContainer title="客流趋势">
-        {/* <h4>日期范围：{data[0].date} 至 {data[data.length-1].date}</h4> */}
         <h4>选择日期范围：</h4>
         <div style={{marginTop: '20px'}}>
           <RangePicker 
