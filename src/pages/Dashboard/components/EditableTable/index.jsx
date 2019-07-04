@@ -14,39 +14,39 @@ export default class EditableTable extends Component {
   static defaultProps = {};
 
   constructor(props) {
-      super(props);
-      const {
-          intl: { formatMessage },
-        } = props;
+    super(props);
+    const {
+      intl: { formatMessage },
+    } = props;
 
-      const db = {
-        message:[
-          {
-            value: 'MySQL数据库',
-            remark: '声音源',
-            validity: '2018-09-09',
-          },
-          {
-            value: 'Oracle数据库',
-            remark: '客流数据',
-            validity: '2018-10-08',
-          }
-        ]
-      }
+    const db = {
+      message: [
+        {
+          value: 'MySQL数据库',
+          remark: '声音源',
+          validity: '2018-09-09',
+        },
+        {
+          value: 'Oracle数据库',
+          remark: '客流数据',
+          validity: '2018-10-08',
+        },
+      ],
+    };
 
-      const generatorData = (db) => {
-        return Array.from(db).map((item, index) => {
-          return {
-            todo: item.value,
-            remark: item.remark,
-            validity: item.validity,
-          };
-        });
-      };
+    const generatorData = (db) => {
+      return Array.from(db).map((item, index) => {
+        return {
+          todo: item.value,
+          remark: item.remark,
+          validity: item.validity,
+        };
+      });
+    };
 
-      this.state = {
-        dataSource: generatorData(db.message),
-      };
+    this.state = {
+      dataSource: generatorData(db.message),
+    };
   }
 
   renderOrder = (value, index) => {
@@ -107,7 +107,7 @@ export default class EditableTable extends Component {
     } = this.props;
 
     return (
-      <IceContainer title='数据管理'>
+      <IceContainer title="数据管理">
         <Table
           dataSource={this.state.dataSource}
           hasBorder={false}

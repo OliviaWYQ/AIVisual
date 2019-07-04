@@ -49,23 +49,23 @@ export default class BarChart extends Component {
   }
 
   disabledDate = function (date, view) {
-      return (endValue+1).valueOf() <= date.valueOf() || date.valueOf() <= (startValue-1).valueOf();
+    return (endValue + 1).valueOf() <= date.valueOf() || date.valueOf() <= (startValue - 1).valueOf();
   };
 
   render() {
     return (
       <IceContainer title="分区统计">
         <h4>选择日期：</h4>
-          <div style={{marginTop: '20px'}}>
-           <DatePicker
+        <div style={{ marginTop: '20px' }}>
+          <DatePicker
             locale={{ datePlaceholder: '查看日期' }}
-            defaultValue={startValue} 
+            defaultValue={startValue}
             onChange={val => console.log(val.format('YYYY-MM-DD'))}
-            dateInputAriaLabel="date input" 
-            inputProps={{"aria-label": "date picker main"}}
+            dateInputAriaLabel="date input"
+            inputProps={{ 'aria-label': 'date picker main' }}
             disabledDate={this.disabledDate}
-            />
-          </div>
+          />
+        </div>
         <Chart height={400} padding={[40]} data={data} scale={cols} forceFit>
           <Axis name="name" />
           <Axis name="value" />

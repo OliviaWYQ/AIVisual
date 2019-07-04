@@ -60,7 +60,7 @@ export default class ColumnForm extends Component {
                       ]}
                     />
                   </FormItem>
-                </Col> 
+                </Col>
                 <Col>
                   <FormItem
                     label="类型："
@@ -113,5 +113,4 @@ export default class ColumnForm extends Component {
     );
   }
 }
-
 

@@ -17,12 +17,12 @@ export default class ImgBlock extends Component {
     result: this.props.result,
   };
 
-  renderResult= (title2)  => {
+  renderResult= (title2) => {
     if (title2 == '识别结果') {
       return (
         <div>
-        <table width="200">
-          {
+          <table width="200">
+            {
             // 拆分 result 返回的字符串
             Array.from(this.state.result.split('；')).map((item, index) => {
               return (
@@ -35,12 +35,11 @@ export default class ImgBlock extends Component {
               );
             })
           }
-        </table>
+          </table>
         </div>
       );
-    } else {
-      return (<img src={this.state.url2} alt={this.state.alt+'_out'} ></img>);
     }
+    return (<img src={this.state.url2} alt={`${this.state.alt}_out`} />);
   };
 
   render() {
@@ -60,7 +59,7 @@ export default class ImgBlock extends Component {
                 {this.state.title1}
               </IcePanel.Header>
               <IcePanel.Body>
-                <img src={this.state.url1} alt={this.state.alt+'_in'}/>
+                <img src={this.state.url1} alt={`${this.state.alt}_in`} />
               </IcePanel.Body>
             </IcePanel>
           </Col>

@@ -16,10 +16,9 @@ export default class ImgBlock extends Component {
   };
 
   render() {
-
     return (
       <div>
-        
+
         {/* 调用摄像头 */}
         <div style={{ position: 'relative', margin: '30px 95px 0px' }}>
           <CameraAPI />
@@ -27,11 +26,12 @@ export default class ImgBlock extends Component {
         {/* 上传 */}
         <div style={{ margin: '-62px 0 5px' }}>
           <Upload
-          action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
-          multiple
-          listType="text">
-          <Button type="primary" style={{ margin: '30px 0 0' }}> 上传图片 </Button> &nbsp;&nbsp;
-        </Upload>
+            action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
+            multiple
+            listType="text"
+          >
+            <Button type="primary" style={{ margin: '30px 0 0' }}> 上传图片 </Button> &nbsp;&nbsp;
+          </Upload>
         </div>
         <Row wrap>
           <Col>
@@ -40,7 +40,7 @@ export default class ImgBlock extends Component {
                 原始图片
               </IcePanel.Header>
               <IcePanel.Body>
-                <img src={this.state.url} alt={this.state.alt}/>
+                <img src={this.state.url} alt={this.state.alt} />
               </IcePanel.Body>
             </IcePanel>
           </Col>
@@ -50,7 +50,7 @@ export default class ImgBlock extends Component {
                 识别结果
               </IcePanel.Header>
               <IcePanel.Body>
-                  <div>
+                <div>
                   <table width="300">
                     {
                       // 拆分 result 返回的字符串
@@ -67,7 +67,7 @@ export default class ImgBlock extends Component {
                       })
                     }
                   </table>
-                  </div>
+                </div>
                 {/* ); */}
               </IcePanel.Body>
             </IcePanel>

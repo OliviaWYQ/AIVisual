@@ -11,8 +11,8 @@ export default class ModelOcr extends Component {
   render() {
     return (
       <div className="model-ocr-page">
-          {/* 基础 Tab 组件 */}
-          <BasicTab />
+        {/* 基础 Tab 组件 */}
+        <BasicTab />
       </div>
     );
   }

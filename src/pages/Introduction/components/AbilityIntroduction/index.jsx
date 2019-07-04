@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Grid } from '@alifd/next';
 import styles from './index.module.scss';
+
 const { Row, Col } = Grid;
 
 const frameworkIcon = require('./images/framework_icon.png');
@@ -33,7 +34,7 @@ export default class Index extends Component {
     return abilities.map(({ icon, title, content, link }, idx) => {
       return (
         <Col xxs="24" l="8" className={styles.item} key={idx}>
-          <img src={icon}  className={styles.icon} alt="" />
+          <img src={icon} className={styles.icon} alt="" />
           <div className={styles.icon_title}>
             {title}
           </div>
@@ -60,7 +61,7 @@ export default class Index extends Component {
     return (
       <div className={styles.container}>
         <div className={styles.title}> AI 可视化分析平台</div>
-        <hr style={{width: '50%', height: '10px'}} />
+        <hr style={{ width: '50%', height: '10px' }} />
         <div className={styles.subtitle}> 让算法触手可及 </div>
         <Row wrap className={styles.group}>
           {this.renderAblities()}

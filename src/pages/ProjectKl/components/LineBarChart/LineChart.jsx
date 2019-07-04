@@ -66,16 +66,16 @@ export default class LineChart extends Component {
   }
 
   disabledDate = function (date, view) {
-      return (endValue+1).valueOf() <= date.valueOf() || date.valueOf() <= (startValue-1).valueOf();
+    return (endValue + 1).valueOf() <= date.valueOf() || date.valueOf() <= (startValue - 1).valueOf();
   };
 
   render() {
     return (
       <IceContainer title="客流趋势">
         <h4>选择日期范围：</h4>
-        <div style={{marginTop: '20px'}}>
-          <RangePicker 
-            defaultValue={[startValue, endValue]} 
+        <div style={{ marginTop: '20px' }}>
+          <RangePicker
+            defaultValue={[startValue, endValue]}
             disabledDate={this.disabledDate}
             onChange={val => console.log(val[0].format('YYYY-MM-DD'), val[1].format('YYYY-MM-DD'))}
           />

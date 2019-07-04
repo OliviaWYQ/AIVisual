@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   G2,
   Chart,
@@ -12,27 +12,24 @@ import {
   Guide,
   Shape,
   Facet,
-  Util
-} from "bizcharts";
+  Util,
+} from 'bizcharts';
 import IceContainer from '@icedesign/container';
-import data from "./mock.json";
-import styles from './index.module.scss';
+import data from './mock.json';
 import moment from 'moment';
-import { DatePicker } from '@alifd/next';
 
 const startValue = moment('2018-09-01', 'YYYY-MM-DD', true);
 const endValue = moment('2018-09-09', 'YYYY-MM-DD', true);
 
 class Image extends React.Component {
-  
   disabledDate = function (date, view) {
-    return (endValue+1).valueOf() <= date.valueOf() || date.valueOf() <= (startValue-1).valueOf();
-};
+    return (endValue + 1).valueOf() <= date.valueOf() || date.valueOf() <= (startValue - 1).valueOf();
+  };
 
   render() {
     const { Image } = Guide;
     return (
-      <IceContainer title='客流热力图'>
+      <IceContainer title="客流热力图">
         <br />
         <Chart
           height={window.innerHeight}
@@ -46,14 +43,14 @@ class Image extends React.Component {
             type="heatmap"
             position="g*l"
             color={[
-              "tmp",
-              "#F51D27-#FA541C-#FF8C12-#FFC838-#FAFFA8-#80FF73-#12CCCC-#1890FF-#6E32C2"
+              'tmp',
+              '#F51D27-#FA541C-#FF8C12-#FFC838-#FAFFA8-#80FF73-#12CCCC-#1890FF-#6E32C2',
             ]}
           />
           <Guide>
             <Image
-              start={["min", "max"]}
-              end={["max", "min"]}
+              start={['min', 'max']}
+              end={['max', 'min']}
               src="https://gw.alipayobjects.com/zos/rmsportal/NeUTMwKtPcPxIFNTWZOZ.png"
             />
           </Guide>

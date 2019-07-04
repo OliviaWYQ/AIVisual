@@ -25,7 +25,7 @@ const input = {
         '测试数据2',
     },
   ],
-}
+};
 
 const generatorData = (input) => {
   return Array.from(input).map((item, index) => {
@@ -117,7 +117,7 @@ export default class ExpandedTable extends Component {
       mode: 'multiple',
     };
     return (
-      <IceContainer title='选择资源'>
+      <IceContainer title="选择资源">
         <Table
           hasBorder={false}
           dataSource={data}
@@ -132,11 +132,11 @@ export default class ExpandedTable extends Component {
           <Table.Column title="上传者" dataIndex="user" />
           <Table.Column title="上传时间" dataIndex="time" />
           <Table.Column
-              title="操作"
-              width={200}
-              dataIndex="oper"
-              cell={this.renderOper}
-            />
+            title="操作"
+            width={200}
+            dataIndex="oper"
+            cell={this.renderOper}
+          />
         </Table>
         {/* <Pagination
           style={{ marginTop: '20px', textAlign: 'right' }}
@@ -147,7 +147,8 @@ export default class ExpandedTable extends Component {
           type="primary"
           style={{ marginTop: '25px', marginRight: '5px', marginBottom: '5px', float: 'right' }}
           onClick={this.handleSubmit}
-        > 确认 </Button>
+        > 确认
+        </Button>
 
         {/* <Link to="/step" >Here</Link> */}
         {/* <Route path="/step">Route</Route> */}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {  Overlay, Button, Tab, Upload } from '@alifd/next';
+import { Overlay, Button, Tab, Upload } from '@alifd/next';
 import IceContainer from '@icedesign/container';
 import styles from './index.module.scss';
 import ImgBlock from '../ImgBlock/index';
@@ -16,30 +16,36 @@ export default class BasicTab extends Component {
     super(props);
     this.state = {
       tabs: [
-        { tab: '人脸识别', key: 'face_recognition',
+        { tab: '人脸识别',
+          key: 'face_recognition',
           url1: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgRL.jpg',
           url2: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgRL_out.jpg',
-          title1: '原始图片', title2: '识别结果',
-          content: '人脸识别介绍', 
+          title1: '原始图片',
+          title2: '识别结果',
+          content: '人脸识别介绍',
           result: '姓名：张丽；性别：女；年龄：25' },
-        { tab: '人脸对比', key: 'face_compare',
-          url1:'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgDB1.jpg',
-          url2:'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgDB2.jpg',
-          title1: '对比图片1', title2: '对比图片2',
-          content: '人脸对比介绍', 
-          result: '相似度：99%'  },
-        { tab: '人数统计', key: 'face_many',
-          url1:'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgDR.jpg',
-          url2:'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgDR_out.jpg',
-          title1: '原始图片', title2: '识别结果',
-          content: '人数统计介绍', 
-          result: '总人数：9'  },
+        { tab: '人脸对比',
+          key: 'face_compare',
+          url1: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgDB1.jpg',
+          url2: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgDB2.jpg',
+          title1: '对比图片1',
+          title2: '对比图片2',
+          content: '人脸对比介绍',
+          result: '相似度：99%' },
+        { tab: '人数统计',
+          key: 'face_many',
+          url1: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgDR.jpg',
+          url2: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgDR_out.jpg',
+          title1: '原始图片',
+          title2: '识别结果',
+          content: '人数统计介绍',
+          result: '总人数：9' },
       ],
       currenttab: 'tab',
       currenturl: '',
       visible: false,
       currentResult: 'none',
-    }
+    };
   }
 
   handleTabChange = (key) => {
@@ -59,9 +65,9 @@ export default class BasicTab extends Component {
 
     // 使用 setTimeout 使 setstate同步
     setTimeout(() => {
-        this.setState({currentResult: result, currenttab:tab, currenturl:url}, ()=>{
-          // console.log("setTimeout setState callback " + this.state.currenttab, this.state.currenturl, this.state.currentResult);
-        });
+      this.setState({ currentResult: result, currenttab: tab, currenturl: url }, () => {
+        // console.log("setTimeout setState callback " + this.state.currenttab, this.state.currenturl, this.state.currentResult);
+      });
     }, 0);
   }
 
@@ -71,40 +77,47 @@ export default class BasicTab extends Component {
   // }
 
   onClick = () => {
-      this.setState({
-          visible: true
-      });
+    this.setState({
+      visible: true,
+    });
   }
 
   onClose = () => {
-      this.setState({
-          visible: false
-      });
+    this.setState({
+      visible: false,
+    });
   }
 
   renderPop = (tab) => {
     if (tab == '人脸对比') {
-      return(
-            <div>
-            <Button type="primary" style={{ position: 'relative', margin: '30px 95px 0px' }} onClick={this.onClick} ref={ref => {
+      return (
+        <div>
+          <Button type="primary"
+            style={{ position: 'relative', margin: '30px 95px 0px' }}
+            onClick={this.onClick}
+            ref={ref => {
                 this.btn = ref;
-            }}> 查看结果 </Button>
-            <Overlay visible={this.state.visible}
-                safeNode={() => this.btn}
-                align="cc cc"
-                hasMask
-                disableScroll
-                onRequestClose={this.onClose}>
-                <span className={styles.overlay}>
-                    <h2>{this.state.currentResult}</h2>
-                </span>
-            </Overlay>
-            <Upload
-              action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
-              multiple
-              listType="text">
-              <Button type="primary" style={{ margin: '-38px 0 10px' }}>上传图片</Button> &nbsp;&nbsp;
-            </Upload>
+            }}
+          > 查看结果
+          </Button>
+          <Overlay visible={this.state.visible}
+            safeNode={() => this.btn}
+            align="cc cc"
+            hasMask
+            disableScroll
+            onRequestClose={this.onClose}
+          >
+            <span className={styles.overlay}>
+              <h2>{this.state.currentResult}</h2>
+            </span>
+          </Overlay>
+          <Upload
+            action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
+            multiple
+            listType="text"
+          >
+            <Button type="primary" style={{ margin: '-38px 0 10px' }}>上传图片</Button> &nbsp;&nbsp;
+          </Upload>
         </div>
       );
     } return (
@@ -117,26 +130,27 @@ export default class BasicTab extends Component {
           <Upload
             action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
             multiple
-            listType="text">
+            listType="text"
+          >
             <Button type="primary" style={{ margin: '30px 0 10px' }}>上传图片</Button> &nbsp;&nbsp;
           </Upload>
         </div>
       </div>
-    )
+    );
   }
 
   render() {
     return (
       <div className="basic-tab">
-        <IceContainer title='人脸识别项目' className={styles.tabCardStyle}>
-          <Tab shape='wrapped' onChange={this.handleTabChange}>
-            {this.state.tabs.map((item) => <Tab.Item key={item.key} title={item.tab} onClick={this.changeState.bind(this, item.url, item.tab, item.result)}>
-            <div className={styles.detached}>
-              {item.content}
-            </div>
-            {this.renderPop(item.tab)}
-            <ImgBlock url1={item.url1} url2={item.url2} alt={item.key} title1={item.title1} title2={item.title2} result={item.result} />
-            </Tab.Item>)}
+        <IceContainer title="人脸识别项目" className={styles.tabCardStyle}>
+          <Tab shape="wrapped" onChange={this.handleTabChange}>
+            {this.state.tabs.map((item) => (<Tab.Item key={item.key} title={item.tab} onClick={this.changeState.bind(this, item.url, item.tab, item.result)}>
+              <div className={styles.detached}>
+                {item.content}
+              </div>
+              {this.renderPop(item.tab)}
+              <ImgBlock url1={item.url1} url2={item.url2} alt={item.key} title1={item.title1} title2={item.title2} result={item.result} />
+                                            </Tab.Item>))}
           </Tab>
         </IceContainer>
       </div>

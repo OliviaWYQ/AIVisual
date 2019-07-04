@@ -16,8 +16,8 @@ export default class ProjectKl extends Component {
     return (
       <div className="project-kl-page">
         <IceContainer>
-        <h2 align="center" >客流预测</h2>
-          <IceContainer title='功能介绍' >
+          <h2 align="center" >客流预测</h2>
+          <IceContainer title="功能介绍" >
             <Paragraph>{content}</Paragraph>
           </IceContainer>
           {/* 算法流程图 */}

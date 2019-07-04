@@ -101,7 +101,7 @@
   "title": "AIVisual",
   "babel": {
     "presets": [
-     "react-app"
+      "react-app"
     ]
   }
 }
