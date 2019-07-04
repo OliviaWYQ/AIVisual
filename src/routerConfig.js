@@ -6,7 +6,7 @@ import { getRouterData } from './utils/utils';
 
 import Introduction from './pages/Introduction';
 import Select from './pages/Select';
-import Step from './pages/Step';
+// import Step from './pages/Step';
 import ModelOcr from './pages/ModelOcr';
 import ModelFace from './pages/ModelFace';
 import ProjectKl from './pages/ProjectKl';
@@ -65,10 +65,10 @@ const routerConfig = [
     path: '/select/db',
     component: Select,
   },
-  {
-    path: '/step',
-    component: Step,
-  },
+  // {
+  //   path: '/step',
+  //   component: Step,
+  // },
   {
     path: '/ModelOCR',
     component: ModelOcr,
