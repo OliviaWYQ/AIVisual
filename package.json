@@ -61,8 +61,7 @@
     "react-webcam": "^1.1.1",
     "redux": "3.6.0",
     "redux-thunk": "^2.3.0",
-    "video.js": "^6.7.3",
-    "webpack": "^4.35.2"
+    "video.js": "^6.7.3"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.3",
@@ -85,7 +84,8 @@
     "karma-coverage": "^1.1.2",
     "karma-jasmine": "^2.0.1",
     "karma-sourcemap-loader": "^0.3.7",
-    "karma-webpack": "^4.0.2"
+    "karma-webpack": "^4.0.2",
+    "webpack": "^4.35.2"
   },
   "scripts": {
     "start": "ice-scripts dev",

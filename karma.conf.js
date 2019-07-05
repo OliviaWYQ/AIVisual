@@ -10,23 +10,24 @@ module.exports = function(config) {
         // 'spec/jasmine_examples/*.js'
       ],
 
-      // webpack: {
-      //   module: {
-      //     loaders: [
-      //       {
-      //         test: /\.js$/,
-      //         loader: 'babel-loader',
-      //         exclude: /(node_modules)/,
-      //       },
-      //     ]
-      //   },
-      //   devtool: 'inline-source-map',
-      // },
+      webpack: {
+        module: {
+          loaders: [
+            {
+              test: /\.js$/,
+              loader: 'babel-loader',
+              exclude: /(node_modules)/,
+            },
+          ]
+        },
+        devtool: 'inline-source-map',
+      },
 
       // list of files to exclude
-      // exclude: [
-      //
-      // ],
+      exclude: [
+
+      ],
+
       preprocessors: {
         // 'tests/*.js': ['webpack'],
         // 'tests/*.test.js': ['webpack'],
