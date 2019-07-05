@@ -70,5 +70,3 @@ export default class Index extends Component {
     );
   }
 }
-
-

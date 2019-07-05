@@ -49,7 +49,7 @@ const cols = {
   },
 };
 
-const { RangePicker, MonthPicker, YearPicker } = DatePicker;
+const { RangePicker } = DatePicker;
 const startValue = moment('2018-09-01', 'YYYY-MM-DD', true);
 const endValue = moment('2018-09-09', 'YYYY-MM-DD', true);
 
@@ -65,7 +65,7 @@ export default class LineChart extends Component {
     this.state = {};
   }
 
-  disabledDate = function (date, view) {
+  disabledDate = function (date) {
     return (endValue + 1).valueOf() <= date.valueOf() || date.valueOf() <= (startValue - 1).valueOf();
   };
 
@@ -77,7 +77,7 @@ export default class LineChart extends Component {
           <RangePicker
             defaultValue={[startValue, endValue]}
             disabledDate={this.disabledDate}
-            onChange={val => console.log(val[0].format('YYYY-MM-DD'), val[1].format('YYYY-MM-DD'))}
+            // onChange={val => console.log(val[0].format('YYYY-MM-DD'), val[1].format('YYYY-MM-DD'))}
           />
         </div>
         <Chart height={400} padding={[40]} data={data} scale={cols} forceFit>

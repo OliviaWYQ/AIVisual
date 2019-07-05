@@ -1,32 +1,20 @@
 import React from 'react';
-import {
-  G2,
-  Chart,
-  Geom,
-  Axis,
-  Tooltip,
-  Coord,
-  Label,
-  Legend,
-  View,
-  Guide,
-  Shape,
-  Facet,
-  Util,
-} from 'bizcharts';
+import moment from 'moment';
+import { Chart, Geom, Tooltip, Legend, Guide } from 'bizcharts';
 import IceContainer from '@icedesign/container';
 import data from './mock.json';
-import moment from 'moment';
 
 const startValue = moment('2018-09-01', 'YYYY-MM-DD', true);
 const endValue = moment('2018-09-09', 'YYYY-MM-DD', true);
 
 class Image extends React.Component {
+  // eslint-disable-next-line no-unused-vars
   disabledDate = function (date, view) {
     return (endValue + 1).valueOf() <= date.valueOf() || date.valueOf() <= (startValue - 1).valueOf();
   };
 
   render() {
+    // eslint-disable-next-line no-shadow
     const { Image } = Guide;
     return (
       <IceContainer title="客流热力图">

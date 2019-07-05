@@ -13,19 +13,23 @@ class CameraAPI extends Component {
     };
   }
 
+  // eslint-disable-next-line no-unused-vars,class-methods-use-this
   onTakePhoto(dataUri) {
     // Do stuff with the dataUri photo...
     console.log('takePhoto');
   }
 
+  // eslint-disable-next-line class-methods-use-this
   onCameraError(error) {
     console.error('onCameraError', error);
   }
 
+  // eslint-disable-next-line no-unused-vars,class-methods-use-this
   onCameraStart(stream) {
     console.log('onCameraStart');
   }
 
+  // eslint-disable-next-line class-methods-use-this
   onCameraStop() {
     console.log('onCameraStop');
   }

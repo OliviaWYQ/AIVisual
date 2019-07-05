@@ -14,7 +14,7 @@ export default {
 
   'app.menu.Introduction': '平台介绍',
   'app.menu.Introduction.detail': '新特性',
-  
+
   'app.menu.select': '应用场景',
   'app.menu.ModelOCR': '光学字符识别 (OCR)',
   'app.menu.ModelFace': '人脸识别',

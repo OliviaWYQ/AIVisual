@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 import IceContainer from '@icedesign/container';
 import { Radio, Upload, Select, Step, Input, Button, Form } from '@alifd/next';
 import styles from './index.module.scss';
 import LineBarChart from '../LineBarChart/index';
-import moment from 'moment';
 
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
@@ -16,6 +16,7 @@ const formItemLayout = {
 const startValue = moment('2018-09-01', 'YYYY-MM-DD', true);
 const endValue = moment('2018-09-09', 'YYYY-MM-DD', true);
 
+// eslint-disable-next-line no-unused-vars
 const { Group: ButtonGroup } = Button;
 
 export default class SimpleFluencyForm extends Component {
@@ -26,9 +27,9 @@ export default class SimpleFluencyForm extends Component {
 
     this.state = {
       step: 0,
-      stepType: 'circle',
-      stepAnimation: true,
-      labelPlacement: 'ver',
+      // stepType: 'circle',
+      // stepAnimation: true,
+      // labelPlacement: 'ver',
     };
 
     this.onClick = this.onClick.bind(this);

@@ -5,7 +5,7 @@ import React from 'react';
 import { getRouterData } from './utils/utils';
 
 import Introduction from './pages/Introduction';
-import Select from './pages/Select';
+// import Select from './pages/Select';
 // import Step from './pages/Step';
 import ModelOcr from './pages/ModelOcr';
 import ModelFace from './pages/ModelFace';
@@ -61,10 +61,10 @@ const routerConfig = [
     path: '/user/login',
     component: UserLogin,
   },
-  {
-    path: '/select/db',
-    component: Select,
-  },
+  // {
+  //   path: '/select/db',
+  //   component: Select,
+  // },
   // {
   //   path: '/step',
   //   component: Step,

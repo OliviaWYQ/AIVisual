@@ -41,7 +41,9 @@ export default class BasicTab extends Component {
           content: '目标统计介绍',
           result: '总个数：' },
       ],
+      // eslint-disable-next-line react/no-unused-state
       currenttab: 'tab',
+      // eslint-disable-next-line react/no-unused-state
       currenturl: '',
       visible: false,
       currentResult: 'none',
@@ -50,12 +52,14 @@ export default class BasicTab extends Component {
 
   handleTabChange = (key) => {
     this.setState({
+      // eslint-disable-next-line react/no-unused-state
       tabKey: key,
     });
   };
 
   changeState = (url, tab, result) => {
     setTimeout(() => {
+      // eslint-disable-next-line react/no-unused-state
       this.setState({ currentResult: result, currenttab: tab, currenturl: url }, () => {
         // console.log("setTimeout setState callback " + this.state.currenttab, this.state.currenturl, this.state.currentResult);
       });
@@ -75,7 +79,7 @@ export default class BasicTab extends Component {
   }
 
   renderPop = (tab) => {
-    if (tab == '图片对比') {
+    if (tab === '图片对比') {
       return (
         <div>
           <Button type="primary"
@@ -131,13 +135,14 @@ export default class BasicTab extends Component {
       <div className="basic-tab">
         <IceContainer title="识别项目" className={styles.tabCardStyle}>
           <Tab shape="wrapped" onChange={this.handleTabChange}>
-            {this.state.tabs.map((item) => (<Tab.Item key={item.key} title={item.tab} onClick={this.changeState.bind(this, item.url, item.tab, item.result)}>
-              <div className={styles.detached}>
-                {item.content}
-              </div>
-              {this.renderPop(item.tab)}
-              <ImgBlock url1={item.url1} url2={item.url2} alt={item.key} title1={item.title1} title2={item.title2} result={item.result} />
-                                            </Tab.Item>))}
+            {this.state.tabs.map((item) => (
+              <Tab.Item key={item.key} title={item.tab} onClick={this.changeState.bind(this, item.url, item.tab, item.result)}>
+                <div className={styles.detached}>
+                  {item.content}
+                </div>
+                {this.renderPop(item.tab)}
+                <ImgBlock url1={item.url1} url2={item.url2} alt={item.key} title1={item.title1} title2={item.title2} result={item.result} />
+              </Tab.Item>))}
           </Tab>
         </IceContainer>
       </div>

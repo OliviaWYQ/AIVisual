@@ -48,6 +48,7 @@ export default class BarChart extends Component {
     this.state = {};
   }
 
+  // eslint-disable-next-line no-unused-vars
   disabledDate = function (date, view) {
     return (endValue + 1).valueOf() <= date.valueOf() || date.valueOf() <= (startValue - 1).valueOf();
   };
@@ -60,7 +61,7 @@ export default class BarChart extends Component {
           <DatePicker
             locale={{ datePlaceholder: '查看日期' }}
             defaultValue={startValue}
-            onChange={val => console.log(val.format('YYYY-MM-DD'))}
+            // onChange={val => console.log(val.format('YYYY-MM-DD'))}
             dateInputAriaLabel="date input"
             inputProps={{ 'aria-label': 'date picker main' }}
             disabledDate={this.disabledDate}

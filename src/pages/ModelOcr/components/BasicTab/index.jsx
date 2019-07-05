@@ -138,13 +138,17 @@ export default class BasicTab extends Component {
         result: '发票代码：；发票号码：；金额：',
       },
     ],
+    // eslint-disable-next-line react/no-unused-state
     currentkey: 'none',
+    // eslint-disable-next-line react/no-unused-state
     currenturl: '#',
+    // eslint-disable-next-line react/no-unused-state
     currentresult: 'none',
   }
 
   changeState = (url, key, result) => {
     setTimeout(() => {
+      // eslint-disable-next-line react/no-unused-state
       this.setState({ currentresult: result, currentkey: key, currenturl: url }, () => {
         // console.log("setTimeout setState callback " + this.state.currentkey, this.state.currenturl, this.state.currentresult);
       });
@@ -158,32 +162,35 @@ export default class BasicTab extends Component {
           <Tab shape="text">
             <Tab.Item title="特殊类识别" key="001">
               <Tab shape="wrapped" >
-                {this.state.tabs1.map((item) => (<Tab.Item key={item.key} title={item.tab} onClick={this.changeState.bind(this, item.url, item.key, item.result)}>
-                  <div className={styles.detached}>
-                    {item.content}
-                  </div>
-                  <ImgBlock url={item.url} alt={item.key} result={item.result} />
-                </Tab.Item>))}
+                {this.state.tabs1.map((item) => (
+                  <Tab.Item key={item.key} title={item.tab} onClick={this.changeState.bind(this, item.url, item.key, item.result)}>
+                    <div className={styles.detached}>
+                      {item.content}
+                    </div>
+                    <ImgBlock url={item.url} alt={item.key} result={item.result} />
+                  </Tab.Item>))}
               </Tab>
             </Tab.Item>
             <Tab.Item title="证件类识别" key="002">
               <Tab shape="wrapped" >
-                {this.state.tabs2.map((item) => (<Tab.Item key={item.key} title={item.tab} onClick={this.changeState.bind(this, item.url, item.key, item.result)}>
-                  <div className={styles.detached}>
-                    {item.content}
-                  </div>
-                  <ImgBlock url={item.url} alt={item.key} result={item.result} />
-                </Tab.Item>))}
+                {this.state.tabs2.map((item) => (
+                  <Tab.Item key={item.key} title={item.tab} onClick={this.changeState.bind(this, item.url, item.key, item.result)}>
+                    <div className={styles.detached}>
+                      {item.content}
+                    </div>
+                    <ImgBlock url={item.url} alt={item.key} result={item.result} />
+                  </Tab.Item>))}
               </Tab>
             </Tab.Item>
             <Tab.Item title="票据类识别" key="003">
               <Tab shape="wrapped" >
-                {this.state.tabs3.map((item) => (<Tab.Item key={item.key} title={item.tab} onClick={this.changeState.bind(this, item.url, item.key, item.result)}>
-                  <div className={styles.detached}>
-                    {item.content}
-                  </div>
-                  <ImgBlock url={item.url} alt={item.key} result={item.result} />
-                </Tab.Item>))}
+                {this.state.tabs3.map((item) => (
+                  <Tab.Item key={item.key} title={item.tab} onClick={this.changeState.bind(this, item.url, item.key, item.result)}>
+                    <div className={styles.detached}>
+                      {item.content}
+                    </div>
+                    <ImgBlock url={item.url} alt={item.key} result={item.result} />
+                  </Tab.Item>))}
               </Tab>
             </Tab.Item>
           </Tab>

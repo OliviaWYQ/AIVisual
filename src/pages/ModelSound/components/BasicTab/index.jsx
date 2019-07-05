@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Button, Tab, Upload } from '@alifd/next';
 import IceContainer from '@icedesign/container';
-import styles from './index.module.scss';
 import IcePanel from '@icedesign/panel';
+import styles from './index.module.scss';
 import MicAPI from '../MicAPI/index';
 
 export default class BasicTab extends Component {
@@ -29,7 +29,9 @@ export default class BasicTab extends Component {
           content: '语音识别介绍',
           result: '文字内容：' },
       ],
+      // eslint-disable-next-line react/no-unused-state
       currenttab: '声音识别',
+      // eslint-disable-next-line react/no-unused-state
       visible: false,
       currentResult: '设备是否正常：',
     };
@@ -37,12 +39,14 @@ export default class BasicTab extends Component {
 
   handleTabChange = (key) => {
     this.setState({
+      // eslint-disable-next-line react/no-unused-state
       tabKey: key,
     });
   };
 
   changeState = (tab, result) => {
     setTimeout(() => {
+      // eslint-disable-next-line react/no-unused-state
       this.setState({ currentResult: result, currenttab: tab }, () => {
         // console.log("setTimeout setState callback " + this.state.currenttab, this.state.currentResult);
       });
@@ -54,11 +58,12 @@ export default class BasicTab extends Component {
       <div className="basic-tab">
         <IceContainer title="声音识别项目" className={styles.tabCardStyle}>
           <Tab shape="wrapped" onChange={this.handleTabChange}>
-            {this.state.tabs.map((item) => (<Tab.Item key={item.key} title={item.tab} onClick={this.changeState.bind(this, item.tab, item.result)}>
-              <div className={styles.detached}>
-                {item.content}
-              </div>
-                                            </Tab.Item>))}
+            {this.state.tabs.map((item) => (
+              <Tab.Item key={item.key} title={item.tab} onClick={this.changeState.bind(this, item.tab, item.result)}>
+                <div className={styles.detached}>
+                  {item.content}
+                </div>
+              </Tab.Item>))}
           </Tab>
           <Upload
             action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Icon, Grid } from '@alifd/next';
+import { Grid } from '@alifd/next';
 import IcePanel from '@icedesign/panel';
 
 const { Row, Col } = Grid;
@@ -13,12 +13,12 @@ export default class ImgBlock extends Component {
     alt: this.props.alt,
     title1: this.props.title1,
     title2: this.props.title2,
-    percent: 0,
+    // percent: 0,
     result: this.props.result,
   };
 
   renderResult= (title2) => {
-    if (title2 == '识别结果') {
+    if (title2 === '识别结果') {
       return (
         <div>
           <table width="200">
@@ -43,12 +43,12 @@ export default class ImgBlock extends Component {
   };
 
   render() {
-    const textRender = percent => {
-      if (percent === 100) {
-        return <Icon type="select" size="medium" />;
-      }
-      return `${percent.toFixed(0)}%`;
-    };
+    // const textRender = percent => {
+    //   if (percent === 100) {
+    //     return <Icon type="select" size="medium" />;
+    //   }
+    //   return `${percent.toFixed(0)}%`;
+    // };
 
     return (
       <div>

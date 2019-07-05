@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Icon } from '@alifd/next';
-import styles from './index.module.scss';
 import IceContainer from '@icedesign/container';
+import styles from './index.module.scss';
 
 const { Row, Col } = Grid;
 
@@ -91,16 +91,16 @@ const input = {
         },
       ],
     },
-  ]
-}
+  ],
+};
 
-const getData = (input) => {
-  return Array.from(input).map((item, index) => {
-      return {
-        key: index + 1,
-        title: item.title,
-        body: item.body,
-      };
+const getData = (data) => {
+  return Array.from(data).map((item, index) => {
+    return {
+      key: index + 1,
+      title: item.title,
+      body: item.body,
+    };
   });
 };
 
@@ -114,16 +114,16 @@ export default class ModelCards extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dataSource: input.project
+      dataSource: input.project,
     };
   }
 
   render() {
     const mockData = getData(this.state.dataSource);
     return (
-      <IceContainer title='项目管理'>
+      <IceContainer title="项目管理">
         <Row wrap gutter="40" className={styles.row}>
-        {mockData.map((data, index) => {
+          {mockData.map((data, index) => {
           return (
             <Col l="6" key={index}>
               <div className={styles.modelCards}>
@@ -142,16 +142,16 @@ export default class ModelCards extends Component {
                 })}
                 </div>
                 <div className={styles.footer}>
-                  <a className={styles.lightBlue }>
+                  <a className={styles.lightBlue}>
                     打开
                   </a>
-                  <a className={styles.green }>删除</a>
+                  <a className={styles.green}>删除</a>
                 </div>
               </div>
             </Col>
           );
         })}
-      </Row>
+        </Row>
       </IceContainer>
     );
   }

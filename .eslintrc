@@ -1,7 +1,7 @@
 {
   "root": true,
   "parser": "babel-eslint",
-  "extends": "eslint-config-airbnb",
+  "extends": ["eslint-config-airbnb", "plugin:jasmine/recommended"],
   "parserOptions": {
     "ecmaVersion": 6,
     "ecmaFeatures": {
@@ -11,9 +11,10 @@
   },
   "env": {
     "browser": true,
-    "mocha": true
+    "mocha": true,
+    "jasmine": true
   },
-  "plugins": ["react", "babel"],
+  "plugins": ["react", "babel", "jasmine"],
   "rules": {
     "react/prefer-stateless-function": 0,
     "no-console": 0,

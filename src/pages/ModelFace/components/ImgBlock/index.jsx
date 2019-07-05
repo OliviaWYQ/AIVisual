@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Icon, Grid } from '@alifd/next';
+import { Grid } from '@alifd/next';
 import IcePanel from '@icedesign/panel';
 
 const { Row, Col } = Grid;
@@ -13,7 +13,7 @@ export default class ImgBlock extends Component {
     alt: this.props.alt,
     title1: this.props.title1,
     title2: this.props.title2,
-    percent: 0,
+    // percent: 0,
     result: this.props.result,
   };
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Progress, Icon, Grid, Upload, Button } from '@alifd/next';
+import { Grid, Upload, Button } from '@alifd/next';
 import IcePanel from '@icedesign/panel';
 import CameraAPI from '../CameraAPI/index';
 
@@ -12,13 +12,12 @@ export default class ImgBlock extends Component {
     url: this.props.url,
     alt: this.props.alt,
     result: this.props.result,
-    percent: 0,
+    // percent: 0,
   };
 
   render() {
     return (
       <div>
-
         {/* 调用摄像头 */}
         <div style={{ position: 'relative', margin: '30px 95px 0px' }}>
           <CameraAPI />
@@ -68,7 +67,6 @@ export default class ImgBlock extends Component {
                     }
                   </table>
                 </div>
-                {/* ); */}
               </IcePanel.Body>
             </IcePanel>
           </Col>

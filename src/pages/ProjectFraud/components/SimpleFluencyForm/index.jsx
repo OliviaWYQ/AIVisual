@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import IceContainer from '@icedesign/container';
-import { Upload, Select, Table, Step, Grid, Input, Button, Form } from '@alifd/next';
+import { Upload, Select, Table, Step, Input, Button, Form } from '@alifd/next';
 import styles from './index.module.scss';
 
-const { Row, Col } = Grid;
 const FormItem = Form.Item;
 
 const formItemLayout = {
@@ -11,6 +10,7 @@ const formItemLayout = {
   wrapperCol: { s: 14, l: 12 },
 };
 
+// eslint-disable-next-line no-unused-vars
 const { Group: ButtonGroup } = Button;
 
 const dataSource = [{ key: 1, number: '198237346429384', result: '否' },
@@ -24,9 +24,9 @@ export default class SimpleFluencyForm extends Component {
 
     this.state = {
       step: 0,
-      stepType: 'circle',
-      stepAnimation: true,
-      labelPlacement: 'ver',
+      // stepType: 'circle',
+      // stepAnimation: true,
+      // labelPlacement: 'ver',
     };
 
     this.onClick = this.onClick.bind(this);

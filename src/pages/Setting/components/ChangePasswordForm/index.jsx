@@ -76,7 +76,7 @@ export default class ChangePasswordForm extends Component {
             ref="form"
             size="large"
           >
-            <div  className={styles.formContent}>
+            <div className={styles.formContent}>
               <h2 className={styles.formTitle}>修改密码</h2>
               <FormItem
                 label="新密码："
@@ -124,5 +124,3 @@ export default class ChangePasswordForm extends Component {
     );
   }
 }
-
-

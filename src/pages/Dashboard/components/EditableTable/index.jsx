@@ -15,9 +15,9 @@ export default class EditableTable extends Component {
 
   constructor(props) {
     super(props);
-    const {
-      intl: { formatMessage },
-    } = props;
+    // const {
+    //   intl: { formatMessage },
+    // } = props;
 
     const db = {
       message: [
@@ -34,8 +34,8 @@ export default class EditableTable extends Component {
       ],
     };
 
-    const generatorData = (db) => {
-      return Array.from(db).map((item, index) => {
+    const generatorData = (data) => {
+      return Array.from(data).map((item) => {
         return {
           todo: item.value,
           remark: item.remark,

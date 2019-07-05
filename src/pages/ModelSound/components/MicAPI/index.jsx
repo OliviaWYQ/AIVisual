@@ -3,7 +3,7 @@ import { ReactMic } from 'react-mic';
 import { Button } from '@alifd/next';
 import styles from './index.module.scss';
 
-export default class MicAPI extends React.Component {
+export default class MicAPI extends Component {
   constructor(props) {
     super(props);
     this.state = {
