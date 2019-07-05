@@ -7,7 +7,7 @@ export default class Logo extends PureComponent {
     return (
       <div className="logo">
         {/* <div className='setimg'>
-          <img src='https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/logo.jpg'/>
+          <img src='https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/richstone.png'/>
         </div> */}
         <Link to="/" className="logo-text">
           Richstone AI Visual Analysis Platform
