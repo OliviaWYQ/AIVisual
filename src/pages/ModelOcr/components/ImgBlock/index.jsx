@@ -15,6 +15,22 @@ export default class ImgBlock extends Component {
     // percent: 0,
   };
 
+  ifMultiple() {
+    if ( this.state.alt === 'shenfen'|| this.state.alt === 'tongxing' || this.state.alt === 'xingshi'){
+      // console.log(this.state.url.split('.jpg')[0]+'b.jpg')
+      return (
+        <div>
+          <img src={this.state.url} alt={this.state.alt} />
+          <img src={this.state.url.split('.jpg')[0]+'b.jpg'} alt={this.state.alt+'_b'} />
+        </div>
+      );
+    } else {
+      return (
+        <img src={this.state.url} alt={this.state.alt} />
+      );
+    }
+  }
+
   render() {
     return (
       <div>
@@ -39,7 +55,10 @@ export default class ImgBlock extends Component {
                 原始图片
               </IcePanel.Header>
               <IcePanel.Body>
-                <img src={this.state.url} alt={this.state.alt} />
+                <div>
+                    {this.ifMultiple()}
+                </div>
+                {/* <img src={this.state.url} alt={this.state.alt} /> */}
               </IcePanel.Body>
             </IcePanel>
           </Col>
@@ -50,19 +69,30 @@ export default class ImgBlock extends Component {
               </IcePanel.Header>
               <IcePanel.Body>
                 <div>
-                  <table width="300">
+                  <table width="450">
                     {
                       // 拆分 result 返回的字符串
                       Array.from(this.state.result.split('；')).map((item, index) => {
-                        // console.log(item);
-                        return (
-                          <tbody key={index}>
-                            <tr key={index}>
-                              <td><p>{item.split('：')[0]}</p></td>
-                              <td><p>{item.split('：')[1]}</p></td>
-                            </tr>
-                          </tbody>
-                        );
+                        // console.log(index, item.split('：').length);
+                        if (item.split('：').length === 1) {
+                          return (
+                            <tbody key={index}>
+                              <tr key={index}>
+                                <td><p>{item.split('：')[0]}</p></td>
+                              </tr>
+                            </tbody>
+                          );
+                        } else {
+                          return (
+                            <tbody key={index}>
+                              <tr key={index}>
+                                <td width='200px'><p>{item.split('：')[0]}</p></td>
+                                <td ><p>{item.split('：')[1]}</p></td>
+                              </tr>
+                            </tbody>
+                          );
+                        }
+                        
                       })
                     }
                   </table>

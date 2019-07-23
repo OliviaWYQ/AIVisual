@@ -25,7 +25,7 @@ const abilities = [
     icon: apiIcon,
     title: 'API',
     content: '调用算法的支持和保障',
-    link: '#',
+    link: '/#/ModelOCR',
   },
 ];
 
