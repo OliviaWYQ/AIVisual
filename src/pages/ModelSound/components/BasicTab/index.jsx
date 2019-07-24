@@ -61,7 +61,7 @@ export default class BasicTab extends Component {
             {this.state.tabs.map((item) => (
               <Tab.Item key={item.key} title={item.tab} onClick={this.changeState.bind(this, item.tab, item.result)}>
                 <div className={styles.detached}>
-                  {item.content}
+                  <p>{item.content}</p>
                 </div>
               </Tab.Item>))}
           </Tab>

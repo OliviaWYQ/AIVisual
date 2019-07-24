@@ -44,31 +44,38 @@ export default class ImgBlock extends Component {
   };
 
   render() {
-    return (
-      <div>
-        <Row wrap>
-          <Col>
-            <IcePanel style={{ marginTop: '20px', marginBottom: '10px', marginRight: '10px' }}>
-              <IcePanel.Header>
-                {this.state.title1}
-              </IcePanel.Header>
-              <IcePanel.Body>
-                <img src={this.state.url1} alt={`${this.state.alt}_in`} />
-              </IcePanel.Body>
-            </IcePanel>
-          </Col>
-          <Col>
-            <IcePanel style={{ marginTop: '20px', marginBottom: '10px' }}>
-              <IcePanel.Header>
-                {this.state.title2}
-              </IcePanel.Header>
-              <IcePanel.Body>
-                {this.renderResult(this.state.title2)}
-              </IcePanel.Body>
-            </IcePanel>
-          </Col>
-        </Row>
-      </div>
-    );
+    if (this.state.alt === 'face_video'){
+      return (
+        <div></div>
+      )
+    }
+    else {
+      return (
+        <div>
+          <Row wrap>
+            <Col>
+              <IcePanel style={{ marginTop: '20px', marginBottom: '10px', marginRight: '10px' }}>
+                <IcePanel.Header>
+                  {this.state.title1}
+                </IcePanel.Header>
+                <IcePanel.Body>
+                  <img src={this.state.url1} alt={`${this.state.alt}_in`} />
+                </IcePanel.Body>
+              </IcePanel>
+            </Col>
+            <Col>
+              <IcePanel style={{ marginTop: '20px', marginBottom: '10px' }}>
+                <IcePanel.Header>
+                  {this.state.title2}
+                </IcePanel.Header>
+                <IcePanel.Body>
+                  {this.renderResult(this.state.title2)}
+                </IcePanel.Body>
+              </IcePanel>
+            </Col>
+          </Row>
+        </div>
+      );
+    }
   }
 }

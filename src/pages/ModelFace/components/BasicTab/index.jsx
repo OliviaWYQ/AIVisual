@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Overlay, Button, Tab, Upload } from '@alifd/next';
+import { Overlay, Button, Tab, Upload, Input, Select } from '@alifd/next';
 import IceContainer from '@icedesign/container';
 import styles from './index.module.scss';
 import ImgBlock from '../ImgBlock/index';
@@ -22,7 +22,8 @@ export default class BasicTab extends Component {
           url2: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgRL_out.jpg',
           title1: '原始图片',
           title2: '识别结果',
-          content: '人脸识别介绍',
+          content: '智能检测图片中是否含有人脸，如果是则在指定人脸数据库中进行匹配并返回分析结果。\
+          当前支持的人脸识别属性有：姓名、性别、年龄。',
           result: '姓名：张丽；性别：女；年龄：25' },
         { tab: '人脸对比',
           key: 'face_compare',
@@ -30,7 +31,7 @@ export default class BasicTab extends Component {
           url2: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgDB2.jpg',
           title1: '对比图片1',
           title2: '对比图片2',
-          content: '人脸对比介绍',
+          content: '通过提取人的面部特征，计算两张人脸的相似度，从而判断是否为同一人。人脸对比技术被广泛应用于基于人脸的真实身份验证、人证合一验证等。',
           result: '相似度：99%' },
         { tab: '人数统计',
           key: 'face_many',
@@ -38,8 +39,16 @@ export default class BasicTab extends Component {
           url2: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgDR_out.jpg',
           title1: '原始图片',
           title2: '识别结果',
-          content: '人数统计介绍',
+          content: '智能搜索并确定其中是否含有人脸，返回图中包含的人脸个数。',
           result: '总人数：9' },
+        { tab: '视频流分析',
+          key: 'face_video',
+          url1: '#',
+          url2: '#',
+          title1: '',
+          title2: '',
+          content: '智能识别视频流中的人脸属性，并返回分析结果。当前支持的人脸识别属性有：姓名、性别、年龄。',
+          result: '' },
       ],
       // eslint-disable-next-line react/no-unused-state
       currenttab: 'tab',
@@ -143,6 +152,30 @@ export default class BasicTab extends Component {
     );
   }
 
+
+  checkVideo(tab){
+    // console.log(tab);
+    if (tab === '视频流分析'){
+      return(
+        <div>
+          <br /><br />
+        <IceContainer title='设置摄像头'>
+          {/* <Input name="video" autoComplete="on" /> */}
+          <div className={styles.select}>
+            <Select dataSource={['本地', '远程']} useVirtual defaultValue="本地" />
+          </div>
+          <div style={{ margin: '-32px 120px 0' }}>
+            <Button type="primary" >开启</Button>
+            <Button type="primary" style={{ marginLeft: '10px' }}>关闭</Button>
+          </div>
+        </IceContainer>
+        </div>
+      )
+    } else {
+      this.renderPop(tab)
+    }
+  }
+
   render() {
     return (
       <div className="basic-tab">
@@ -151,9 +184,9 @@ export default class BasicTab extends Component {
             {this.state.tabs.map((item) => (
               <Tab.Item key={item.key} title={item.tab} onClick={this.changeState.bind(this, item.url, item.tab, item.result)}>
                 <div className={styles.detached}>
-                  {item.content}
+                  <p>{item.content}</p>
                 </div>
-                {this.renderPop(item.tab)}
+                {this.checkVideo(item.tab)}
                 <ImgBlock url1={item.url1} url2={item.url2} alt={item.key} title1={item.title1} title2={item.title2} result={item.result} />
               </Tab.Item>))}
           </Tab>

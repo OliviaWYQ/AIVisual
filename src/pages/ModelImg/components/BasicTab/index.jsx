@@ -22,7 +22,7 @@ export default class BasicTab extends Component {
           url2: '#',
           title1: '原始图片',
           title2: '识别结果',
-          content: '图片识别介绍',
+          content: '准确快速地检测图像中的内容信息，返回检测出的内容名称。',
           result: '物体名称：手机' },
         { tab: '图片对比',
           key: 'img_compare',
@@ -30,7 +30,7 @@ export default class BasicTab extends Component {
           url2: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/Img_dog.jpg',
           title1: '对比图片1',
           title2: '对比图片2',
-          content: '图片对比介绍',
+          content: '通过检测图像中的内容信息，对比检测出的物体相似度。',
           result: '相似度：10%' },
         { tab: '目标统计',
           key: 'img_many',
@@ -38,7 +38,7 @@ export default class BasicTab extends Component {
           url2: '#',
           title1: '原始图片',
           title2: '识别结果',
-          content: '目标统计介绍',
+          content: '智能搜索图像中的包含的物体，并返回物体总个数。',
           result: '总个数：3' },
       ],
       // eslint-disable-next-line react/no-unused-state
@@ -138,7 +138,7 @@ export default class BasicTab extends Component {
             {this.state.tabs.map((item) => (
               <Tab.Item key={item.key} title={item.tab} onClick={this.changeState.bind(this, item.url, item.tab, item.result)}>
                 <div className={styles.detached}>
-                  {item.content}
+                  <p>{item.content}</p>
                 </div>
                 {this.renderPop(item.tab)}
                 <ImgBlock url1={item.url1} url2={item.url2} alt={item.key} title1={item.title1} title2={item.title2} result={item.result} />
