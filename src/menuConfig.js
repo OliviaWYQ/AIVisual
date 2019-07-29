@@ -5,14 +5,14 @@
 const headerMenuConfig = [
   {
     name: 'feedback',
-    path: 'https://github.com/alibaba/ice',
+    path: 'http://richstonedt.com/about/contact/',
     external: true,
     newWindow: true,
     icon: 'message',
   },
   {
     name: 'help',
-    path: 'https://alibaba.github.io/ice',
+    path: 'http://richstonedt.com/about/contact/',
     external: true,
     newWindow: true,
     icon: 'bangzhu',

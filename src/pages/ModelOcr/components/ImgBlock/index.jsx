@@ -13,6 +13,11 @@ export default class ImgBlock extends Component {
     alt: this.props.alt,
     result: this.props.result,
     // percent: 0,
+    testOCR: {
+      component: 'a',
+      href: 'http://192.168.16.176:5000/model_chinese_ocr',
+      target: '_blank',
+    },
   };
 
   ifMultiple() {
@@ -48,9 +53,16 @@ export default class ImgBlock extends Component {
             <Button type="primary" style={{ margin: '30px 0 0' }}> 上传图片 </Button> &nbsp;&nbsp;
           </Upload>
         </div>
+        <Button
+          {...this.state.testOCR}
+          type="primary"
+          style={{ position: 'relative', margin: '-48px 190px 10px' }}
+        >
+          测试接口
+        </Button>
         <Row wrap>
           <Col>
-            <IcePanel style={{ marginTop: '30px', marginBottom: '10px', marginRight: '10px' }}>
+            <IcePanel style={{ marginTop: '15px', marginBottom: '10px', marginRight: '10px' }}>
               <IcePanel.Header>
                 原始图片
               </IcePanel.Header>
@@ -63,7 +75,7 @@ export default class ImgBlock extends Component {
             </IcePanel>
           </Col>
           <Col>
-            <IcePanel style={{ marginTop: '30px', marginBottom: '10px' }}>
+            <IcePanel style={{ marginTop: '15px', marginBottom: '10px' }}>
               <IcePanel.Header>
                 识别结果
               </IcePanel.Header>
@@ -92,7 +104,6 @@ export default class ImgBlock extends Component {
                             </tbody>
                           );
                         }
-                        
                       })
                     }
                   </table>

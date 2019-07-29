@@ -17,7 +17,7 @@ export default class ImgBlock extends Component {
     result: this.props.result,
   };
 
-  renderResult= (title2) => {
+  renderResult = (title2) => {
     if (title2 === '识别结果') {
       return (
         <div>
@@ -43,6 +43,14 @@ export default class ImgBlock extends Component {
     return (<img src={this.state.url2} alt={`${this.state.alt}_out`} />);
   };
 
+  leftImg(alt) {
+    if (alt === 'face_compare'){
+      return <img src={this.state.url1} alt={`${this.state.alt}_in`} />
+    } else {
+      return <img src={this.state.url2} alt={`${this.state.alt}_in`} />
+    }
+  }
+
   render() {
     if (this.state.alt === 'face_video'){
       return (
@@ -59,7 +67,8 @@ export default class ImgBlock extends Component {
                   {this.state.title1}
                 </IcePanel.Header>
                 <IcePanel.Body>
-                  <img src={this.state.url1} alt={`${this.state.alt}_in`} />
+                  {/* <img src={this.state.url1} alt={`${this.state.alt}_in`} /> */}
+                  {this.leftImg(this.state.alt)}
                 </IcePanel.Body>
               </IcePanel>
             </Col>

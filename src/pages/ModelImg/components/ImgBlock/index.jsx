@@ -42,6 +42,14 @@ export default class ImgBlock extends Component {
     return (<img src={this.state.url2} alt={`${this.state.alt}_out`} />);
   };
 
+  leftImg(alt) {
+    if (alt === 'img_compare'){
+      return <img src={this.state.url1} alt={`${this.state.alt}_in`} />
+    } else {
+      return <img src={this.state.url2} alt={`${this.state.alt}_in`} />
+    }
+  }
+
   render() {
     // const textRender = percent => {
     //   if (percent === 100) {
@@ -59,7 +67,8 @@ export default class ImgBlock extends Component {
                 {this.state.title1}
               </IcePanel.Header>
               <IcePanel.Body>
-                <img src={this.state.url1} alt={`${this.state.alt}_in`} />
+                {/* <img src={this.state.url1} alt={`${this.state.alt}_in`} /> */}
+                {this.leftImg(this.state.alt)}
               </IcePanel.Body>
             </IcePanel>
           </Col>
