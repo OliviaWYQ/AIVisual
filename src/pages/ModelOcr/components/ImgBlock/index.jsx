@@ -18,6 +18,11 @@ export default class ImgBlock extends Component {
       href: 'http://192.168.16.176:5000/model_chinese_ocr',
       target: '_blank',
     },
+    testCP: {
+      component: 'a',
+      href: 'http://192.168.16.176:5000/model_car_plate',
+      target: '_blank',
+    },
   };
 
   ifMultiple() {
@@ -33,6 +38,31 @@ export default class ImgBlock extends Component {
       return (
         <img src={this.state.url} alt={this.state.alt} />
       );
+    }
+  }
+
+
+  checkTest(alt) {
+    if(alt === 'chepai'){
+      return(
+        <Button
+          {...this.state.testCP}
+          type="primary"
+          style={{ position: 'relative', margin: '-48px 190px 10px' }}
+        >
+          测试接口
+        </Button>
+      )
+    } else {
+      return(
+        <Button
+          {...this.state.testOCR}
+          type="primary"
+          style={{ position: 'relative', margin: '-48px 190px 10px' }}
+        >
+          测试接口
+        </Button>
+      )
     }
   }
 
@@ -53,13 +83,7 @@ export default class ImgBlock extends Component {
             <Button type="primary" style={{ margin: '30px 0 0' }}> 上传图片 </Button> &nbsp;&nbsp;
           </Upload>
         </div>
-        <Button
-          {...this.state.testOCR}
-          type="primary"
-          style={{ position: 'relative', margin: '-48px 190px 10px' }}
-        >
-          测试接口
-        </Button>
+        {this.checkTest(this.state.alt)}
         <Row wrap>
           <Col>
             <IcePanel style={{ marginTop: '15px', marginBottom: '10px', marginRight: '10px' }}>
