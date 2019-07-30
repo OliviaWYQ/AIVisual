@@ -62,12 +62,12 @@ export default class BasicTab extends Component {
       },
       testREC: {
         component: 'a',
-        href: 'http://192.168.5.153:5000/model_video_face_recog',
+        href: 'http://127.0.0.1:5000/model_video_face_recog',
         target: '_blank',
       },
       testVIDEO: {
         component: 'a',
-        href: 'http://192.168.5.153:5000/model_video_face_recog',
+        href: 'http://127.0.0.1:5000/model_video_face_recog',
         target: '_blank',
       },
     };
