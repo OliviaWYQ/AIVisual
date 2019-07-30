@@ -57,7 +57,7 @@ export default class BasicTab extends Component {
       currentResult: 'none',
       testCOMP: {
         component: 'a',
-        href: 'http://192.168.16.176:5000/model_face_compare',
+        href: 'http://127.0.0.1:5000/model_face_compare',
         target: '_blank',
       },
       testREC: {

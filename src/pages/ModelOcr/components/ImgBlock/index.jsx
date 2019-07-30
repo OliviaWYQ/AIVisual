@@ -53,7 +53,8 @@ export default class ImgBlock extends Component {
           测试接口
         </Button>
       )
-    } else {
+    } 
+    if(alt === 'yinyezhizhao'){
       return(
         <Button
           {...this.state.testOCR}
@@ -62,6 +63,11 @@ export default class ImgBlock extends Component {
         >
           测试接口
         </Button>
+      )
+    }
+    else {
+      return(
+        <div></div>
       )
     }
   }
