@@ -18,7 +18,7 @@ export default class ProjectKl extends Component {
         <IceContainer>
           <h2 align="center" >客流预测</h2>
           <IceContainer title="功能介绍" >
-            <div style={{display: 'flex', paddingLeft:'60px', paddingRight:'60px'}}>
+            <div style={{ display: 'flex', paddingLeft: '60px', paddingRight: '60px' }}>
               <h4>{content}</h4>
             </div>
           </IceContainer>

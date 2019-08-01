@@ -26,25 +26,24 @@ export default class ImgBlock extends Component {
   };
 
   ifMultiple() {
-    if ( this.state.alt === 'shenfen'|| this.state.alt === 'tongxing' || this.state.alt === 'xingshi'){
+    if (this.state.alt === 'shenfen' || this.state.alt === 'tongxing' || this.state.alt === 'xingshi') {
       // console.log(this.state.url.split('.jpg')[0]+'b.jpg')
       return (
         <div>
           <img src={this.state.url} alt={this.state.alt} />
-          <img src={this.state.url.split('.jpg')[0]+'b.jpg'} alt={this.state.alt+'_b'} />
+          <img src={`${this.state.url.split('.jpg')[0]}b.jpg`} alt={`${this.state.alt}_b`} />
         </div>
       );
-    } else {
-      return (
-        <img src={this.state.url} alt={this.state.alt} />
-      );
     }
+    return (
+      <img src={this.state.url} alt={this.state.alt} />
+    );
   }
 
 
   checkTest(alt) {
-    if(alt === 'chepai'){
-      return(
+    if (alt === 'chepai') {
+      return (
         <Button
           {...this.state.testCP}
           type="primary"
@@ -52,10 +51,10 @@ export default class ImgBlock extends Component {
         >
           测试接口
         </Button>
-      )
-    } 
-    if(alt === 'yinyezhizhao'){
-      return(
+      );
+    }
+    if (alt === 'yinyezhizhao') {
+      return (
         <Button
           {...this.state.testOCR}
           type="primary"
@@ -63,12 +62,46 @@ export default class ImgBlock extends Component {
         >
           测试接口
         </Button>
-      )
+      );
     }
-    else {
-      return(
-        <div></div>
-      )
+
+    return (
+      <div />
+    );
+  }
+
+  showResult() {
+    if (this.state.alt !== 'chepai') {
+      // 拆分 result 返回的字符串
+      Array.from(this.state.result.split('；'))
+        .map((item, index) => {
+          // console.log(index, item.split('：').length);
+          if (item.split('：').length === 1) {
+            return (
+              <tbody key={index}>
+                <tr key={index}>
+                  <td><p>{item.split('：')[0]}</p></td>
+                </tr>
+              </tbody>
+            );
+          }
+          return (
+            <tbody key={index}>
+              <tr key={index}>
+                <td width="200px"><p>{item.split('：')[0]}</p></td>
+                <td><p>{item.split('：')[1]}</p></td>
+              </tr>
+            </tbody>
+          );
+        });
+    } else {
+      const res = this.state.result;
+      for (let item in res) {
+        let varItem = res[item];
+          // .split(':');
+        console.log(varItem);
+      }
+      return <p>chepai</p>;
     }
   }
 
@@ -98,7 +131,7 @@ export default class ImgBlock extends Component {
               </IcePanel.Header>
               <IcePanel.Body>
                 <div>
-                    {this.ifMultiple()}
+                  {this.ifMultiple()}
                 </div>
                 {/* <img src={this.state.url} alt={this.state.alt} /> */}
               </IcePanel.Body>
@@ -112,30 +145,7 @@ export default class ImgBlock extends Component {
               <IcePanel.Body>
                 <div>
                   <table width="450">
-                    {
-                      // 拆分 result 返回的字符串
-                      Array.from(this.state.result.split('；')).map((item, index) => {
-                        // console.log(index, item.split('：').length);
-                        if (item.split('：').length === 1) {
-                          return (
-                            <tbody key={index}>
-                              <tr key={index}>
-                                <td><p>{item.split('：')[0]}</p></td>
-                              </tr>
-                            </tbody>
-                          );
-                        } else {
-                          return (
-                            <tbody key={index}>
-                              <tr key={index}>
-                                <td width='200px'><p>{item.split('：')[0]}</p></td>
-                                <td ><p>{item.split('：')[1]}</p></td>
-                              </tr>
-                            </tbody>
-                          );
-                        }
-                      })
-                    }
+                    {this.showResult()}
                   </table>
                 </div>
               </IcePanel.Body>

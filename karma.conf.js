@@ -4,10 +4,7 @@ module.exports = function(config) {
       basePath: '',
       frameworks: ['jasmine'],
       files: [
-        // 'src/*.js',
-        'tests/*.js',
-        // 'tests/*.test.js',
-        // 'spec/jasmine_examples/*.js'
+        'spec/*.js'
       ],
 
       webpack: {
@@ -31,9 +28,8 @@ module.exports = function(config) {
       preprocessors: {
         // 'tests/*.js': ['webpack'],
         // 'tests/*.test.js': ['webpack'],
-        'tests/*.js': ['coverage'],
         // 'src/*.js': ['coverage'],
-        // 'spec/jasmine_examples/*.js': ['coverage']
+        'spec/*.js': ['coverage']
       },
 
       reporters: ['progress', 'coverage'],

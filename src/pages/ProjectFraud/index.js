@@ -18,7 +18,7 @@ export default class ProjectFraud extends Component {
         <IceContainer>
           <h2 align="center" >电信反欺诈</h2>
           <IceContainer title="功能介绍" >
-            <div style={{display: 'flex', paddingLeft:'60px', paddingRight:'60px'}}>
+            <div style={{ display: 'flex', paddingLeft: '60px', paddingRight: '60px' }}>
               <h4>{content}</h4>
             </div>
           </IceContainer>
