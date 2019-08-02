@@ -1,28 +1,25 @@
 {
-  "tabs": [
-    { tab: '图片识别',
-      key: 'img_recognition',
-      url1: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgThing.jpg',
-      url2: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgThing_res.jpg',
-      title1: '原始图片',
-      title2: '识别结果',
-      content: '准确快速地检测图像中的内容信息，返回检测出的内容名称。',
-      result: '物体名称：手机' },
-    { tab: '图片对比',
-      key: 'img_compare',
-      url1: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/Img_cat.jpg',
-      url2: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/Img_dog.jpg',
-      title1: '对比图片1',
-      title2: '对比图片2',
-      content: '通过检测图像中的内容信息，对比检测出的物体相似度。',
-      result: '相似度：10%' },
-    { tab: '目标统计',
-      key: 'img_many',
-      url1: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/Img_fruit2.jpg',
-      url2: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/Img_fruit2_res.jpg',
-      title1: '原始图片',
-      title2: '识别结果',
-      content: '智能搜索图像中的包含的物体，并返回物体总个数。',
-      result: '总个数：3' },
-  ]
+  "data": {
+    "img_recognition": {
+      "url1": "https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgThing.jpg",
+      "url2": "https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgThing_res.jpg",
+      "result": {
+        "物体名称": "手机"
+      }
+    },
+    "img_compare": {
+      "url1": "https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/Img_cat.jpg",
+      "url2": "https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/Img_dog.jpg",
+      "result": {
+        "相似度": "10%"
+      }
+    },
+    "img_many": {
+      "url1": "https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/Img_fruit2.jpg",
+      "url2": "https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/Img_fruit2_res.jpg",
+      "result": {
+        "总个数": "3"
+      }
+    }
+  }
 }

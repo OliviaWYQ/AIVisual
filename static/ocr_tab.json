@@ -4,30 +4,32 @@
       "id": 1,
       "post": "https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgTY2.jpg",
       "get": {
-        "0": "智慧旅游服务平台引导者",
-        "1": "智慧旅游新模式：New Model of Smart Tourism",
-        "2": "智慧旅游是一种以物联网、云计算、智能数据挖掘等技术在旅游体验、产业发展、行政管理等方面的应用，以激励产业创新、促进产业结构升级为特色。根据《“十三五”全国旅游信息化规划》，我们提出打造“管理、服务、营销、体验”四维一体的智慧旅游新模式，以“123+N”的建设之路，全力推动旅游信息化发展，提升旅游服务与管理能力，助力旅游供给侧改革的落地。"
+        "0": [
+          "智慧旅游服务平台引导者",
+          "智慧旅游新模式：New Model of Smart Tourism",
+          "智慧旅游是一种以物联网、云计算、智能数据挖掘等技术在旅游体验、产业发展、行政管理等方面的应用，以激励产业创新、促进产业结构升级为特色。根据《“十三五”全国旅游信息化规划》，我们提出打造“管理、服务、营销、体验”四维一体的智慧旅游新模式，以“123+N”的建设之路，全力推动旅游信息化发展，提升旅游服务与管理能力，助力旅游供给侧改革的落地。"
+        ]
       }
     },
     "shouxieti": {
       "id": 2,
       "post": "https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgSXT2.jpg",
       "get": {
-        "0": "但愿人长久，千里共婵娟。"
+        "0": ["但愿人长久，千里共婵娟。"]
       }
     },
     "erweima": {
       "id": 3,
       "post": "https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgEWM.jpg",
       "get": {
-        "0": "http://weixin.qq.com/r/pkRZQefEW7okraMi9xG0"
+        "0": ["http://weixin.qq.com/r/pkRZQefEW7okraMi9xG0"]
       }
     },
     "tiaoxingma": {
       "id": 4,
       "post": "https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgTXM.jpg",
       "get": {
-        "0": "9787506825061"
+        "0": ["9787506825061"]
       }
     },
     "chepai": {
@@ -35,7 +37,7 @@
       "post": "https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgCP.jpg",
       "get": {
         "0": {
-          "车牌号": "京H 44444"
+          "车牌号": ["京H 44444"]
         }
       }
     },

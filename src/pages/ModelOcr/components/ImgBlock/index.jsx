@@ -64,44 +64,117 @@ export default class ImgBlock extends Component {
         </Button>
       );
     }
-
     return (
       <div />
     );
   }
 
   showResult() {
-    if (this.state.alt !== 'chepai') {
-      // 拆分 result 返回的字符串
-      Array.from(this.state.result.split('；'))
-        .map((item, index) => {
-          // console.log(index, item.split('：').length);
-          if (item.split('：').length === 1) {
-            return (
-              <tbody key={index}>
-                <tr key={index}>
-                  <td><p>{item.split('：')[0]}</p></td>
-                </tr>
-              </tbody>
-            );
-          }
-          return (
-            <tbody key={index}>
-              <tr key={index}>
-                <td width="200px"><p>{item.split('：')[0]}</p></td>
-                <td><p>{item.split('：')[1]}</p></td>
-              </tr>
-            </tbody>
-          );
-        });
-    } else {
-      const res = this.state.result;
-      for (let item in res) {
-        let varItem = res[item];
-          // .split(':');
-        console.log(varItem);
-      }
-      return <p>chepai</p>;
+    switch (this.state.alt) {
+      // 车牌识别
+      case 'chepai':
+        // console.log(this.state.result[0]);
+        return (
+          <tbody>
+            <tr>
+              <td width="200px"><p>{ Object.keys(this.state.result[0]) }</p></td>
+              <td><p>{ Object.values(this.state.result[0]).join(' ， ') }</p></td>
+            </tr>
+          </tbody>
+        );
+        // 营业执照
+      case 'yinyezhizhao':
+        return (
+          Array.from(Object.keys(this.state.result[0]))
+            .map((item, index) => {
+              return (
+                <tbody key={index}>
+                  <tr key={index}>
+                    <td width="200px"><p>{item}</p></td>
+                    <td><p>{this.state.result[0][item]}</p></td>
+                  </tr>
+                </tbody>
+              );
+            })
+        );
+        // 通用
+      case 'tongyong':
+        return (
+          Array.from(this.state.result[0])
+            .map((item, index) => {
+              return (
+                <tbody key={index}>
+                  <tr key={index}>
+                    <td><p>{item}</p></td>
+                  </tr>
+                </tbody>
+              );
+            })
+        );
+        // 手写体
+      case 'shouxieti':
+        return (
+          <tbody>
+            <tr>
+              <td><p>{this.state.result[0].join(', ')}</p></td>
+            </tr>
+          </tbody>
+        );
+        // 二维码
+      case 'erweima':
+        return (
+          <tbody>
+            <tr>
+              <td><p>{this.state.result[0].join(', ')}</p></td>
+            </tr>
+          </tbody>
+        );
+        // 条形码
+      case 'tiaoxingma':
+        return (
+          <tbody>
+            <tr>
+              <td><p>{this.state.result[0].join(', ')}</p></td>
+            </tr>
+          </tbody>
+        );
+      default:
+        return (
+          Array.from(Object.keys(this.state.result[0]))
+            .map((item, index) => {
+              return (
+                <tbody key={index}>
+                  <tr key={index}>
+                    <td width="200px"><p>{item}</p></td>
+                    <td><p>{this.state.result[0][item]}</p></td>
+                  </tr>
+                </tbody>
+              );
+            })
+        );
+        // return (
+        //   Array.from(this.state.result.split('；'))
+        //     .map((item, index) => {
+        //       // console.log(index, item.split('：').length);
+        //       if (item.split('：').length === 1) {
+        //         return (
+        //           <tbody key={index}>
+        //             <tr key={index}>
+        //               <td><p>{item.split('：')[0]}</p></td>
+        //             </tr>
+        //           </tbody>
+        //         );
+        //       }
+        //       return (
+        //         <tbody key={index}>
+        //           <tr key={index}>
+        //             <td width="200px"><p>{item.split('：')[0]}</p></td>
+        //             <td><p>{item.split('：')[1]}</p></td>
+        //           </tr>
+        //         </tbody>
+        //       );
+        //     })
+        // );
     }
   }
 
