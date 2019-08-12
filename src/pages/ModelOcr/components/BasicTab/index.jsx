@@ -5,6 +5,7 @@ import styles from './index.module.scss';
 import ImgBlock from '../ImgBlock/index';
 import data from '../../../../../static/ocr_tab';
 
+
 export default class BasicTab extends Component {
   static displayName = 'BasicTab';
 

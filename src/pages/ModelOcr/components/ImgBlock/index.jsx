@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Grid, Upload, Button } from '@alifd/next';
 import IcePanel from '@icedesign/panel';
 import CameraAPI from '../CameraAPI/index';
+import PostCarPlate from '../../REST/post_carplate';
+import GetCarPlate from '../../REST/get_carplate';
 
 const { Row, Col } = Grid;
 
@@ -44,13 +46,15 @@ export default class ImgBlock extends Component {
   checkTest(alt) {
     if (alt === 'chepai') {
       return (
-        <Button
-          {...this.state.testCP}
-          type="primary"
-          style={{ position: 'relative', margin: '-48px 190px 10px' }}
-        >
-          测试接口
-        </Button>
+        <div>
+          <Button
+            {...this.state.testCP}
+            type="primary"
+            style={{ position: 'relative', margin: '-38px 190px 10px' }}
+          >
+            测试接口
+          </Button>
+        </div>
       );
     }
     if (alt === 'yinyezhizhao') {
@@ -152,53 +156,74 @@ export default class ImgBlock extends Component {
               );
             })
         );
-        // return (
-        //   Array.from(this.state.result.split('；'))
-        //     .map((item, index) => {
-        //       // console.log(index, item.split('：').length);
-        //       if (item.split('：').length === 1) {
-        //         return (
-        //           <tbody key={index}>
-        //             <tr key={index}>
-        //               <td><p>{item.split('：')[0]}</p></td>
-        //             </tr>
-        //           </tbody>
-        //         );
-        //       }
-        //       return (
-        //         <tbody key={index}>
-        //           <tr key={index}>
-        //             <td width="200px"><p>{item.split('：')[0]}</p></td>
-        //             <td><p>{item.split('：')[1]}</p></td>
-        //           </tr>
-        //         </tbody>
-        //       );
-        //     })
-        // );
     }
+  }
+
+  handleUpload(alt) {
+    if (alt === 'chepai') {
+      return (
+        <div>
+          {/* <Upload */}
+          {/*  action="http://127.0.0.1:5000/model_car_plate/car_plate_submit" */}
+          {/*  // headers={"Access-Control-Allow-Origin": "*"} */}
+          {/*  formatter={(res, file) => { */}
+          {/*    // 函数里面根据当前服务器返回的响应数据 */}
+          {/*    // 重新拼装符合组件要求的数据格式 */}
+          {/*    return { */}
+          {/*      success: res.status === 'success', */}
+          {/*      get: res.carplate, */}
+          {/*    }; */}
+          {/*  }} */}
+          {/* > */}
+          {/*  <Button type="primary" style={{ margin: '30px 0 0' }}> 上传图片 </Button> &nbsp;&nbsp; */}
+          {/* </Upload> */}
+          <PostCarPlate />
+          {/* <GetCarPlate /> */}
+        </div>
+      );
+    }
+    return (
+      <div>
+        <Upload
+          action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
+          multiple
+          listType="text"
+        >
+          <Button type="primary" style={{ margin: '30px 0 0' }}> 上传图片 </Button> &nbsp;&nbsp;
+        </Upload>
+      </div>
+    );
+  }
+
+  checkCamera(alt) {
+    if (alt === 'chepai') {
+      return (
+        <div style={{ position: 'relative', margin: '30px 95px 0px' }}>
+          <CameraAPI />
+        </div>
+      );
+    }
+    return (
+      <div style={{ position: 'relative', margin: '30px 95px 0px' }}>
+        <CameraAPI />
+      </div>
+    );
   }
 
   render() {
     return (
       <div>
         {/* 调用摄像头 */}
-        <div style={{ position: 'relative', margin: '30px 95px 0px' }}>
-          <CameraAPI />
-        </div>
+        {this.checkCamera(this.state.alt)}
+        {/* 测试接口 */}
+        {this.checkTest(this.state.alt)}
         {/* 上传 */}
         <div style={{ margin: '-62px 0 5px' }}>
-          <Upload
-            action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
-            multiple
-            listType="text"
-          >
-            <Button type="primary" style={{ margin: '30px 0 0' }}> 上传图片 </Button> &nbsp;&nbsp;
-          </Upload>
+          {this.handleUpload(this.state.alt)}
         </div>
-        {this.checkTest(this.state.alt)}
         <Row wrap>
           <Col>
-            <IcePanel style={{ marginTop: '15px', marginBottom: '10px', marginRight: '10px' }}>
+            <IcePanel style={{ marginTop: '25px', marginBottom: '10px', marginRight: '10px' }}>
               <IcePanel.Header>
                 原始图片
               </IcePanel.Header>
@@ -211,7 +236,7 @@ export default class ImgBlock extends Component {
             </IcePanel>
           </Col>
           <Col>
-            <IcePanel style={{ marginTop: '15px', marginBottom: '10px' }}>
+            <IcePanel style={{ marginTop: '25px', marginBottom: '10px' }}>
               <IcePanel.Header>
                 识别结果
               </IcePanel.Header>
