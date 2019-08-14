@@ -57,17 +57,17 @@ export default class BasicTab extends Component {
       currentResult: 'none',
       testCOMP: {
         component: 'a',
-        href: 'http://127.0.0.1:5000/model_face_compare',
+        href: 'http://127.0.0.1:9496/model_face_compare',
         target: '_blank',
       },
       testREC: {
         component: 'a',
-        href: 'http://127.0.0.1:5000/model_video_face_recog',
+        href: 'http://127.0.0.1:9496/model_video_face_recog',
         target: '_blank',
       },
       testVIDEO: {
         component: 'a',
-        href: 'http://127.0.0.1:5000/model_video_face_recog',
+        href: 'http://127.0.0.1:9496/model_video_face_recog',
         target: '_blank',
       },
     };
