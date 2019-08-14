@@ -30,6 +30,11 @@ export default class SimpleFluencyForm extends Component {
       // stepType: 'circle',
       // stepAnimation: true,
       // labelPlacement: 'ver',
+      testKL: {
+        component: 'a',
+        href: 'http://127.0.0.1:9496/model_tourist_predict',
+        target: '_blank',
+      },
     };
 
     this.onClick = this.onClick.bind(this);
@@ -86,8 +91,19 @@ export default class SimpleFluencyForm extends Component {
                 action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
                 listType="text"
               >
-                <Button type="primary" >上传文件</Button>
+                <Button
+                  type="primary"
+                  style={{ margin: '0px 10px 0px' }}
+                >上传文件
+                </Button>
               </Upload>
+              <Button
+                {...this.state.testKL}
+                type="primary"
+                style={{ margin: '0px 10px 0px' }}
+              >
+                测试接口
+              </Button>
             </div>
             <div className={styles.select}>
               <Button onClick={this.nextStep} validate type="primary">保存</Button>

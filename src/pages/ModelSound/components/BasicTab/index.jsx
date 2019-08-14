@@ -34,6 +34,11 @@ export default class BasicTab extends Component {
       // eslint-disable-next-line react/no-unused-state
       visible: false,
       currentResult: '设备是否正常：',
+      testSOUND: {
+        component: 'a',
+        href: 'http://127.0.0.1:9496/model_sound_recognition',
+        target: '_blank',
+      },
     };
   }
 
@@ -51,6 +56,22 @@ export default class BasicTab extends Component {
         // console.log("setTimeout setState callback " + this.state.currenttab, this.state.currentResult);
       });
     }, 0);
+  }
+
+  testModule(tab) {
+    if (tab === '声音识别') {
+      return (
+        <Button
+          {...this.state.testSOUND}
+          type="primary"
+          style={{ position: 'relative', margin: '-48px 94px 0px' }}
+        >
+        测试接口
+        </Button>
+      );
+    } return (
+      <div />
+    );
   }
 
   render() {
@@ -72,8 +93,12 @@ export default class BasicTab extends Component {
           >
             <Button type="primary" style={{ margin: '30px 0 0px' }}>上传音频</Button> &nbsp;&nbsp;
           </Upload>
+          {/* 测试接口 */}
+          {this.testModule(this.state.currenttab)}
           {/* 录音模块 */}
-          <MicAPI />
+          <div style={{ marginTop: '-15px' }}>
+            <MicAPI />
+          </div>
           <IcePanel style={{ marginTop: '30px', marginBottom: '10px' }}>
             <IcePanel.Header>
                 识别结果
