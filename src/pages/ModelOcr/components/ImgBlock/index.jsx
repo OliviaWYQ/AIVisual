@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Grid, Upload, Button } from '@alifd/next';
 import IcePanel from '@icedesign/panel';
 import CameraAPI from '../CameraAPI/index';
-import PostCarPlate from '../../REST/post_carplate';
-import GetCarPlate from '../../REST/get_carplate';
+import PostCarPlate from '../../api/post_carplate';
 
 const { Row, Col } = Grid;
 
@@ -27,6 +26,7 @@ export default class ImgBlock extends Component {
     },
   };
 
+  // 多张图片
   ifMultiple() {
     if (this.state.alt === 'shenfen' || this.state.alt === 'tongxing' || this.state.alt === 'xingshi') {
       // console.log(this.state.url.split('.jpg')[0]+'b.jpg')
@@ -37,32 +37,38 @@ export default class ImgBlock extends Component {
         </div>
       );
     }
+    if (this.state.alt === 'chepai') {
+      console.log('chepai: ', this.props);
+      return (
+        <img src={this.state.url} alt={this.state.alt} />
+      );
+    }
     return (
       <img src={this.state.url} alt={this.state.alt} />
     );
   }
 
-
+  // 添加测试接口
   checkTest(alt) {
-    if (alt === 'chepai') {
-      return (
-        <div>
-          <Button
-            {...this.state.testCP}
-            type="primary"
-            style={{ position: 'relative', margin: '-38px 190px 10px' }}
-          >
-            测试接口
-          </Button>
-        </div>
-      );
-    }
+    // if (alt === 'chepai') {
+    //   return (
+    //     <div>
+    //       <Button
+    //         {...this.state.testCP}
+    //         type="primary"
+    //         style={{ position: 'relative', margin: '-38px 190px 10px' }}
+    //       >
+    //         测试接口
+    //       </Button>
+    //     </div>
+    //   );
+    // }
     if (alt === 'yinyezhizhao') {
       return (
         <Button
           {...this.state.testOCR}
           type="primary"
-          style={{ position: 'relative', margin: '-48px 190px 10px' }}
+          style={{ position: 'relative', margin: '-30px 190px 30px' }}
         >
           测试接口
         </Button>
@@ -73,6 +79,7 @@ export default class ImgBlock extends Component {
     );
   }
 
+  // 显示结果
   showResult() {
     switch (this.state.alt) {
       // 车牌识别
@@ -81,7 +88,7 @@ export default class ImgBlock extends Component {
         return (
           <tbody>
             <tr>
-              <td width="200px"><p>{ Object.keys(this.state.result[0]) }</p></td>
+              <td width="200px"><p>车牌号</p></td>
               <td><p>{ Object.values(this.state.result[0]).join(' ， ') }</p></td>
             </tr>
           </tbody>
@@ -159,26 +166,34 @@ export default class ImgBlock extends Component {
     }
   }
 
+  // 得到 Post 值
+  receiveCar = (info) => {
+    this.setState({
+      url: info.response.downloadURL,
+      result: info.url,
+    });
+    console.log('new state', this.state);
+  }
+
+  // 上传组件
   handleUpload(alt) {
     if (alt === 'chepai') {
       return (
+        <div style={{ margin: '30px 0 0' }}>
+          <PostCarPlate func={this.receiveCar} />
+        </div>
+      );
+    }
+    if (alt === 'yinyezhizhao') {
+      return (
         <div>
-          {/* <Upload */}
-          {/*  action="http://127.0.0.1:5000/model_car_plate/car_plate_submit" */}
-          {/*  // headers={"Access-Control-Allow-Origin": "*"} */}
-          {/*  formatter={(res, file) => { */}
-          {/*    // 函数里面根据当前服务器返回的响应数据 */}
-          {/*    // 重新拼装符合组件要求的数据格式 */}
-          {/*    return { */}
-          {/*      success: res.status === 'success', */}
-          {/*      get: res.carplate, */}
-          {/*    }; */}
-          {/*  }} */}
-          {/* > */}
-          {/*  <Button type="primary" style={{ margin: '30px 0 0' }}> 上传图片 </Button> &nbsp;&nbsp; */}
-          {/* </Upload> */}
-          <PostCarPlate />
-          {/* <GetCarPlate /> */}
+          <Upload
+            action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
+            multiple
+            listType="text"
+          >
+            <Button type="primary"> 上传图片 </Button> &nbsp;&nbsp;
+          </Upload>
         </div>
       );
     }
@@ -196,9 +211,9 @@ export default class ImgBlock extends Component {
   }
 
   checkCamera(alt) {
-    if (alt === 'chepai') {
+    if (alt === 'yinyezhizhao') {
       return (
-        <div style={{ position: 'relative', margin: '30px 95px 0px' }}>
+        <div style={{ position: 'relative', margin: '30px 95px -2px' }}>
           <CameraAPI />
         </div>
       );
@@ -231,7 +246,6 @@ export default class ImgBlock extends Component {
                 <div>
                   {this.ifMultiple()}
                 </div>
-                {/* <img src={this.state.url} alt={this.state.alt} /> */}
               </IcePanel.Body>
             </IcePanel>
           </Col>

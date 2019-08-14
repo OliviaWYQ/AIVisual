@@ -61,14 +61,6 @@ const routerConfig = [
     path: '/user/login',
     component: UserLogin,
   },
-  // {
-  //   path: '/select/db',
-  //   component: Select,
-  // },
-  // {
-  //   path: '/step',
-  //   component: Step,
-  // },
   {
     path: '/ModelOCR',
     component: ModelOcr,

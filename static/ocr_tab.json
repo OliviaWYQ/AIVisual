@@ -36,9 +36,7 @@
       "id": 5,
       "post": "https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgCP.jpg",
       "get": {
-        "0": {
-          "车牌号": ["京H 44444"]
-        }
+        "0": ["京H 44444"]
       }
     },
     "shenfen": {
