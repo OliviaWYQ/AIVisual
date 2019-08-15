@@ -44,47 +44,45 @@ export default class ImgBlock extends Component {
   };
 
   leftImg(alt) {
-    if (alt === 'face_compare'){
-      return <img src={this.state.url1} alt={`${this.state.alt}_in`} />
-    } else {
-      return <img src={this.state.url2} alt={`${this.state.alt}_in`} />
+    if (alt === 'face_compare') {
+      return <img src={this.state.url1} alt={`${this.state.alt}_in`} />;
     }
+    return <img src={this.state.url2} alt={`${this.state.alt}_in`} />;
   }
 
   render() {
-    if (this.state.alt === 'face_video'){
+    if (this.state.alt === 'face_video') {
       return (
-        <div></div>
-      )
-    }
-    else {
-      return (
-        <div>
-          <Row wrap>
-            <Col>
-              <IcePanel style={{ marginTop: '20px', marginBottom: '10px', marginRight: '10px' }}>
-                <IcePanel.Header>
-                  {this.state.title1}
-                </IcePanel.Header>
-                <IcePanel.Body>
-                  {/* <img src={this.state.url1} alt={`${this.state.alt}_in`} /> */}
-                  {this.leftImg(this.state.alt)}
-                </IcePanel.Body>
-              </IcePanel>
-            </Col>
-            <Col>
-              <IcePanel style={{ marginTop: '20px', marginBottom: '10px' }}>
-                <IcePanel.Header>
-                  {this.state.title2}
-                </IcePanel.Header>
-                <IcePanel.Body>
-                  {this.renderResult(this.state.title2)}
-                </IcePanel.Body>
-              </IcePanel>
-            </Col>
-          </Row>
-        </div>
+        <div />
       );
     }
+
+    return (
+      <div>
+        <Row wrap>
+          <Col>
+            <IcePanel style={{ marginTop: '20px', marginBottom: '10px', marginRight: '10px' }}>
+              <IcePanel.Header>
+                {this.state.title1}
+              </IcePanel.Header>
+              <IcePanel.Body>
+                {/* <img src={this.state.url1} alt={`${this.state.alt}_in`} /> */}
+                {this.leftImg(this.state.alt)}
+              </IcePanel.Body>
+            </IcePanel>
+          </Col>
+          <Col>
+            <IcePanel style={{ marginTop: '20px', marginBottom: '10px' }}>
+              <IcePanel.Header>
+                {this.state.title2}
+              </IcePanel.Header>
+              <IcePanel.Body>
+                {this.renderResult(this.state.title2)}
+              </IcePanel.Body>
+            </IcePanel>
+          </Col>
+        </Row>
+      </div>
+    );
   }
 }

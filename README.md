@@ -10,16 +10,13 @@
 
 ## 简介
 
-基于海量高质量可复用区块，通过 GUI 工具快速搭建的一套中后台模板。
-
-![ice-design-pro](https://img.alicdn.com/tfs/TB1_bulmpOWBuNjy0FiXXXFxVXa-1920-1080.png)
+Moonstone AI 可视化分析平台前端应用，基于阿里飞冰开发。
 
 ## 特性
 
-- 专业的设计支持: [ICE Design](https://alibaba.github.io/ice/design.html)
-- 成熟的基础组件: [ICE Component](https://alibaba.github.io/ice/component/button)
-- 丰富的业务模块: [ICE Block](https://alibaba.github.io/ice/block)
-- 完善的开发工具: [iceworks](https://alibaba.github.io/ice/iceworks)
+- 多场景应用: 高效便捷满足多种需求
+- 算法模块化: 定制个性化数据分析流程
+- API: 调用算法的支持和保障
 
 ## 技术点
 
@@ -38,60 +35,154 @@
 > 按照 Dashboard 综合页和 Block 分类进行展示
 
 ```
-- Dashboard
-- 图表页
-  - 图表列表
-- 表格页
-  - 基础表格
-  - 展示型表格
-  - 表格列表
-- 列表页
-  - 文章列表
-  - 项目列表
-- 内容页
-  - 基础详情页
-  - 条款协议页
-  - 进度展示页
-- 结果页
-  - 成功
-  - 失败
-- 异常
-  - 403 无权限
-  - 404 找不到
-  - 500 服务器出错
-  - 内容为空
+- 介绍页
+- OCR识别页
+- 人脸识别页
+  - 导航栏
+  - 上传组件
+  - 识别结果
+- 图片识别页
+  - 导航栏
+  - 上传组件
+  - 识别结果
+- 声音识别页
+  - 导航栏
+  - 上传组件
+  - 识别结果
+- 客流预测页
+  - 项目介绍
+  - 流程图
+- 声音识别页
+  - 项目介绍
+  - 流程图
+- 电信反欺诈页
+  - 项目介绍
+  - 流程图
+- 历史记录页
+  - 项目历史
+  - 数据历史
+- 个人中心页
+  - 基本设置
+  - 修改密码
 ```
 
 ## 目录结构
 
 ```
-ice-design-pro
-├── dist        // 打包资源
-├── mock        // 模拟数据
-├── public      // 静态资源
+AIVisual
+├── coverage              // 测试代码覆盖率
+├── Dockerfile            // Dockerfile
+├── Jenkinsfile           // Jenkinsfile 
+├── karma.conf.coffee     // karma 配置文件
+├── karma.conf.js
+├── karma.conf.ts
+├── lib               
+│   └── jasmine_examples  // jasmine 测试示例
+├── package.json          // package.json
+├── public
+│   ├── favicon.png
+│   └── index.html        // 设置 title
+├── README.md
+├── spec                  // jasmine 测试文件
 ├── src
-│   ├── components   // 公共组件
-│   ├── layouts      // 通用布局
-│   ├── locales      // i18n
-│   ├── pages        // 页面
-│   ├── index.js     // 应用入口
-│   ├── menuConfig   // 导航配置
-│   ├── routerConfig // 路由配置
-│   └── router.jsx   // 路由配置
-├── tests            // 测试
-├── .gitignore       // git 忽略目录配置
-├── .editorconfig    // 代码风格配置
-├── .eslintignore    // eslint 忽略目录配置
-├── .eslintrc        // eslint 配置
-├── package.json     // package.json
-└── README.md        // 项目说明
+│   ├── api               // 用户登录
+│   │   ├── index.js
+│   │   └── user.js
+│   ├── components        // 系统页
+│   │   ├── Authorized
+│   │   ├── Exception
+│   │   ├── LocaleProvider
+│   │   ├── NotFound
+│   │   ├── PageLoading
+│   │   └── SelectLang
+│   ├── configureStore.js  // Redux Store
+│   ├── index.jsx          // 首页
+│   ├── layouts           
+│   │   ├── BasicLayout    // 控制台页
+│   │   └── UserLayout     // 用户登录页
+│   ├── locales            // 语言设置
+│   │   ├── en-US
+│   │   └── zh-CN
+│   ├── menuConfig.js      // 控制台侧栏目录
+│   ├── pages
+│   │   ├── Dashboard      // 个人中心->历史记录
+│   │   │   ├── components
+│   │   │   │   ├── EditableTable         // 项目管理
+│   │   │   │   └── ModelCards            // 数据管理
+│   │   │   └── index.jsx
+│   │   ├── Exception      // 错误页
+│   │   ├── Introduction   // 平台介绍->新特性
+│   │   │   ├── components
+│   │   │   │   └── AbilityIntroduction   // 功能展示页
+│   │   │   └── index.js
+│   │   ├── ModelFace      // 应用场景->人脸识别
+│   │   │   ├── components
+│   │   │   │   ├── BasicTab              // 导航栏
+│   │   │   │   ├── CameraAPI             // 摄像头
+│   │   │   │   └── ImgBlock              // 识别结果
+│   │   │   └── index.js
+│   │   ├── ModelImg       // 应用场景->图片识别
+│   │   │   ├── components
+│   │   │   │   ├── BasicTab              // 导航栏
+│   │   │   │   ├── CameraAPI             // 摄像头
+│   │   │   │   └── ImgBlock              // 识别结果
+│   │   │   └── index.js
+│   │   ├── ModelOcr       // 应用场景->OCR
+│   │   │   ├── api
+│   │   │   │   └── post_carplate.js      // 车牌识别上传组件
+│   │   │   ├── components
+│   │   │   │   ├── BasicTab              // 导航栏
+│   │   │   │   ├── CameraAPI             // 摄像头
+│   │   │   │   └── ImgBlock              // 识别结果
+│   │   │   └── index.js
+│   │   ├── ModelSound     // 应用场景->声音识别
+│   │   │   ├── components
+│   │   │   │   ├── BasicTab              // 导航栏与识别结果
+│   │   │   │   └── MicAPI                // 录音模块
+│   │   │   └── index.js
+│   │   ├── ProjectFraud   // 应用场景->电信反欺诈
+│   │   │   ├── components
+│   │   │   │   └── SimpleFluencyForm     // 流程图
+│   │   │   └── index.js
+│   │   ├── ProjectKl      // 应用场景->客流预测
+│   │   │   ├── components
+│   │   │   │   ├── BizchartsHeatmapImage // 识别结果->热力图
+│   │   │   │   ├── LineBarChart          // 识别结果->折线图
+│   │   │   │   └── SimpleFluencyForm     // 流程图
+│   │   │   └── index.js
+│   │   ├── Setting        // 个人中心->基本设置
+│   │   │   ├── components
+│   │   │   │   ├── BaseSetting           // 基本设置
+│   │   │   │   └── ChangePasswordForm    // 修改密码
+│   │   │   └── index.jsx
+│   │   ├── UserLogin      // 登陆页
+│   │   └── UserRegister   // 注册页
+│   ├── reducers.js        // Redux Reducer
+│   ├── routerConfig.js    // 路由配置
+│   ├── router.jsx         // React Router
+│   ├── store
+│   │   ├── userLogout     // Redux 用户登陆
+│   │   └── userProfile    // Redux 用户数据
+│   └── utils
+├── static                 // HTTP Request 接口文档
+│   ├── face_tab.json      // 人脸识别测试数据
+│   ├── img_tab.json       // 图片识别测试数据
+│   └── ocr_tab.json       // OCR 测试数据
+└── webpack.config.js      // webpack
+
 ```
 
 ## 使用
 
-1.  (推荐) GUI 工具使用: 下载 [iceworks](https://alibaba.github.io/ice/#/iceworks)
+1. 项目发布在: http://192.168.108.3:31714
 
-2.  Cli 命令使用:
+2. 下载:
+
+```bash
+$ git clone http://192.168.6.126/moonstone/moonstone-fe.git
+```
+
+2. 使用:
 
 ```bash
 $ npm start      // 启动预览服务器

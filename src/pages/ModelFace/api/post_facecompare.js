@@ -1,18 +1,14 @@
 import React from 'react';
-// import { connect } from 'react-redux';
 import { Button, Upload } from '@alifd/next';
-// import { getCarplateData } from '../../../store/modelCarplate/action';
 
-class PostCarPlate extends React.Component {
+export default class PostFaceCompare extends React.Component {
   beforeUpload = (info) => {
     console.log('beforeUpload callback', info);
-    // this.setState({ fileToBeSent: info });
   }
 
   onSuccess = (info) => {
-    // console.log('onSuccess : ', info);
-    console.log('车牌号: ', info.url);
-    console.log('pathout:', info.response.downloadURL);
+    console.log('onSuccess : ', info);
+    console.log('相似度: ', info.url);
     this.props.func(info);
   }
 
@@ -20,9 +16,10 @@ class PostCarPlate extends React.Component {
     return (
       <div style={{ margin: '15px 0 0' }}>
         <Upload
-          action="http://192.168.108.3:31714/model/model_car_plate/car_plate_submit"
+          action="http://192.168.108.3:31714/model/model_face_compare/compare"
           accept="image/png, image/jpg, image/jpeg"
           autoUpload
+          multiple
           listType="image"
           useDataURL
           beforeUpload={this.beforeUpload}
@@ -33,9 +30,7 @@ class PostCarPlate extends React.Component {
             // 重新拼装符合组件要求的数据格式
             return {
               success: res.status === 'success',
-              url: res.data.carplate,
-              imgURL: res.data.pathin,
-              downloadURL: res.data.pathout,
+              url: res.data.compare,
             };
           }}
         >
@@ -45,5 +40,3 @@ class PostCarPlate extends React.Component {
     );
   }
 }
-
-export default PostCarPlate;

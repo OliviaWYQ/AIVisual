@@ -4,6 +4,7 @@ import IceContainer from '@icedesign/container';
 import styles from './index.module.scss';
 import ImgBlock from '../ImgBlock/index';
 import CameraAPI from '../CameraAPI/index';
+import PostFaceCompare from '../../api/post_facecompare';
 
 export default class BasicTab extends Component {
   static displayName = 'BasicTab';
@@ -147,13 +148,16 @@ export default class BasicTab extends Component {
               <h2>{this.state.currentResult}</h2>
             </span>
           </Overlay>
-          <Upload
-            action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
-            multiple
-            listType="text"
-          >
-            <Button type="primary" style={{ margin: '-38px 0 10px' }}>上传图片</Button> &nbsp;&nbsp;
-          </Upload>
+          {/* <Upload */}
+          {/*  action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload" */}
+          {/*  multiple */}
+          {/*  listType="text" */}
+          {/* > */}
+          {/*  <Button type="primary" style={{ margin: '-38px 0 10px' }}>上传图片</Button> &nbsp;&nbsp; */}
+          {/* </Upload> */}
+          <div style={{ margin: '-47px 0 10px' }} >
+            <PostFaceCompare />
+          </div>
         </div>
       );
     }
