@@ -16,12 +16,12 @@ export default class ImgBlock extends Component {
     // percent: 0,
     testOCR: {
       component: 'a',
-      href: 'http://192.168.16.175:5000/model_chinese_ocr',
+      href: 'http://192.168.108.3:31714/model/model_chinese_ocr',
       target: '_blank',
     },
     testCP: {
       component: 'a',
-      href: 'http://192.168.16.175:5000/model_car_plate',
+      href: 'http://192.168.108.3:31714/model/model_car_plate',
       target: '_blank',
     },
   };
