@@ -28,8 +28,8 @@ export default class PostFaceCompare extends React.Component {
     return (
       <div style={{ margin: '15px 0 0' }}>
         <Upload
-          // action="http://192.168.108.3:31714/model/model_face_compare/compare"
-          action="http://192.168.16.175:5060/model/model_face_compare/compare"
+          action="http://192.168.108.3:31714/model/model_face_compare/compare"
+          // action="http://192.168.16.175:5060/model/model_face_compare/compare"
           accept="image/png, image/jpg, image/jpeg"
           autoUpload={false}
           onChange={this.onChange}

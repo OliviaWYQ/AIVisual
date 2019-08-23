@@ -17,8 +17,8 @@ class PostSound extends React.Component {
     return (
       <div style={{ margin: '15px 0 0' }}>
         <Upload
-          // action="http://192.168.108.3:31714/model/model_sound_recognition/sound_recognition_submit"
-          action="http://192.168.16.175:5060/model/model_sound_recognition/sound_recognition_submit"
+          action="http://192.168.108.3:31714/model/model_sound_recognition/sound_recognition_submit"
+          // action="http://192.168.16.175:5060/model/model_sound_recognition/sound_recognition_submit"
           accept="audio/wav"
           autoUpload
           listType="text"

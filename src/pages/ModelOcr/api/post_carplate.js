@@ -20,8 +20,8 @@ class PostCarPlate extends React.Component {
     return (
       <div style={{ margin: '15px 0 0' }}>
         <Upload
-          // action="http://192.168.108.3:31714/model/model_car_plate/car_plate_submit"
-          action="http://192.168.16.175:5060/model/model_car_plate/car_plate_submit"
+          action="http://192.168.108.3:31714/model/model_car_plate/car_plate_submit"
+          // action="http://192.168.16.175:5060/model/model_car_plate/car_plate_submit"
           accept="image/png, image/jpg, image/jpeg"
           autoUpload
           listType="image"
