@@ -12,14 +12,29 @@ export default class PostFaceCompare extends React.Component {
     this.props.func(info);
   }
 
+  saveUploaderRef = (ref) => {
+    this.uploaderRef = ref.getInstance();
+  };
+
+  onSubmit = () => {
+    this.uploaderRef.startUpload();
+  }
+
+  onChange(file) {
+    console.log('onChange callback : ', file);
+  }
+
   render() {
     return (
       <div style={{ margin: '15px 0 0' }}>
         <Upload
-          action="http://192.168.108.3:31714/model/model_face_compare/compare"
+          // action="http://192.168.108.3:31714/model/model_face_compare/compare"
+          action="http://192.168.16.175:5060/model/model_face_compare/compare"
           accept="image/png, image/jpg, image/jpeg"
-          autoUpload
+          autoUpload={false}
+          onChange={this.onChange}
           multiple
+          // limit={2}
           listType="image"
           useDataURL
           beforeUpload={this.beforeUpload}
@@ -31,11 +46,15 @@ export default class PostFaceCompare extends React.Component {
             return {
               success: res.status === 'success',
               url: res.data.compare,
+              imgURL1: res.data.path1,
+              imgURL2: res.data.path2,
             };
           }}
         >
-          <Button type="primary">上传图片</Button>
+          <Button type="primary">选择图片</Button>
         </Upload>
+        <br />
+        <Button type="primary" onClick={this.onSubmit}>确认上传</Button>
       </div>
     );
   }

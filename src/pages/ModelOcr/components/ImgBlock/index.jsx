@@ -171,6 +171,7 @@ export default class ImgBlock extends Component {
     this.setState({
       url: info.response.downloadURL,
       result: info.url,
+
     });
     console.log('new state', this.state);
   }

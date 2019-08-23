@@ -17,6 +17,14 @@ export default class ImgBlock extends Component {
     result: this.props.result,
   };
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      url1: nextProps.url1,
+      url2: nextProps.url2,
+      result: nextProps.result,
+    });
+  }
+
   renderResult = (title2) => {
     if (title2 === '识别结果') {
       return (
@@ -40,6 +48,7 @@ export default class ImgBlock extends Component {
         </div>
       );
     }
+    // console.log('face compare imgblock', this.state);
     return (<img src={this.state.url2} alt={`${this.state.alt}_out`} />);
   };
 

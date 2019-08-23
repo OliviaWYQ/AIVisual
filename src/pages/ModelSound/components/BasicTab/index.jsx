@@ -4,6 +4,7 @@ import IceContainer from '@icedesign/container';
 import IcePanel from '@icedesign/panel';
 import styles from './index.module.scss';
 import MicAPI from '../MicAPI/index';
+import PostSound from '../../api/post_sound';
 
 export default class BasicTab extends Component {
   static displayName = 'BasicTab';
@@ -64,7 +65,7 @@ export default class BasicTab extends Component {
         <Button
           {...this.state.testSOUND}
           type="primary"
-          style={{ position: 'relative', margin: '-48px 94px 0px' }}
+          style={{ position: 'relative', margin: '10px 94px 0px' }}
         >
         测试接口
         </Button>
@@ -72,6 +73,14 @@ export default class BasicTab extends Component {
     } return (
       <div />
     );
+  }
+
+  // 得到 Post 值
+  receiveSound = (info) => {
+    this.setState({
+      currentResult: `设备是否正常：${info.url}`,
+    });
+    console.log('new state', this.state);
   }
 
   render() {
@@ -86,15 +95,12 @@ export default class BasicTab extends Component {
                 </div>
               </Tab.Item>))}
           </Tab>
-          <Upload
-            action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload"
-            multiple
-            listType="text"
-          >
-            <Button type="primary" style={{ margin: '30px 0 0px' }}>上传音频</Button> &nbsp;&nbsp;
-          </Upload>
           {/* 测试接口 */}
           {this.testModule(this.state.currenttab)}
+          {/* 上传模块 */}
+          <div style={{ position: 'relative', margin: '-47px 0 15px' }}>
+            <PostSound func={this.receiveSound} />
+          </div>
           {/* 录音模块 */}
           <div style={{ marginTop: '-15px' }}>
             <MicAPI />

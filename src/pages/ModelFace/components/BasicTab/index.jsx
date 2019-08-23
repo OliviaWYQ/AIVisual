@@ -32,7 +32,7 @@ export default class BasicTab extends Component {
           title1: '对比图片1',
           title2: '对比图片2',
           content: '通过提取人的面部特征，计算两张人脸的相似度，从而判断是否为同一人。人脸对比技术被广泛应用于基于人脸的真实身份验证、人证合一验证等。',
-          result: '相似度：99%' },
+          result: '99%' },
         { tab: '人数统计',
           key: 'face_many',
           url1: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgDR.jpg',
@@ -56,6 +56,8 @@ export default class BasicTab extends Component {
       currenturl: '',
       visible: false,
       currentResult: 'none',
+      faceurl1: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgDB1.jpg',
+      faceurl2: 'https://aivisualimg.oss-cn-hangzhou.aliyuncs.com/ImgDB2.jpg',
       testCOMP: {
         component: 'a',
         href: 'http://127.0.0.1:9496/model_face_compare',
@@ -82,27 +84,14 @@ export default class BasicTab extends Component {
   };
 
   changeState = (url, tab, result) => {
-    // setstate 不保证同步
-    // this.setState(() => {
-    //   this.state.currenttab = tab;
-    //   this.state.currenturl = url;
-    //   this.state.currentResult = result;
-    //   // console.log('setstate:', this.state.currenttab, this.state.currentResult)
-    // });
-
     // 使用 setTimeout 使 setstate同步
     setTimeout(() => {
       // eslint-disable-next-line react/no-unused-state
-      this.setState({ currentResult: result, currenttab: tab, currenturl: url }, () => {
+      this.setState({ currentResult: `相似度：${result}`, currenttab: tab, currenturl: url }, () => {
         // console.log("setTimeout setState callback " + this.state.currenttab, this.state.currenturl, this.state.currentResult);
       });
     }, 0);
   }
-
-  // 检查State
-  // componentDidUpdate(){
-  //     console.log('update', this.state.currenttab, this.state.currentResult)
-  // }
 
   onClick = () => {
     this.setState({
@@ -116,10 +105,20 @@ export default class BasicTab extends Component {
     });
   }
 
+  // 得到 Post 值
+  receiveFace = (info) => {
+    this.setState({
+      currentResult: `相似度：${info.url}`,
+      faceurl1: info.response.imgURL1,
+      faceurl2: info.response.imgURL2,
+    });
+    console.log('new state', this.state);
+  }
+
   renderPop = (tab) => {
     // 人脸对比
     if (tab === '人脸对比') {
-      // console.log(tab)
+      // console.log(tab);
       return (
         <div>
           <Button type="primary"
@@ -148,15 +147,9 @@ export default class BasicTab extends Component {
               <h2>{this.state.currentResult}</h2>
             </span>
           </Overlay>
-          {/* <Upload */}
-          {/*  action="https://www.easy-mock.com/mock/5b713974309d0d7d107a74a3/alifd/upload" */}
-          {/*  multiple */}
-          {/*  listType="text" */}
-          {/* > */}
-          {/*  <Button type="primary" style={{ margin: '-38px 0 10px' }}>上传图片</Button> &nbsp;&nbsp; */}
-          {/* </Upload> */}
+          {/* 上传组件 */}
           <div style={{ margin: '-47px 0 10px' }} >
-            <PostFaceCompare />
+            <PostFaceCompare func={this.receiveFace} />
           </div>
         </div>
       );
@@ -232,6 +225,24 @@ export default class BasicTab extends Component {
     );
   }
 
+  DisplayFace(item) {
+    let face1 = item.url1;
+    let face2 = item.url2;
+    if (item.tab === '人脸对比') {
+      // setTimeout(() => {
+      face1 = this.state.faceurl1;
+      face2 = this.state.faceurl2;
+      // console.log('face1', face1, 'face2', face2);
+      return (
+        <ImgBlock url1={face1} url2={face2} alt={item.key} title1={item.title1} title2={item.title2} result={item.result} />
+      );
+      // }, 0);
+    }
+    return (
+      <ImgBlock url1={face1} url2={face2} alt={item.key} title1={item.title1} title2={item.title2} result={item.result} />
+    );
+  }
+
   render() {
     return (
       <div className="basic-tab">
@@ -243,7 +254,7 @@ export default class BasicTab extends Component {
                   <p>{item.content}</p>
                 </div>
                 {this.renderPop(item.tab)}
-                <ImgBlock url1={item.url1} url2={item.url2} alt={item.key} title1={item.title1} title2={item.title2} result={item.result} />
+                {this.DisplayFace(item)}
               </Tab.Item>))}
           </Tab>
         </IceContainer>
