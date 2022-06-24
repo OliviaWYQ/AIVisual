@@ -48,7 +48,7 @@
     "istanbul": "^0.4.5",
     "jasmine": "^3.4.0",
     "jasmine-enzyme": "^7.0.2",
-    "jsdom": "^15.1.1",
+    "jsdom": "^16.5.0",
     "karma-browserify": "^6.0.0",
     "karma-commonjs": "^1.0.0",
     "karma-firefox-launcher": "^1.1.0",
